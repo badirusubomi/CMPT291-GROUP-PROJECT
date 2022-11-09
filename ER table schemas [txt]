@@ -1,0 +1,22 @@
+
+ENTITIES
+Order(Ord_Id, MovieID, CopyId, CustomerID, EmployeeID, Datefrom, DateTo, MovieRating) 
+    MovieID FK references Copies
+    CopyID FK references Copies
+    CustomerID FK references Customer
+    EmployeeID FK references Employee 
+Movies(MovieID, title, type, fee, MovieRating())
+Employee(EmpID,FName,LName,Email,Gender,StartDate,street,city,state,ZipCode ,Wage,password)
+Customer(CustomerID, FName, LName, email,street, city, state,creationDate,expiryDate,CrCd#,planID,password)
+    planID FK references AccType
+AccType(PlanID,PlanName,planCost, planLimit)
+Actors(ActorID, FName,LName, Age, Gender, ActorRating())
+Copies(CopyID,CopyType,MovieID)
+    MovieID FK references Movies
+CustomerPhoneNumbers(phone_number, number_type, customerID)
+    customerID FK references Customer
+EmployeePhoneNumber(phone_number, number_type, employeeID)
+    employeeID FK references Employee
+ACTS_IN(ActorID, MovieID, ActorRating)
+    ActorID FK references Actors
+    MoveID FK references Movies
