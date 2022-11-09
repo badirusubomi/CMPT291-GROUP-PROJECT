@@ -1,0 +1,25 @@
+Date of Creation: November 9th 2022
+UI Tasks:
+
+
+Subomi
+- Search
+    - search results
+    - order results
+    - order page
+    - order confirmed
+
+
+Jerome
+- Welcome pg customer
+- profile pg customer
+
+Brandt
+- welcome pg employee
+    - all cases of welcome pg [manager and employee]
+- Sales Report
+
+
+Marek
+- Signup employee
+- signup customer
