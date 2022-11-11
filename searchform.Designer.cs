@@ -149,15 +149,14 @@
         }
 
         #endregion
-
-        private TextBox textBox1;
         private Label label1;
-        private TextBox textBox2;
         private Label label2;
-        private TextBox textBox3;
         private Label label3;
-        private TextBox textBox4;
         private Label label4;
-        private Button button1;
+        public TextBox textBox1;
+        public TextBox textBox2;
+        public TextBox textBox3;
+        public TextBox textBox4;
+        public Button button1;
     }
 }

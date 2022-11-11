@@ -45,12 +45,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.searchFormuc1 = new CMPT291_GROUP_PROJECT.searchFormUC();
-            this.searchResultsuc1 = new CMPT291_GROUP_PROJECT.searchResultsUC();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.mainpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -267,31 +264,12 @@
             // 
             // mainpanel
             // 
-            this.mainpanel.Controls.Add(this.searchFormuc1);
-            this.mainpanel.Controls.Add(this.searchResultsuc1);
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.mainpanel.Location = new System.Drawing.Point(199, 229);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(895, 324);
             this.mainpanel.TabIndex = 3;
             this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
-            // 
-            // searchFormuc1
-            // 
-            this.searchFormuc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.searchFormuc1.Location = new System.Drawing.Point(-3, 0);
-            this.searchFormuc1.Name = "searchFormuc1";
-            this.searchFormuc1.Size = new System.Drawing.Size(907, 536);
-            this.searchFormuc1.TabIndex = 2;
-            this.searchFormuc1.Load += new System.EventHandler(this.searchFormuc1_Load_1);
-            // 
-            // searchResultsuc1
-            // 
-            this.searchResultsuc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.searchResultsuc1.Location = new System.Drawing.Point(-3, 0);
-            this.searchResultsuc1.Name = "searchResultsuc1";
-            this.searchResultsuc1.Size = new System.Drawing.Size(915, 324);
-            this.searchResultsuc1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -310,7 +288,6 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.mainpanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -332,8 +309,6 @@
         private Button button7;
         private Button button10;
         private Panel sidePanel;
-        private Panel mainpanel;
-        private searchResultsUC searchResultsuc1;
-        private searchFormUC searchFormuc1;
+        public Panel mainpanel;
     }
 }

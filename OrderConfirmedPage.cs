@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace CMPT291_GROUP_PROJECT
 {
-    public partial class UserControl2 : UserControl
+    public partial class OrderConfirmedPage : Form
     {
-        public UserControl2()
+        public OrderConfirmedPage()
         {
             InitializeComponent();
+        }
+
+        private void OrderConfirmedPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void confirmedMessage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

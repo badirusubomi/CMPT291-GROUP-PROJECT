@@ -20,9 +20,6 @@ namespace CMPT291_GROUP_PROJECT
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
             f.Show();
-
-
-
         }
         private void button6_Click(object sender, EventArgs e)
         {
@@ -34,7 +31,7 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Show();
             sidePanel.Height = button2.Height;
             sidePanel.Top = button2.Top;
-            loadForms(new searchform());
+            loadForms(new searchform(this));
 
         }
 

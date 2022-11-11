@@ -16,5 +16,10 @@ namespace CMPT291_GROUP_PROJECT
         {
             InitializeComponent();
         }
+
+        private void searchResultsUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

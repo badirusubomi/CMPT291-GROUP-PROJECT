@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace CMPT291_GROUP_PROJECT
 {
-    public partial class UserControl1 : UserControl
+    public partial class PresentCopies : Form
     {
-        public UserControl1()
+        Form1 ths;
+        public PresentCopies(Form1 frm)
         {
+            ths = frm;
             InitializeComponent();
+            //RentButton.Hide();
+        }
+
+        private void RentButton_Click(object sender, EventArgs e)
+        {
+            ths.loadForms(new CheckOutPage(ths));
         }
     }
 }

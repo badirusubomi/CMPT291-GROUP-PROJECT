@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.SelectMovie = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -42,12 +43,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Search Result:";
             // 
+            // SelectMovie
+            // 
+            this.SelectMovie.Location = new System.Drawing.Point(354, 191);
+            this.SelectMovie.Name = "SelectMovie";
+            this.SelectMovie.Size = new System.Drawing.Size(191, 49);
+            this.SelectMovie.TabIndex = 1;
+            this.SelectMovie.Text = "Pick Movie";
+            this.SelectMovie.UseVisualStyleBackColor = true;
+            this.SelectMovie.Click += new System.EventHandler(this.SelectMovie_Click);
+            // 
             // searchResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(895, 324);
+            this.Controls.Add(this.SelectMovie);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "searchResultForm";
@@ -61,5 +73,6 @@
         #endregion
 
         private Label label1;
+        private Button SelectMovie;
     }
 }

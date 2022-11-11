@@ -12,11 +12,14 @@ namespace CMPT291_GROUP_PROJECT
 {
     public partial class searchform : Form
     {
-        public searchform()
+        Form1 ths;
+        public searchform(Form1 frm)
         {
             InitializeComponent();
+            ths = frm;
+            button1.Click += new EventHandler(button1_Click);
         }
-        
+        public Form1 Form { get; set; }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -25,6 +28,7 @@ namespace CMPT291_GROUP_PROJECT
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ths.loadForms(new searchResultForm(ths));
         }
     }
 }
