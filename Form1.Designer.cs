@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.sidePanel = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -37,16 +39,18 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.sidePanel = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.mainpanel = new System.Windows.Forms.Panel();
+            this.searchFormuc1 = new CMPT291_GROUP_PROJECT.searchFormUC();
+            this.searchResultsuc1 = new CMPT291_GROUP_PROJECT.searchResultsUC();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.mainpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,8 +66,30 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(199, 551);
+            this.panel1.Size = new System.Drawing.Size(199, 553);
             this.panel1.TabIndex = 0;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button10.Location = new System.Drawing.Point(3, 494);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(49, 54);
+            this.button10.TabIndex = 0;
+            this.button10.Text = "?";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // sidePanel
+            // 
+            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
+            this.sidePanel.Location = new System.Drawing.Point(0, 58);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(13, 75);
+            this.sidePanel.TabIndex = 3;
             // 
             // button5
             // 
@@ -157,7 +183,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(199, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(916, 22);
+            this.panel2.Size = new System.Drawing.Size(895, 22);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -171,8 +197,47 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(199, 22);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(916, 207);
+            this.panel3.Size = new System.Drawing.Size(895, 207);
             this.panel3.TabIndex = 2;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.Location = new System.Drawing.Point(812, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(43, 54);
+            this.button9.TabIndex = 0;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.Location = new System.Drawing.Point(714, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(43, 54);
+            this.button8.TabIndex = 0;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Location = new System.Drawing.Point(763, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(43, 54);
+            this.button7.TabIndex = 0;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button6_Click);
             // 
             // button6
             // 
@@ -200,66 +265,33 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // button7
+            // mainpanel
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(763, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(43, 54);
-            this.button7.TabIndex = 0;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button6_Click);
+            this.mainpanel.Controls.Add(this.searchFormuc1);
+            this.mainpanel.Controls.Add(this.searchResultsuc1);
+            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.mainpanel.Location = new System.Drawing.Point(199, 229);
+            this.mainpanel.Name = "mainpanel";
+            this.mainpanel.Size = new System.Drawing.Size(895, 324);
+            this.mainpanel.TabIndex = 3;
+            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 
-            // button8
+            // searchFormuc1
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(714, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(43, 54);
-            this.button8.TabIndex = 0;
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button6_Click);
+            this.searchFormuc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.searchFormuc1.Location = new System.Drawing.Point(-3, 0);
+            this.searchFormuc1.Name = "searchFormuc1";
+            this.searchFormuc1.Size = new System.Drawing.Size(907, 536);
+            this.searchFormuc1.TabIndex = 2;
+            this.searchFormuc1.Load += new System.EventHandler(this.searchFormuc1_Load_1);
             // 
-            // button9
+            // searchResultsuc1
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(812, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(43, 54);
-            this.button9.TabIndex = 0;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // sidePanel
-            // 
-            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
-            this.sidePanel.Location = new System.Drawing.Point(0, 58);
-            this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(13, 75);
-            this.sidePanel.TabIndex = 3;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button10.Location = new System.Drawing.Point(3, 494);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(49, 54);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "?";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button6_Click);
+            this.searchResultsuc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.searchResultsuc1.Location = new System.Drawing.Point(-3, 0);
+            this.searchResultsuc1.Name = "searchResultsuc1";
+            this.searchResultsuc1.Size = new System.Drawing.Size(915, 324);
+            this.searchResultsuc1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -267,6 +299,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1115, 551);
+            this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -277,6 +310,7 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.mainpanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -298,5 +332,8 @@
         private Button button7;
         private Button button10;
         private Panel sidePanel;
+        private Panel mainpanel;
+        private searchResultsUC searchResultsuc1;
+        private searchFormUC searchFormuc1;
     }
 }
