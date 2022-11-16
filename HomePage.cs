@@ -72,7 +72,8 @@ namespace CMPT291_GROUP_PROJECT
         {
             if (this.mainpanel.Controls.Count > 0)
                 this.mainpanel.Controls.RemoveAt(0);
-            this.mainpanel.SetBounds(this.panel1.Width, this.panel3.Height, this.Width, this.Height);
+            this.mainpanel.SetBounds(this.panel1.Width, this.panel3.Height, this.Width- this.panel1.Width, 
+                                    this.Height - this.panel3.Height-22);
             Form f = Form as Form;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
@@ -99,6 +100,8 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Show();
             sidePanel.Height = button1.Height;
             sidePanel.Top = button1.Top;
+            this.hideForms(this);
+            this.loadBigForms(new ProfilePage(this));
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -106,6 +109,8 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Show();
             sidePanel.Height = button3.Height;
             sidePanel.Top = button3.Top;
+            this.hideForms(this);
+            this.loadBigForms(new Categories(this));
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -113,6 +118,7 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Show();
             sidePanel.Height = button4.Height;
             sidePanel.Top = button4.Top;
+            this.loadForms(new AboutPage());
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -120,6 +126,7 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Show();
             sidePanel.Height = button5.Height;
             sidePanel.Top = button5.Top;
+            this.loadForms(new FAQpage());
         }
 
         private void mainpanel_Paint(object sender, PaintEventArgs e)
