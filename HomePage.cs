@@ -8,12 +8,71 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Height = button2.Height;
             sidePanel.Top = button2.Top;
             sidePanel.Hide();
+            /*this.panel1.Hide();
+            this.panel2.Hide();
+            this.panel3.Hide();
+            this.button1.Hide();
+            this.button2.Hide();
+            this.button3.Hide();
+            this.button4.Hide();
+            this.button5.Hide();
+            this.button6.Hide();
+            this.button7.Hide();
+            this.button8.Hide();
+            this.button9.Hide();
+            this.button10.Hide();*/
+            hideForms(this);
+            this.loadBigForms(new LogInPage(this));
         }
-
+        public void hideForms(object Form)
+        {
+            this.panel1.Hide();
+            this.panel2.Hide();
+            this.panel3.Hide();
+            this.button1.Hide();
+            this.button2.Hide();
+            this.button3.Hide();
+            this.button4.Hide();
+            this.button5.Hide();
+            this.button6.Hide();
+            this.button7.Hide();
+            this.button8.Hide();
+            this.button9.Hide();
+            this.button10.Hide();
+        }
+        public void showForms(object Form)
+        {
+            this.panel1.Show();
+            this.panel2.Show();
+            this.panel3.Show();
+            this.button1.Show();
+            this.button2.Show();
+            this.button3.Show();
+            this.button4.Show();
+            this.button5.Show();
+            this.button6.Show();
+            this.button7.Show();
+            this.button8.Show();
+            this.button9.Show();
+            this.button10.Show();
+        }
+        public void loadBigForms(object Form)
+        {
+            if (this.mainpanel.Controls.Count > 0)
+                this.mainpanel.Controls.RemoveAt(0);
+            this.mainpanel.SetBounds(0,0,this.Width,this.Height);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.mainpanel.Controls.Add(f);
+            this.mainpanel.Tag = f;
+            f.Show();
+        }
         public void loadForms(object Form)
         {
             if (this.mainpanel.Controls.Count > 0)
                 this.mainpanel.Controls.RemoveAt(0);
+            this.mainpanel.SetBounds(this.panel1.Width, this.panel3.Height, this.Width, this.Height);
             Form f = Form as Form;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
