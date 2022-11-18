@@ -116,6 +116,7 @@
             this.employeeRadio.TabStop = true;
             this.employeeRadio.Text = "Employee";
             this.employeeRadio.UseVisualStyleBackColor = true;
+            this.employeeRadio.CheckedChanged += new System.EventHandler(this.employeeRadio_CheckedChanged);
             // 
             // customerRadio
             // 
