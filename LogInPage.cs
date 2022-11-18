@@ -22,9 +22,16 @@ namespace CMPT291_GROUP_PROJECT
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            ths.showForms(ths);
-            ths.loadForms(new searchform(ths));
-            //ths.loadBigForms(new LogInPage(ths));            
+            if (employeeRadio.Checked)
+            {
+                ths.loadBigForms(new EmployeeWelcomePage(ths));
+            }
+            else
+            {
+                ths.showForms(ths);
+                ths.loadForms(new searchform(ths));
+                //ths.loadBigForms(new LogInPage(ths));
+            }
         }
     }
 }

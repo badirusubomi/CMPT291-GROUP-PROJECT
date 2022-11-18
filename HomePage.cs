@@ -99,6 +99,8 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Show();
             sidePanel.Height = button1.Height;
             sidePanel.Top = button1.Top;
+            hideForms(this);
+            this.loadBigForms(new ProfilePage(this));
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -106,6 +108,8 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Show();
             sidePanel.Height = button3.Height;
             sidePanel.Top = button3.Top;
+            hideForms(this);
+            this.loadBigForms(new Categories(this));
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -113,6 +117,8 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Show();
             sidePanel.Height = button4.Height;
             sidePanel.Top = button4.Top;
+            hideForms(this);
+            this.loadBigForms(new AboutPage(this));
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -120,6 +126,8 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Show();
             sidePanel.Height = button5.Height;
             sidePanel.Top = button5.Top;
+            hideForms(this);
+            this.loadBigForms(new FAQpage(this));
         }
 
         private void mainpanel_Paint(object sender, PaintEventArgs e)
@@ -136,6 +144,20 @@ namespace CMPT291_GROUP_PROJECT
         {
             this.SendToBack();
             this.Hide();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            sidePanel.Show();
+            sidePanel.Height = button5.Height;
+            sidePanel.Top = button5.Top;
+            hideForms(this);
+            this.loadBigForms(new SalesReport(this));
+        }
+
+        private void sidePanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
