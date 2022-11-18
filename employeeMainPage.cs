@@ -12,9 +12,21 @@ namespace CMPT291_GROUP_PROJECT
 {
     public partial class employeeMainPage : Form
     {
-        public employeeMainPage()
+        Form1 ths;
+        public employeeMainPage(Form1 frm)
         {
             InitializeComponent();
+            ths = frm;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ths.loadBigForms(new EmployeeFunctionsPage(ths));
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ths.showForms(ths);
         }
     }
 }

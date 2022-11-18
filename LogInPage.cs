@@ -25,11 +25,11 @@ namespace CMPT291_GROUP_PROJECT
             if (employeeRadio.Checked)
             {
                    
-                ths.loadBigForms(new employeeMainPage());
+                ths.loadBigForms(new employeeMainPage(ths));
             }
             //ths.showForms(ths);
             //ths.loadForms(new searchform(ths));
-            ths.loadBigForms(new employeeMainPage());
+            ths.loadBigForms(new employeeMainPage(ths));
             //ths.loadBigForms(new LogInPage(ths));            
         }
 
