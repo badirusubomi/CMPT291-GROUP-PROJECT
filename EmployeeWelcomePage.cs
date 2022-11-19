@@ -71,5 +71,10 @@ namespace CMPT291_GROUP_PROJECT
         {
 
         }
+
+        private void signOut_Click(object sender, EventArgs e)
+        {
+            ths.loadBigForms(new Form1());
+        }
     }
 }

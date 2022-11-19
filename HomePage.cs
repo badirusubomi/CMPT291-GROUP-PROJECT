@@ -159,5 +159,11 @@ namespace CMPT291_GROUP_PROJECT
         {
 
         }
+
+        private void signOut_Click(object sender, EventArgs e)
+        {
+            this.hideForms(this);
+            this.loadBigForms(new Form1());
+        }
     }
 }
