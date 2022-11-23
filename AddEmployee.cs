@@ -33,5 +33,15 @@ namespace CMPT291_GROUP_PROJECT
         {
             Environment.Exit(0);
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
