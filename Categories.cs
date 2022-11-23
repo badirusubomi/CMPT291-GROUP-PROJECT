@@ -21,13 +21,91 @@ namespace CMPT291_GROUP_PROJECT
         {
             ths = frm;
             InitializeComponent();
-            string connectionString = "Data Source=(local);Database=BLOCKBUSTER;Integrated Security=sspi;";
+            //string connectionString = "Data Source=(local);Database=BLOCKBUSTER;Integrated Security=sspi;";
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
+            //Console.WriteLine("Succesfully Connected");
+            //MessageBox.Show("Succesfully Connected");
             try
             {
                 myConnection.Open();
                 myCommand = new SqlCommand();
                 myCommand.Connection = myConnection;
+                Console.WriteLine("Succesfully Connected");
+                MessageBox.Show("Succesfully Connected");
+
+                //Start Queries
+
+                //Action
+                myCommand.CommandText = "select * from Movies where MovieType = 'Action'";
+                try
+                {
+                    myReader = myCommand.ExecuteReader();
+                    actionMovies.Rows.Clear();
+                    while (myReader.Read())
+                    {
+                        actionMovies.Rows.Add(myReader["MovieID"].ToString(), myReader["MovieName"].ToString(), myReader["MovieType"].ToString(), myReader["fee"].ToString(), myReader["MovieRating"].ToString());
+                        //MessageBox.Show(myReader["MovieName"].ToString());
+                    }
+                    myReader.Close();
+                }
+                catch (Exception e3)
+                {
+                    MessageBox.Show(e3.ToString(), "Error");
+                }
+
+                //Drama
+                myCommand.CommandText = "select * from Movies where MovieType = 'Drama'";
+                try
+                {
+                    myReader = myCommand.ExecuteReader();
+                    dramaMovies.Rows.Clear();
+                    while (myReader.Read())
+                    {
+                        dramaMovies.Rows.Add(myReader["MovieID"].ToString(), myReader["MovieName"].ToString(), myReader["MovieType"].ToString(), myReader["fee"].ToString(), myReader["MovieRating"].ToString());
+                        //MessageBox.Show(myReader["MovieName"].ToString());
+                    }
+                    myReader.Close();
+                }
+                catch (Exception e3)
+                {
+                    MessageBox.Show(e3.ToString(), "Error");
+                }
+
+                //Thriller
+                myCommand.CommandText = "select * from Movies where MovieType = 'Thriller'";
+                try
+                {
+                    myReader = myCommand.ExecuteReader();
+                    thrillerMovies.Rows.Clear();
+                    while (myReader.Read())
+                    {
+                        thrillerMovies.Rows.Add(myReader["MovieID"].ToString(), myReader["MovieName"].ToString(), myReader["MovieType"].ToString(), myReader["fee"].ToString(), myReader["MovieRating"].ToString());
+                    }
+                    myReader.Close();
+                }
+                catch (Exception e3)
+                {
+                    MessageBox.Show(e3.ToString(), "Error");
+                }
+
+                //Documentary
+                myCommand.CommandText = "select * from Movies where MovieType = 'Documentary'";
+                try
+                {
+                    myReader = myCommand.ExecuteReader();
+                    documentaryMovies.Rows.Clear();
+                    while (myReader.Read())
+                    {
+                        documentaryMovies.Rows.Add(myReader["MovieID"].ToString(), myReader["MovieName"].ToString(), myReader["MovieType"].ToString(), myReader["fee"].ToString(), myReader["MovieRating"].ToString());
+                    }
+                    myReader.Close();
+                }
+                catch (Exception e3)
+                {
+                    MessageBox.Show(e3.ToString(), "Error");
+                }
+                //End Queries
             }
             catch (Exception ex)
             {
@@ -54,6 +132,7 @@ namespace CMPT291_GROUP_PROJECT
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            /*
             myCommand.CommandText = "select * from Movies where MovieType = 'Action'";
             try
             {
@@ -62,6 +141,7 @@ namespace CMPT291_GROUP_PROJECT
                 while (myReader.Read())
                 {
                     actionMovies.Rows.Add(myReader["MovieID"].ToString(), myReader["MovieName"].ToString(), myReader["MovieType"].ToString(), myReader["fee"].ToString(), myReader["MovieRating"].ToString());
+                    //MessageBox.Show(myReader["MovieName"].ToString());
                 }
                 myReader.Close();
             }
@@ -69,6 +149,7 @@ namespace CMPT291_GROUP_PROJECT
             {
                 MessageBox.Show(e3.ToString(), "Error");
             }
+            */
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -78,6 +159,7 @@ namespace CMPT291_GROUP_PROJECT
 
         private void dramaMovies_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            /*
             myCommand.CommandText = "select * from Movies where MovieType = 'Drama'";
             try
             {
@@ -86,6 +168,7 @@ namespace CMPT291_GROUP_PROJECT
                 while (myReader.Read())
                 {
                     dramaMovies.Rows.Add(myReader["MovieID"].ToString(), myReader["MovieName"].ToString(), myReader["MovieType"].ToString(), myReader["fee"].ToString(), myReader["MovieRating"].ToString());
+                    //MessageBox.Show(myReader["MovieName"].ToString());
                 }
                 myReader.Close();
             }
@@ -93,10 +176,12 @@ namespace CMPT291_GROUP_PROJECT
             {
                 MessageBox.Show(e3.ToString(), "Error");
             }
+            */
         }
 
         private void comedyMovies_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            /*
             myCommand.CommandText = "select * from Movies where MovieType = 'Comedy'";
             try
             {
@@ -105,6 +190,7 @@ namespace CMPT291_GROUP_PROJECT
                 while (myReader.Read())
                 {
                     comedyMovies.Rows.Add(myReader["MovieID"].ToString(), myReader["MovieName"].ToString(), myReader["MovieType"].ToString(), myReader["fee"].ToString(), myReader["MovieRating"].ToString());
+                    //MessageBox.Show(myReader["MovieName"].ToString());
                 }
                 myReader.Close();
             }
@@ -112,10 +198,12 @@ namespace CMPT291_GROUP_PROJECT
             {
                 MessageBox.Show(e3.ToString(), "Error");
             }
+            */
         }
 
         private void documentaryMovies_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            /*
             myCommand.CommandText = "select * from Movies where MovieType = 'Documentary'";
             try
             {
@@ -131,10 +219,12 @@ namespace CMPT291_GROUP_PROJECT
             {
                 MessageBox.Show(e3.ToString(), "Error");
             }
+            */
         }
 
         private void thrillerMovies_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            /*
             myCommand.CommandText = "select * from Movies where MovieType = 'Thriller'";
             try
             {
@@ -150,6 +240,7 @@ namespace CMPT291_GROUP_PROJECT
             {
                 MessageBox.Show(e3.ToString(), "Error");
             }
+            */
         }
     }
 }
