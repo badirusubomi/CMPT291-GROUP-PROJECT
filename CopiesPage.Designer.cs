@@ -51,6 +51,7 @@
             // 
             // RentButton
             // 
+            this.RentButton.ForeColor = System.Drawing.Color.Black;
             this.RentButton.Location = new System.Drawing.Point(757, 467);
             this.RentButton.Name = "RentButton";
             this.RentButton.Size = new System.Drawing.Size(183, 59);

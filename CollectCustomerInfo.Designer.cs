@@ -120,9 +120,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(363, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 50);
+            this.label1.Size = new System.Drawing.Size(400, 50);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Collect Cutomer Info";
+            this.label1.Text = "Collect Customer Info";
             // 
             // panel3
             // 
