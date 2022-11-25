@@ -60,19 +60,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox20 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -92,9 +82,19 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -411,6 +411,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage2.Controls.Add(this.button10);
             this.tabPage2.Controls.Add(this.label30);
             this.tabPage2.Controls.Add(this.textBox20);
@@ -441,144 +442,33 @@
             this.tabPage2.Size = new System.Drawing.Size(1128, 418);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Edit Info";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // button10
             // 
-            this.tabPage3.Controls.Add(this.label20);
-            this.tabPage3.Controls.Add(this.label19);
-            this.tabPage3.Controls.Add(this.label18);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.textBox7);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1128, 418);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Delete Employee";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.button10.Location = new System.Drawing.Point(176, 104);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(94, 29);
+            this.button10.TabIndex = 90;
+            this.button10.Text = "Search";
+            this.button10.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // label30
             // 
-            this.button4.Location = new System.Drawing.Point(537, 299);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
-            this.button4.TabIndex = 60;
-            this.button4.Text = "Delete Employee";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label30.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label30.Location = new System.Drawing.Point(8, 29);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(142, 20);
+            this.label30.TabIndex = 89;
+            this.label30.Text = "Enter Employee ID:";
             // 
-            // label16
+            // textBox20
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(453, 57);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(101, 20);
-            this.label16.TabIndex = 59;
-            this.label16.Text = "Employee ID:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(453, 116);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 20);
-            this.label15.TabIndex = 58;
-            this.label15.Text = "Name:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(453, 171);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(84, 20);
-            this.label14.TabIndex = 57;
-            this.label14.Text = "Start Date:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(453, 237);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 20);
-            this.label13.TabIndex = 56;
-            this.label13.Text = "Email ID:";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(189, 116);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 55;
-            this.button3.Text = "Search";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(21, 41);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(142, 20);
-            this.label8.TabIndex = 54;
-            this.label8.Text = "Enter Employee ID:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(189, 34);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(125, 27);
-            this.textBox7.TabIndex = 53;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(636, 57);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(34, 20);
-            this.label17.TabIndex = 61;
-            this.label17.Text = "text";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(636, 237);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(34, 20);
-            this.label18.TabIndex = 62;
-            this.label18.Text = "text";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(636, 171);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(34, 20);
-            this.label19.TabIndex = 63;
-            this.label19.Text = "text";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(636, 116);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(34, 20);
-            this.label20.TabIndex = 64;
-            this.label20.Text = "text";
+            this.textBox20.Location = new System.Drawing.Point(176, 22);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(125, 27);
+            this.textBox20.TabIndex = 88;
             // 
             // textBox11
             // 
@@ -591,6 +481,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label21.Location = new System.Drawing.Point(558, 345);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(91, 20);
@@ -608,6 +499,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label22.Location = new System.Drawing.Point(622, 76);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(84, 20);
@@ -618,6 +510,7 @@
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.Location = new System.Drawing.Point(862, 181);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(198, 72);
@@ -678,6 +571,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label23.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label23.Location = new System.Drawing.Point(342, 344);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(45, 20);
@@ -688,6 +582,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label24.Location = new System.Drawing.Point(342, 22);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(97, 20);
@@ -698,6 +593,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label25.Location = new System.Drawing.Point(342, 290);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(36, 20);
@@ -708,6 +604,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label26.Location = new System.Drawing.Point(342, 233);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(51, 20);
@@ -718,6 +615,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label27.Location = new System.Drawing.Point(342, 181);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(76, 20);
@@ -728,6 +626,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label28.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label28.Location = new System.Drawing.Point(343, 129);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(47, 20);
@@ -738,37 +637,158 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label29.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label29.Location = new System.Drawing.Point(343, 72);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(86, 20);
             this.label29.TabIndex = 69;
             this.label29.Text = "First Name";
             // 
-            // button10
+            // tabPage3
             // 
-            this.button10.Location = new System.Drawing.Point(176, 104);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(94, 29);
-            this.button10.TabIndex = 90;
-            this.button10.Text = "Search";
-            this.button10.UseVisualStyleBackColor = true;
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage3.Controls.Add(this.label20);
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.label18);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.button4);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.label13);
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.textBox7);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1128, 418);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Delete Employee";
             // 
-            // label30
+            // label20
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label30.Location = new System.Drawing.Point(8, 29);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(142, 20);
-            this.label30.TabIndex = 89;
-            this.label30.Text = "Enter Employee ID:";
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label20.Location = new System.Drawing.Point(636, 116);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(34, 20);
+            this.label20.TabIndex = 64;
+            this.label20.Text = "text";
             // 
-            // textBox20
+            // label19
             // 
-            this.textBox20.Location = new System.Drawing.Point(176, 22);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(125, 27);
-            this.textBox20.TabIndex = 88;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label19.Location = new System.Drawing.Point(636, 171);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(34, 20);
+            this.label19.TabIndex = 63;
+            this.label19.Text = "text";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Location = new System.Drawing.Point(636, 237);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(34, 20);
+            this.label18.TabIndex = 62;
+            this.label18.Text = "text";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(636, 57);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(34, 20);
+            this.label17.TabIndex = 61;
+            this.label17.Text = "text";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(537, 299);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(94, 29);
+            this.button4.TabIndex = 60;
+            this.button4.Text = "Delete Employee";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(453, 57);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(101, 20);
+            this.label16.TabIndex = 59;
+            this.label16.Text = "Employee ID:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(453, 116);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(55, 20);
+            this.label15.TabIndex = 58;
+            this.label15.Text = "Name:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(453, 171);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(84, 20);
+            this.label14.TabIndex = 57;
+            this.label14.Text = "Start Date:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(453, 237);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 20);
+            this.label13.TabIndex = 56;
+            this.label13.Text = "Email ID:";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(189, 116);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 29);
+            this.button3.TabIndex = 55;
+            this.button3.Text = "Search";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(21, 41);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(142, 20);
+            this.label8.TabIndex = 54;
+            this.label8.Text = "Enter Employee ID:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(189, 34);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(125, 27);
+            this.textBox7.TabIndex = 53;
             // 
             // AddEmployee
             // 
