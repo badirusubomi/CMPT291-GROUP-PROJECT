@@ -43,5 +43,10 @@ namespace CMPT291_GROUP_PROJECT
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
