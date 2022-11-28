@@ -1,3 +1,5 @@
+USE [BLOCKBUSTER]
+
 CREATE TABLE AccType(
 PlanID int NOT NULL PRIMARY KEY,
 PlanName varchar(20),
@@ -42,6 +44,7 @@ MovieID int NOT NULL PRIMARY KEY,
 Title varchar(80),
 Genre varchar(80),
 Fee int,
+Year int,
 MovieRating int
 )
 
