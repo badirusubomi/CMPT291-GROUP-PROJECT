@@ -2,12 +2,55 @@ namespace CMPT291_GROUP_PROJECT
 {
     public partial class Form1 : Form
     {
+        //properties
+        private User _appUser;
+
+       
+        
+        /*  SQL connection code
+         * 
+         * 
+         * 
+         * string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            SqlConnection myConnection = new SqlConnection(connectionString);
+            //Console.WriteLine("Succesfully Connected");
+            //MessageBox.Show("Succesfully Connected");
+            try
+            {
+                myConnection.Open();
+                myCommand = new SqlCommand();
+                myCommand.Connection = myConnection;
+
+                //Start Queries
+                myCommand.CommandText = $"select * from Order where Order.AccountID = {frm}";
+                try
+                {
+                    myReader = myCommand.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        //MessageBox.Show(myReader["MovieName"].ToString());
+                    }
+                    myReader.Close();
+                }
+                catch (Exception e3)
+                {
+                    MessageBox.Show(e3.ToString(), "Error");
+                }
+                //End Queries
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+            }
+         * */
+        
         public Form1()
         {
             InitializeComponent();
             sidePanel.Height = button2.Height;
             sidePanel.Top = button2.Top;
             sidePanel.Hide();
+            _appUser = new User();
             /*this.panel1.Hide();
             this.panel2.Hide();
             this.panel3.Hide();
@@ -24,6 +67,18 @@ namespace CMPT291_GROUP_PROJECT
             hideForms(this);
             this.loadBigForms(new LogInPage(this));
         }
+        public User AppUser
+        {
+            get
+            {
+                return _appUser;
+            }
+            set
+            {
+                _appUser = value;
+            }
+        }
+        
         public void hideForms(object Form)
         {
             this.panel1.Hide();

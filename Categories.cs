@@ -243,5 +243,10 @@ namespace CMPT291_GROUP_PROJECT
             }
             */
         }
+
+        private void Categories_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
