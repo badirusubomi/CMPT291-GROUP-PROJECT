@@ -272,6 +272,7 @@
             this.titleBox.Name = "titleBox";
             this.titleBox.Size = new System.Drawing.Size(317, 27);
             this.titleBox.TabIndex = 1;
+            this.titleBox.TextChanged += new System.EventHandler(this.titleBox_TextChanged);
             // 
             // label1
             // 
