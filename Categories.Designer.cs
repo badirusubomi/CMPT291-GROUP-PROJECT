@@ -497,6 +497,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Categories";
             this.Text = "Categories";
+            this.Load += new System.EventHandler(this.Categories_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
