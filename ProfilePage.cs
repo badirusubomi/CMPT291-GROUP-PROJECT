@@ -24,7 +24,7 @@ namespace CMPT291_GROUP_PROJECT
             string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");
-            //MessageBox.Show("Succesfully Connected");
+            MessageBox.Show($"Username: {ths.AppUser._email}");
             try
             {
                 myConnection.Open();
@@ -32,16 +32,40 @@ namespace CMPT291_GROUP_PROJECT
                 myCommand.Connection = myConnection;
 
                 //Start Queries
-                myCommand.CommandText = $"select * from Order where Order.AccountID = {ths.AppUser.ID}";
+                /*   Get Orders
+                myCommand.CommandText = $"select * from Order where Order.AccountID = '{ths.AppUser._email}'";
                 try
                 {
                     myReader = myCommand.ExecuteReader();
                     while (myReader.Read())
                     {
-                        orderHistory.Rows.Add(myReader["MovieID"].ToString(), myReader["MovieName"].ToString(), myReader["MovieType"].ToString(), myReader["fee"].ToString(), myReader["MovieRating"].ToString());
+                        continue;
+                        //orderHistory.Rows.Add(myReader["MovieID"].ToString(), myReader["MovieName"].ToString(), myReader["MovieType"].ToString(), myReader["fee"].ToString(), myReader["MovieRating"].ToString());
 
                         //MessageBox.Show(myReader["MovieName"].ToString());
                     }
+                    myReader.Close();
+                }
+                catch (Exception e3)
+                {
+                    MessageBox.Show(e3.ToString(), "Error");
+                }
+                */
+
+                //Add Customer info to account info page
+                myCommand.CommandText = $"select * from Customer where Customer.email = '{ths.AppUser._email}'";
+                myReader = myCommand.ExecuteReader();
+                try
+                {
+                    myReader.Read();
+                    customerID.Text = $"{myReader["CustomerID"]}".Trim();
+                    accountType.Text = $"{myReader["PlanID"]}";
+                    Address.Text = $"{myReader["Street"]} {myReader["City"]} {myReader["Province"]}";
+                    gender.Text = myReader["Gender"].ToString();
+                    email.Text = myReader["email"].ToString();
+                    accountCreationDate.Text = myReader["CreationDate"].ToString();
+                    balance.Text = myReader["FName"].ToString().Trim() + " " + myReader["LName"].ToString().Trim();
+
                     myReader.Close();
                 }
                 catch (Exception e3)
@@ -79,6 +103,16 @@ namespace CMPT291_GROUP_PROJECT
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void accountType_Click(object sender, EventArgs e)
         {
 
         }

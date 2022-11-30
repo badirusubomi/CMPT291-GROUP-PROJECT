@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesReport));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button9 = new System.Windows.Forms.Button();
@@ -39,12 +40,34 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.EmployeeData = new System.Windows.Forms.DataGridView();
+            this.EmployeeID = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EmployeeName = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EmployeeEmails = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EmployeeAddress = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EmployeeGender = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EmployeeWage = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.CustomerData = new System.Windows.Forms.DataGridView();
+            this.dataGridViewButtonColumn3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.AccountType = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Address = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
+            this.clientEmails = new System.Windows.Forms.DataGridView();
+            this.CustomerNames = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.CustomerEmails = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.CustomerID = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeData)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerData)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientEmails)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -59,15 +82,26 @@
             this.panel3.Controls.Add(this.button6);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1115, 131);
+            this.panel3.Size = new System.Drawing.Size(976, 98);
             this.panel3.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(435, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 15);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Reports";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(989, 79);
+            this.button1.Location = new System.Drawing.Point(865, 59);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(82, 22);
             this.button1.TabIndex = 2;
             this.button1.Text = "back";
             this.button1.UseVisualStyleBackColor = true;
@@ -77,8 +111,9 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(155, 98);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -89,9 +124,10 @@
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(1011, 9);
+            this.button9.Location = new System.Drawing.Point(885, 7);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(43, 54);
+            this.button9.Size = new System.Drawing.Size(38, 40);
             this.button9.TabIndex = 0;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -102,9 +138,10 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(913, 9);
+            this.button8.Location = new System.Drawing.Point(799, 7);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(43, 54);
+            this.button8.Size = new System.Drawing.Size(38, 40);
             this.button8.TabIndex = 0;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -115,9 +152,10 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(962, 9);
+            this.button7.Location = new System.Drawing.Point(842, 7);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(43, 54);
+            this.button7.Size = new System.Drawing.Size(38, 40);
             this.button7.TabIndex = 0;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -128,9 +166,10 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(1060, 9);
+            this.button6.Location = new System.Drawing.Point(928, 7);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(43, 54);
+            this.button6.Size = new System.Drawing.Size(38, 40);
             this.button6.TabIndex = 0;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -141,68 +180,196 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(119, 137);
+            this.tabControl1.Location = new System.Drawing.Point(104, 103);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(762, 402);
+            this.tabControl1.Size = new System.Drawing.Size(667, 302);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(754, 369);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(659, 274);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sales";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Controls.Add(this.EmployeeData);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(754, 369);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(659, 274);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Employee";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // EmployeeData
+            // 
+            this.EmployeeData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.EmployeeData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmployeeData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EmployeeID,
+            this.EmployeeName,
+            this.EmployeeEmails,
+            this.EmployeeAddress,
+            this.EmployeeGender,
+            this.EmployeeWage});
+            this.EmployeeData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeeData.Location = new System.Drawing.Point(3, 2);
+            this.EmployeeData.MultiSelect = false;
+            this.EmployeeData.Name = "EmployeeData";
+            this.EmployeeData.RowTemplate.Height = 25;
+            this.EmployeeData.Size = new System.Drawing.Size(653, 270);
+            this.EmployeeData.TabIndex = 0;
+            // 
+            // EmployeeID
+            // 
+            this.EmployeeID.HeaderText = "Employee ID";
+            this.EmployeeID.Name = "EmployeeID";
+            // 
+            // EmployeeName
+            // 
+            this.EmployeeName.HeaderText = "Names";
+            this.EmployeeName.Name = "EmployeeName";
+            this.EmployeeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // EmployeeEmails
+            // 
+            this.EmployeeEmails.HeaderText = "Emails";
+            this.EmployeeEmails.Name = "EmployeeEmails";
+            // 
+            // EmployeeAddress
+            // 
+            this.EmployeeAddress.HeaderText = "Address";
+            this.EmployeeAddress.Name = "EmployeeAddress";
+            // 
+            // EmployeeGender
+            // 
+            this.EmployeeGender.HeaderText = "Gender";
+            this.EmployeeGender.Name = "EmployeeGender";
+            // 
+            // EmployeeWage
+            // 
+            this.EmployeeWage.HeaderText = "Wage";
+            this.EmployeeWage.Name = "EmployeeWage";
+            // 
             // tabPage3
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Controls.Add(this.CustomerData);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(754, 369);
+            this.tabPage3.Size = new System.Drawing.Size(659, 274);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Customers";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // CustomerData
+            // 
+            this.CustomerData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CustomerData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.CustomerData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CustomerData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewButtonColumn3,
+            this.dataGridViewButtonColumn1,
+            this.AccountType,
+            this.Address,
+            this.dataGridViewButtonColumn2});
+            this.CustomerData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomerData.Location = new System.Drawing.Point(0, 0);
+            this.CustomerData.MultiSelect = false;
+            this.CustomerData.Name = "CustomerData";
+            this.CustomerData.RowTemplate.Height = 25;
+            this.CustomerData.Size = new System.Drawing.Size(659, 274);
+            this.CustomerData.TabIndex = 1;
+            this.CustomerData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // dataGridViewButtonColumn3
+            // 
+            this.dataGridViewButtonColumn3.HeaderText = "CID";
+            this.dataGridViewButtonColumn3.Name = "dataGridViewButtonColumn3";
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.HeaderText = "Customer Names";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            // 
+            // AccountType
+            // 
+            this.AccountType.HeaderText = "Account Type";
+            this.AccountType.Name = "AccountType";
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            // 
+            // dataGridViewButtonColumn2
+            // 
+            this.dataGridViewButtonColumn2.HeaderText = "Emails";
+            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            // 
             // tabPage4
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Controls.Add(this.clientEmails);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(754, 369);
+            this.tabPage4.Size = new System.Drawing.Size(659, 274);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Emails";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // clientEmails
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(497, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Reports";
+            this.clientEmails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.clientEmails.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.clientEmails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientEmails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CustomerNames,
+            this.CustomerEmails,
+            this.CustomerID});
+            this.clientEmails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clientEmails.Location = new System.Drawing.Point(0, 0);
+            this.clientEmails.MultiSelect = false;
+            this.clientEmails.Name = "clientEmails";
+            this.clientEmails.RowTemplate.Height = 25;
+            this.clientEmails.Size = new System.Drawing.Size(659, 274);
+            this.clientEmails.TabIndex = 0;
+            // 
+            // CustomerNames
+            // 
+            this.CustomerNames.HeaderText = "Customer Names";
+            this.CustomerNames.Name = "CustomerNames";
+            // 
+            // CustomerEmails
+            // 
+            this.CustomerEmails.HeaderText = "Emails";
+            this.CustomerEmails.Name = "CustomerEmails";
+            // 
+            // CustomerID
+            // 
+            this.CustomerID.HeaderText = "CID";
+            this.CustomerID.Name = "CustomerID";
             // 
             // SalesReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 551);
+            this.ClientSize = new System.Drawing.Size(976, 413);
             this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SalesReport";
             this.Text = "SalesReport";
             this.Load += new System.EventHandler(this.SalesReport_Load);
@@ -210,6 +377,12 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeData)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerData)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.clientEmails)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,5 +402,22 @@
         private Button button6;
         private Button button1;
         private Label label1;
+        private DataGridView EmployeeData;
+        private DataGridView CustomerData;
+        private DataGridViewButtonColumn dataGridViewButtonColumn3;
+        private DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private DataGridViewButtonColumn AccountType;
+        private DataGridViewButtonColumn Address;
+        private DataGridViewButtonColumn dataGridViewButtonColumn2;
+        private DataGridView clientEmails;
+        private DataGridViewButtonColumn CustomerNames;
+        private DataGridViewButtonColumn CustomerEmails;
+        private DataGridViewButtonColumn CustomerID;
+        private DataGridViewButtonColumn EmployeeID;
+        private DataGridViewButtonColumn EmployeeName;
+        private DataGridViewButtonColumn EmployeeEmails;
+        private DataGridViewButtonColumn EmployeeAddress;
+        private DataGridViewButtonColumn EmployeeGender;
+        private DataGridViewButtonColumn EmployeeWage;
     }
 }

@@ -67,7 +67,7 @@ namespace CMPT291_GROUP_PROJECT
                         {
                             logIncheck = true;
                             ths.AppUser.ID = Int32.Parse(myReader["EID"].ToString());
-                            MessageBox.Show($"Email: {ths.AppUser._email}\nCorrect Password: {tempPassword}\nID: {ths.AppUser.ID}"); //Dev.check
+                            //MessageBox.Show($"Email: {ths.AppUser._email}\nCorrect Password: {tempPassword}\nID: {ths.AppUser.ID}"); //Dev.check
                         }
                     }
                     myReader.Close();
@@ -95,7 +95,7 @@ namespace CMPT291_GROUP_PROJECT
                         {
                             logIncheck = true;
                             ths.AppUser.ID = Int32.Parse(myReader["CID"].ToString());
-                            MessageBox.Show($"Email: {ths.AppUser._email}\nCorrect Password: {tempPassword}\nID: {ths.AppUser.ID}"); //Dev.check
+                            //MessageBox.Show($"Email: {ths.AppUser._email}\nCorrect Password: {tempPassword}\nID: {ths.AppUser.ID}"); //Dev.check
                         }
                         //MessageBox.Show(myReader["MovieName"].ToString());
                     }

@@ -40,25 +40,31 @@
             this.button6 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.balance = new System.Windows.Forms.Label();
+            this.gender = new System.Windows.Forms.Label();
+            this.email = new System.Windows.Forms.Label();
+            this.password = new System.Windows.Forms.Label();
+            this.Address = new System.Windows.Forms.Label();
+            this.accountCreationDate = new System.Windows.Forms.Label();
+            this.accountType = new System.Windows.Forms.Label();
+            this.customerID = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.orderHistory = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.customerID = new System.Windows.Forms.Label();
-            this.accountType = new System.Windows.Forms.Label();
-            this.accountCreationDate = new System.Windows.Forms.Label();
-            this.Address = new System.Windows.Forms.Label();
-            this.password = new System.Windows.Forms.Label();
-            this.email = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.balance = new System.Windows.Forms.Label();
+            this.orderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CopyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rentFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,6 +111,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(960, 98);
             this.panel3.TabIndex = 9;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button1
             // 
@@ -185,16 +192,16 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(85, 171);
+            this.tabControl1.Location = new System.Drawing.Point(37, 149);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(774, 195);
+            this.tabControl1.Size = new System.Drawing.Size(894, 217);
             this.tabControl1.TabIndex = 11;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.balance);
-            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.gender);
             this.tabPage1.Controls.Add(this.email);
             this.tabPage1.Controls.Add(this.password);
             this.tabPage1.Controls.Add(this.Address);
@@ -213,50 +220,130 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(766, 167);
+            this.tabPage1.Size = new System.Drawing.Size(886, 189);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Account Info";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage2
+            // balance
             // 
-            this.tabPage2.Controls.Add(this.orderHistory);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(766, 167);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Order History";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.balance.AutoSize = true;
+            this.balance.Location = new System.Drawing.Point(144, 91);
+            this.balance.Name = "balance";
+            this.balance.Size = new System.Drawing.Size(0, 15);
+            this.balance.TabIndex = 1;
             // 
-            // orderHistory
+            // gender
             // 
-            this.orderHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.orderHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orderHistory.Location = new System.Drawing.Point(3, 3);
-            this.orderHistory.Name = "orderHistory";
-            this.orderHistory.Size = new System.Drawing.Size(760, 161);
-            this.orderHistory.TabIndex = 0;
-            this.orderHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.gender.AutoSize = true;
+            this.gender.Location = new System.Drawing.Point(144, 122);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(0, 15);
+            this.gender.TabIndex = 1;
             // 
-            // label2
+            // email
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Account ID:";
+            this.email.AutoSize = true;
+            this.email.Location = new System.Drawing.Point(485, 122);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(0, 15);
+            this.email.TabIndex = 1;
             // 
-            // label3
+            // password
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Account Type:";
+            this.password.AutoSize = true;
+            this.password.Location = new System.Drawing.Point(485, 91);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(0, 15);
+            this.password.TabIndex = 1;
+            // 
+            // Address
+            // 
+            this.Address.AutoSize = true;
+            this.Address.Location = new System.Drawing.Point(485, 21);
+            this.Address.Name = "Address";
+            this.Address.Size = new System.Drawing.Size(0, 15);
+            this.Address.TabIndex = 1;
+            // 
+            // accountCreationDate
+            // 
+            this.accountCreationDate.AutoSize = true;
+            this.accountCreationDate.Location = new System.Drawing.Point(485, 54);
+            this.accountCreationDate.Name = "accountCreationDate";
+            this.accountCreationDate.Size = new System.Drawing.Size(0, 15);
+            this.accountCreationDate.TabIndex = 1;
+            // 
+            // accountType
+            // 
+            this.accountType.AutoSize = true;
+            this.accountType.Location = new System.Drawing.Point(144, 54);
+            this.accountType.Name = "accountType";
+            this.accountType.Size = new System.Drawing.Size(0, 15);
+            this.accountType.TabIndex = 1;
+            this.accountType.Click += new System.EventHandler(this.accountType_Click);
+            // 
+            // customerID
+            // 
+            this.customerID.AutoSize = true;
+            this.customerID.Location = new System.Drawing.Point(144, 21);
+            this.customerID.Name = "customerID";
+            this.customerID.Size = new System.Drawing.Size(0, 15);
+            this.customerID.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(373, 122);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 15);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "email:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(373, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 15);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Address:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(373, 54);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(97, 15);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Account created:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(373, 91);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 15);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Password";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(373, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 15);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "label2";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(28, 91);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 15);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Name:";
             // 
             // label4
             // 
@@ -268,131 +355,82 @@
             this.label4.Text = "Gender:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 15);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Balance:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(28, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Account Type:";
             // 
-            // label6
+            // label2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(373, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 15);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "label2";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Account ID:";
             // 
-            // label7
+            // tabPage2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(373, 91);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 15);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Password";
+            this.tabPage2.Controls.Add(this.orderHistory);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(886, 189);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Order History";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // orderHistory
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(373, 54);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 15);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Account created:";
+            this.orderHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.orderHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orderHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.orderID,
+            this.CopyID,
+            this.MovieTitle,
+            this.rentFrom,
+            this.dateTo,
+            this.Status});
+            this.orderHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderHistory.Location = new System.Drawing.Point(3, 3);
+            this.orderHistory.Name = "orderHistory";
+            this.orderHistory.Size = new System.Drawing.Size(880, 183);
+            this.orderHistory.TabIndex = 0;
+            this.orderHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // label9
+            // orderID
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(373, 21);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Address:";
+            this.orderID.HeaderText = "Order ID";
+            this.orderID.Name = "orderID";
             // 
-            // label10
+            // CopyID
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(373, 122);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 15);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "email:";
+            this.CopyID.HeaderText = "Copy ID";
+            this.CopyID.Name = "CopyID";
             // 
-            // customerID
+            // MovieTitle
             // 
-            this.customerID.AutoSize = true;
-            this.customerID.Location = new System.Drawing.Point(144, 21);
-            this.customerID.Name = "customerID";
-            this.customerID.Size = new System.Drawing.Size(44, 15);
-            this.customerID.TabIndex = 1;
-            this.customerID.Text = "label11";
+            this.MovieTitle.HeaderText = "Movie TItle";
+            this.MovieTitle.Name = "MovieTitle";
             // 
-            // accountType
+            // rentFrom
             // 
-            this.accountType.AutoSize = true;
-            this.accountType.Location = new System.Drawing.Point(144, 54);
-            this.accountType.Name = "accountType";
-            this.accountType.Size = new System.Drawing.Size(44, 15);
-            this.accountType.TabIndex = 1;
-            this.accountType.Text = "label11";
+            this.rentFrom.HeaderText = "Rent Date";
+            this.rentFrom.Name = "rentFrom";
             // 
-            // accountCreationDate
+            // dateTo
             // 
-            this.accountCreationDate.AutoSize = true;
-            this.accountCreationDate.Location = new System.Drawing.Point(485, 54);
-            this.accountCreationDate.Name = "accountCreationDate";
-            this.accountCreationDate.Size = new System.Drawing.Size(44, 15);
-            this.accountCreationDate.TabIndex = 1;
-            this.accountCreationDate.Text = "label11";
+            this.dateTo.HeaderText = "Return Date";
+            this.dateTo.Name = "dateTo";
             // 
-            // Address
+            // Status
             // 
-            this.Address.AutoSize = true;
-            this.Address.Location = new System.Drawing.Point(485, 21);
-            this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(44, 15);
-            this.Address.TabIndex = 1;
-            this.Address.Text = "label11";
-            // 
-            // password
-            // 
-            this.password.AutoSize = true;
-            this.password.Location = new System.Drawing.Point(485, 91);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(44, 15);
-            this.password.TabIndex = 1;
-            this.password.Text = "label11";
-            // 
-            // email
-            // 
-            this.email.AutoSize = true;
-            this.email.Location = new System.Drawing.Point(485, 122);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(44, 15);
-            this.email.TabIndex = 1;
-            this.email.Text = "label11";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(144, 122);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(44, 15);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "label11";
-            // 
-            // balance
-            // 
-            this.balance.AutoSize = true;
-            this.balance.Location = new System.Drawing.Point(144, 91);
-            this.balance.Name = "balance";
-            this.balance.Size = new System.Drawing.Size(44, 15);
-            this.balance.TabIndex = 1;
-            this.balance.Text = "label11";
+            this.Status.HeaderText = "Order Status";
+            this.Status.Name = "Status";
             // 
             // ProfilePage
             // 
@@ -445,12 +483,18 @@
         private Label label3;
         private Label label2;
         private Label balance;
-        private Label label17;
+        private Label gender;
         private Label email;
         private Label password;
         private Label Address;
         private Label accountCreationDate;
         private Label accountType;
         private Label customerID;
+        private DataGridViewTextBoxColumn orderID;
+        private DataGridViewTextBoxColumn CopyID;
+        private DataGridViewTextBoxColumn MovieTitle;
+        private DataGridViewTextBoxColumn rentFrom;
+        private DataGridViewTextBoxColumn dateTo;
+        private DataGridViewButtonColumn Status;
     }
 }
