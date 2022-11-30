@@ -53,7 +53,7 @@ CREATE TABLE Copies(
 CopyID int NOT NULL PRIMARY KEY,
 MovieID int NOT NULL FOREIGN KEY REFERENCES Movies(MovieID),
 CopyType char(20),
-OrderStatus char(10)
+OrderStatus int
 )
 
 
