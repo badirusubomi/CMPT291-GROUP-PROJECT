@@ -46,8 +46,8 @@ namespace CMPT291_GROUP_PROJECT
                     while (myReader.Read())
                     {
                         actionMovies.Rows.Add(myReader["MovieID"].ToString(), myReader["Title"].ToString(),
-                                                   myReader["Genre"].ToString(), myReader["Fee"].ToString(),
-                                                   myReader["Year"].ToString(), myReader["MovieRating"].ToString());
+                                              myReader["Genre"].ToString(), myReader["Fee"].ToString(),
+                                              myReader["ReleaseYear"].ToString(), myReader["MovieRating"].ToString());
                     }
                     myReader.Close();
                 }
@@ -66,7 +66,7 @@ namespace CMPT291_GROUP_PROJECT
                     {
                         dramaMovies.Rows.Add(myReader["MovieID"].ToString(), myReader["Title"].ToString(),
                                                    myReader["Genre"].ToString(), myReader["Fee"].ToString(),
-                                                   myReader["Year"].ToString(), myReader["MovieRating"].ToString());
+                                                   myReader["ReleaseYear"].ToString(), myReader["MovieRating"].ToString());
                         //MessageBox.Show(myReader["MovieName"].ToString());
                     }
                     myReader.Close();
@@ -86,7 +86,7 @@ namespace CMPT291_GROUP_PROJECT
                     {
                         thrillerMovies.Rows.Add(myReader["MovieID"].ToString(), myReader["Title"].ToString(),
                                                    myReader["Genre"].ToString(), myReader["Fee"].ToString(),
-                                                   myReader["Year"].ToString(), myReader["MovieRating"].ToString());
+                                                   myReader["ReleaseYear"].ToString(), myReader["MovieRating"].ToString());
                     }
                     myReader.Close();
                 }
@@ -105,7 +105,7 @@ namespace CMPT291_GROUP_PROJECT
                     {
                         documentaryMovies.Rows.Add(myReader["MovieID"].ToString(), myReader["Title"].ToString(), 
                                                    myReader["Genre"].ToString(), myReader["Fee"].ToString(), 
-                                                   myReader["Year"].ToString() ,myReader["MovieRating"].ToString());
+                                                   myReader["ReleaseYear"].ToString() ,myReader["MovieRating"].ToString());
                     }
                     myReader.Close();
                 }

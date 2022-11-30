@@ -45,14 +45,15 @@ MovieID int NOT NULL PRIMARY KEY,
 Title varchar(80),
 Genre varchar(80),
 Fee int,
-MovieRating int
+MovieRating int,
+ReleaseYear int;
 )
 
 CREATE TABLE Copies(
 CopyID int NOT NULL PRIMARY KEY,
 MovieID int NOT NULL FOREIGN KEY REFERENCES Movies(MovieID),
 CopyType char(20),
-OrderStatus char(10)
+OrderStatus int
 )
 
 
@@ -77,5 +78,6 @@ EmployeeID int NOT NULL FOREIGN KEY REFERENCES Employee(EmployeeID),
 CopyID int NOT NULL FOREIGN KEY REFERENCES Copies(CopyID),
 MovieID int NOT NULL FOREIGN KEY REFERENCES Movies(MovieID),
 DateFrom DATE,
-DateTo DATE)
+DateTo DATE,
+OrderStatus int)
 

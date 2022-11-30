@@ -24,7 +24,7 @@ namespace CMPT291_GROUP_PROJECT
             string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");
-            MessageBox.Show($"Username: {ths.AppUser._email}");
+            //MessageBox.Show($"Username: {ths.AppUser._email}");   Dev. Check
             try
             {
                 myConnection.Open();

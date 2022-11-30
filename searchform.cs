@@ -28,7 +28,29 @@ namespace CMPT291_GROUP_PROJECT
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string query = "";
+            if (title.Checked)
+            {
+                query += $"intersect (select * from Movies where Title = '{titleBox.Text}')";
+            }
+            if (year.Checked)
+            {
+                query += $"intersect (select * from Movies where ReleaseYear = {yearBox.Text})";
+            }
+            if (genre.Checked)
+            {
+                query += $"intersect (select * from Movies where genre = '{genreComboBox.Text}')";
+            }
+            if (actor.Checked)
+            {
+                query += $"intersect (select M.Title from (select concat(A1.FName,' ' ,A1.LName) " +
+                        $"as ActorName, A1.ActorID from Actors as A1) as T, Movies as M, Acts_In " +
+                        $"as AI where M.MoviesID = AI.MovieID AND T.ActorID = AI.ActorID and T.ActorName " +
+                        $"like {actorBox.Text})";
+            }
+            ths.AppUser._query = query.Remove(0,9);
             ths.loadForms(new searchResultForm(ths));
+
         }
         private int checkCounter;
 
@@ -44,7 +66,7 @@ namespace CMPT291_GROUP_PROJECT
             // prevent checking
             if (checkCounter == 3)
             {
-                MessageBox.Show("YOU ARE EVIL", "Bad");
+                MessageBox.Show("Max 2 options:", "Please select 2 search option only");
                 box.Checked = false;
             }
 

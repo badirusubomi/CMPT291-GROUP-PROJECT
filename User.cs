@@ -17,6 +17,7 @@ namespace CMPT291_GROUP_PROJECT
         public string _address;
         //private  List<string> _phoneNumbers;
         public string _email;
+        public string _query;
 
         public User()
         {
@@ -25,6 +26,17 @@ namespace CMPT291_GROUP_PROJECT
 
         }
 
+        public string query
+        {
+            get
+            {
+                return _query;
+            }
+            set
+            {
+                _query = value;
+            }
+        }
         public int ID
         {
             get

@@ -65,10 +65,8 @@ from Movies
 where Title like '%keyowrd%'
 
 /*Movies available starring a particular actor or group of actors*/
+select M.Title from 
 (select concat(A1.FName,' ' ,A1.LName) as ActorName, A1.ActorID
-from Actors as A1) as Temp1
-
-select M.Title 
-from Movies as M, Temp1 as T and Acts_In as AI
+from Actors as A1) as T, Movies as M, Acts_In as AI
 where M.MoviesID = AI.MovieID AND T.ActorID = AI.ActorID and T.ActorName like '%key%'
 

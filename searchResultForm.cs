@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,49 @@ namespace CMPT291_GROUP_PROJECT
 {
     public partial class searchResultForm : Form
     {
+        public SqlConnection myConnection;
+        public SqlCommand myCommand;
+        public SqlDataReader myReader;
         Form1 ths;
         public searchResultForm(Form1 frm)
         {
             InitializeComponent();
             ths = frm;
             SelectMovie.Click += new EventHandler(SelectMovie_Click);
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            SqlConnection myConnection = new SqlConnection(connectionString);
+            //Console.WriteLine("Succesfully Connected");
+            //MessageBox.Show("Succesfully Connected");
+            try
+            {
+                myConnection.Open();
+                myCommand = new SqlCommand();
+                myCommand.Connection = myConnection;
+                //MessageBox.Show($"Query: {ths.AppUser._query}");
+                //Start Queries
+                myCommand.CommandText = ths.AppUser._query;
+                try
+                {
+                    myReader = myCommand.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        searchResult.Rows.Add(myReader["MovieID"].ToString(), myReader["Title"].ToString(), 
+                                              myReader["Genre"].ToString(), myReader["ReleaseYear"].ToString(), 
+                                              myReader["Fee"].ToString(), myReader["MovieRating"]);
+
+                    }
+                    myReader.Close();
+                }
+                catch (Exception e3)
+                {
+                    MessageBox.Show(e3.ToString(), "Error");
+                }
+                //End Queries
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+            }
         }
 
         private void searchResultForm_Load(object sender, EventArgs e)
