@@ -46,7 +46,7 @@ Title varchar(80),
 Genre varchar(80),
 Fee int,
 MovieRating int,
-ReleaseYear int;
+ReleaseYear int
 )
 
 CREATE TABLE Copies(
