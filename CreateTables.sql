@@ -18,7 +18,7 @@ Province varchar(40),
 ZipCode varchar(40),
 CreationDate DATE,
 ExpiryDate DATE,
-CreditCardNo int,
+CreditCardNo varchar,
 PlanID int NOT NULL FOREIGN KEY REFERENCES AccType(PlanID),
 Passwords varchar(40),
 inHand int
