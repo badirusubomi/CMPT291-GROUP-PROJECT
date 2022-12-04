@@ -55,4 +55,11 @@ Insert into Copies values (01, 5, 'DVD', 1);
 Insert into Copies values (02, 5, 'Blu-Ray', 1);
 Insert into Copies values (03, 5, 'VHS', 1);
 
-select * from Employee;
+
+Insert into Orders values (1, 1, 1, 01, 1, '2008-11-11', '2008-11-30', 0);
+Insert into Orders values (2, 1, 1, 01, 2, '2008-11-11', '2022-11-11', 0);
+Insert into Orders values (3, 1, 1, 01, 3, '2008-11-11', '2008-11-30', 0);
+
+select * from Orders;
+select Customer.CustomerID as ID from Customer where Customer.email = 'elhajjm@macewan.ca'
+select * from Orders, Movies where Orders.MovieID = Movies.MovieID and Orders.CustomerID = 1;

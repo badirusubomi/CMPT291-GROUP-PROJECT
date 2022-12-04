@@ -18,6 +18,8 @@ namespace CMPT291_GROUP_PROJECT
         //private  List<string> _phoneNumbers;
         public string _email;
         public string _query;
+        public string _selectMovie;
+        public string _selectTitle;
 
         public User()
         {
@@ -35,6 +37,30 @@ namespace CMPT291_GROUP_PROJECT
             set
             {
                 _query = value;
+            }
+        }
+        
+        public string selectMovie
+        {
+            get
+            {
+                return _selectMovie;
+            }
+            set
+            {
+                _selectMovie = value;
+            }
+        }
+
+        public string selectTitle
+        {
+            get
+            {
+                return _selectTitle;
+            }
+            set
+            {
+                _selectTitle = value;
             }
         }
         public int ID

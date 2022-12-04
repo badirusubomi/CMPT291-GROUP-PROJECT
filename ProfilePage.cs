@@ -32,17 +32,28 @@ namespace CMPT291_GROUP_PROJECT
                 myCommand.Connection = myConnection;
 
                 //Start Queries
-                /*   Get Orders
-                myCommand.CommandText = $"select * from Order where Order.AccountID = '{ths.AppUser._email}'";
+                //Get Orders
+                myCommand.CommandText = $"select Customer.CustomerID as ID from Customer where Customer.email = '{ths.AppUser._email}'";
+                //MessageBox.Show(ths.AppUser._email.ToString());
+                
+                myReader = myCommand.ExecuteReader();
+                myReader.Read();
+                string accountID = myReader["ID"].ToString();
+                //MessageBox.Show(accountID);
+                myReader.Close();
+                
+
+                myCommand.CommandText = $"select * from Orders, Movies where Orders.MovieID = Movies.MovieID and Orders.CustomerID = {accountID}";
                 try
                 {
                     myReader = myCommand.ExecuteReader();
                     while (myReader.Read())
                     {
-                        continue;
-                        //orderHistory.Rows.Add(myReader["MovieID"].ToString(), myReader["MovieName"].ToString(), myReader["MovieType"].ToString(), myReader["fee"].ToString(), myReader["MovieRating"].ToString());
+                        
+                        orderHistory.Rows.Add(myReader["OrderID"].ToString(), myReader["CopyID"].ToString(), myReader["Title"].ToString(), 
+                                              myReader["DateFrom"].ToString(), myReader["DateTo"].ToString(), myReader["OrderStatus"].ToString());
 
-                        //MessageBox.Show(myReader["MovieName"].ToString());
+                        //MessageBox.Show(myReader["Title"].ToString());
                     }
                     myReader.Close();
                 }
@@ -50,7 +61,7 @@ namespace CMPT291_GROUP_PROJECT
                 {
                     MessageBox.Show(e3.ToString(), "Error");
                 }
-                */
+                
 
                 //Add Customer info to account info page
                 myCommand.CommandText = $"select * from Customer where Customer.email = '{ths.AppUser._email}'";

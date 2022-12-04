@@ -21,6 +21,7 @@ namespace CMPT291_GROUP_PROJECT
         {
             InitializeComponent();
             ths = frm;
+            SelectMovie.Hide();
             SelectMovie.Click += new EventHandler(SelectMovie_Click);
             string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
@@ -66,6 +67,18 @@ namespace CMPT291_GROUP_PROJECT
         private void SelectMovie_Click(object sender, EventArgs e)
         {
             ths.loadForms(new PresentCopies(ths));
+        }
+
+        private void searchResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (searchResult.Columns[e.ColumnIndex].Name == "ID")
+            {
+                ths.AppUser._selectMovie = searchResult.CurrentCell.Value.ToString();
+                ths.AppUser._selectTitle = searchResult.CurrentRow.Cells["Title"].Value.ToString();
+                //MessageBox.Show($"Movie Title: {ths.AppUser._selectTitle}");
+                SelectMovie.Show();
+                SelectMovie.PerformClick();
+            }
         }
     }
 }

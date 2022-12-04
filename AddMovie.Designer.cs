@@ -32,10 +32,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -68,15 +65,13 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.button9);
-            this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1115, 131);
+            this.panel3.Size = new System.Drawing.Size(1150, 98);
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -85,9 +80,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(421, 67);
+            this.label9.Location = new System.Drawing.Point(504, 50);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(225, 50);
+            this.label9.Size = new System.Drawing.Size(183, 41);
             this.label9.TabIndex = 21;
             this.label9.Text = "Edit Movies";
             // 
@@ -95,57 +90,23 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(155, 98);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(991, 24);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(43, 54);
-            this.button9.TabIndex = 0;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(893, 24);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(43, 54);
-            this.button8.TabIndex = 0;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(991, 99);
+            this.button1.Location = new System.Drawing.Point(1057, 67);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(82, 22);
             this.button1.TabIndex = 20;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(942, 24);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(43, 54);
-            this.button7.TabIndex = 0;
-            this.button7.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
@@ -153,9 +114,10 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(1040, 24);
+            this.button6.Location = new System.Drawing.Point(1100, 11);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(43, 54);
+            this.button6.Size = new System.Drawing.Size(38, 40);
             this.button6.TabIndex = 0;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -164,10 +126,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(64, 175);
+            this.tabControl1.Location = new System.Drawing.Point(56, 131);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1012, 344);
+            this.tabControl1.Size = new System.Drawing.Size(1082, 462);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -183,10 +146,11 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.titleBox);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1004, 311);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(1074, 434);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Movie";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -194,25 +158,27 @@
             // 
             // feeBox
             // 
-            this.feeBox.Location = new System.Drawing.Point(639, 39);
+            this.feeBox.Location = new System.Drawing.Point(727, 26);
+            this.feeBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.feeBox.Name = "feeBox";
-            this.feeBox.Size = new System.Drawing.Size(317, 27);
+            this.feeBox.Size = new System.Drawing.Size(278, 23);
             this.feeBox.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(500, 39);
+            this.label5.Location = new System.Drawing.Point(606, 26);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 20);
+            this.label5.Size = new System.Drawing.Size(25, 15);
             this.label5.TabIndex = 3;
             this.label5.Text = "Fee";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(862, 183);
+            this.button2.Location = new System.Drawing.Point(922, 134);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.Size = new System.Drawing.Size(82, 22);
             this.button2.TabIndex = 2;
             this.button2.Text = "Add Movie";
             this.button2.UseVisualStyleBackColor = true;
@@ -220,66 +186,70 @@
             // 
             // ratingBox
             // 
-            this.ratingBox.Location = new System.Drawing.Point(166, 116);
+            this.ratingBox.Location = new System.Drawing.Point(145, 92);
+            this.ratingBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ratingBox.Name = "ratingBox";
-            this.ratingBox.Size = new System.Drawing.Size(317, 27);
+            this.ratingBox.Size = new System.Drawing.Size(278, 23);
             this.ratingBox.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 116);
+            this.label4.Location = new System.Drawing.Point(24, 92);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
+            this.label4.Size = new System.Drawing.Size(41, 15);
             this.label4.TabIndex = 0;
             this.label4.Text = "Rating";
             // 
             // yearReleasedBox
             // 
-            this.yearReleasedBox.Location = new System.Drawing.Point(166, 159);
+            this.yearReleasedBox.Location = new System.Drawing.Point(145, 124);
+            this.yearReleasedBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.yearReleasedBox.Name = "yearReleasedBox";
-            this.yearReleasedBox.Size = new System.Drawing.Size(317, 27);
+            this.yearReleasedBox.Size = new System.Drawing.Size(278, 23);
             this.yearReleasedBox.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 159);
+            this.label3.Location = new System.Drawing.Point(24, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 20);
+            this.label3.Size = new System.Drawing.Size(78, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "Year Released";
             // 
             // genreBox
             // 
-            this.genreBox.Location = new System.Drawing.Point(166, 83);
+            this.genreBox.Location = new System.Drawing.Point(145, 62);
+            this.genreBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.genreBox.Name = "genreBox";
-            this.genreBox.Size = new System.Drawing.Size(317, 27);
+            this.genreBox.Size = new System.Drawing.Size(278, 23);
             this.genreBox.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 83);
+            this.label2.Location = new System.Drawing.Point(24, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.Size = new System.Drawing.Size(38, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Genre";
             // 
             // titleBox
             // 
-            this.titleBox.Location = new System.Drawing.Point(166, 39);
+            this.titleBox.Location = new System.Drawing.Point(145, 29);
+            this.titleBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.titleBox.Name = "titleBox";
-            this.titleBox.Size = new System.Drawing.Size(317, 27);
+            this.titleBox.Size = new System.Drawing.Size(278, 23);
             this.titleBox.TabIndex = 1;
             this.titleBox.TextChanged += new System.EventHandler(this.titleBox_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 39);
+            this.label1.Location = new System.Drawing.Point(24, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 20);
+            this.label1.Size = new System.Drawing.Size(29, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Title";
             // 
@@ -290,19 +260,21 @@
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.titleDelete);
             this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1004, 311);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(1074, 434);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Delete Movie";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(353, 172);
+            this.button3.Location = new System.Drawing.Point(309, 129);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 29);
+            this.button3.Size = new System.Drawing.Size(123, 22);
             this.button3.TabIndex = 13;
             this.button3.Text = "Delete Movie";
             this.button3.UseVisualStyleBackColor = true;
@@ -310,45 +282,48 @@
             // 
             // idDelete
             // 
-            this.idDelete.Location = new System.Drawing.Point(177, 119);
+            this.idDelete.Location = new System.Drawing.Point(155, 89);
+            this.idDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idDelete.Name = "idDelete";
-            this.idDelete.Size = new System.Drawing.Size(317, 27);
+            this.idDelete.Size = new System.Drawing.Size(278, 23);
             this.idDelete.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 119);
+            this.label6.Location = new System.Drawing.Point(33, 89);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 20);
+            this.label6.Size = new System.Drawing.Size(54, 15);
             this.label6.TabIndex = 8;
             this.label6.Text = "Movie ID";
             // 
             // titleDelete
             // 
-            this.titleDelete.Location = new System.Drawing.Point(177, 69);
+            this.titleDelete.Location = new System.Drawing.Point(155, 52);
+            this.titleDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.titleDelete.Name = "titleDelete";
-            this.titleDelete.Size = new System.Drawing.Size(317, 27);
+            this.titleDelete.Size = new System.Drawing.Size(278, 23);
             this.titleDelete.TabIndex = 12;
             this.titleDelete.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(38, 69);
+            this.label11.Location = new System.Drawing.Point(33, 52);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 20);
+            this.label11.Size = new System.Drawing.Size(29, 15);
             this.label11.TabIndex = 8;
             this.label11.Text = "Title";
             // 
             // AddMovie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 551);
+            this.ClientSize = new System.Drawing.Size(1150, 664);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddMovie";
             this.Text = "AddMovie";
             this.Load += new System.EventHandler(this.AddMovie_Load);
@@ -368,9 +343,6 @@
 
         private Panel panel3;
         private PictureBox pictureBox1;
-        private Button button9;
-        private Button button8;
-        private Button button7;
         private Button button6;
         private Button button1;
         private Label label9;

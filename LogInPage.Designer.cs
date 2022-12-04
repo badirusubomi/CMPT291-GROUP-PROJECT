@@ -43,25 +43,27 @@
             // 
             // Username
             // 
-            this.Username.Location = new System.Drawing.Point(260, 232);
+            this.Username.Location = new System.Drawing.Point(416, 339);
+            this.Username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(276, 27);
+            this.Username.Size = new System.Drawing.Size(242, 23);
             this.Username.TabIndex = 0;
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(260, 287);
+            this.Password.Location = new System.Drawing.Point(416, 380);
+            this.Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(276, 27);
+            this.Password.Size = new System.Drawing.Size(242, 23);
             this.Password.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(130, 235);
+            this.label1.Location = new System.Drawing.Point(302, 341);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 20);
+            this.label1.Size = new System.Drawing.Size(60, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username";
             // 
@@ -69,17 +71,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(135, 294);
+            this.label2.Location = new System.Drawing.Point(306, 385);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 20);
+            this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password";
             // 
             // LogInButton
             // 
-            this.LogInButton.Location = new System.Drawing.Point(298, 353);
+            this.LogInButton.Location = new System.Drawing.Point(449, 430);
+            this.LogInButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LogInButton.Name = "LogInButton";
-            this.LogInButton.Size = new System.Drawing.Size(200, 41);
+            this.LogInButton.Size = new System.Drawing.Size(175, 31);
             this.LogInButton.TabIndex = 3;
             this.LogInButton.Text = "Log In";
             this.LogInButton.UseVisualStyleBackColor = true;
@@ -90,18 +93,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(246, 84);
+            this.label3.Location = new System.Drawing.Point(403, 228);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(305, 69);
+            this.label3.Size = new System.Drawing.Size(247, 57);
             this.label3.TabIndex = 4;
             this.label3.Text = "Log In Page";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(547, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(403, 63);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(306, 200);
+            this.pictureBox1.Size = new System.Drawing.Size(268, 150);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -109,9 +113,11 @@
             // employeeRadio
             // 
             this.employeeRadio.AutoSize = true;
-            this.employeeRadio.Location = new System.Drawing.Point(629, 231);
+            this.employeeRadio.ForeColor = System.Drawing.Color.White;
+            this.employeeRadio.Location = new System.Drawing.Point(738, 338);
+            this.employeeRadio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.employeeRadio.Name = "employeeRadio";
-            this.employeeRadio.Size = new System.Drawing.Size(96, 24);
+            this.employeeRadio.Size = new System.Drawing.Size(77, 19);
             this.employeeRadio.TabIndex = 6;
             this.employeeRadio.TabStop = true;
             this.employeeRadio.Text = "Employee";
@@ -120,9 +126,11 @@
             // customerRadio
             // 
             this.customerRadio.AutoSize = true;
-            this.customerRadio.Location = new System.Drawing.Point(629, 287);
+            this.customerRadio.ForeColor = System.Drawing.Color.White;
+            this.customerRadio.Location = new System.Drawing.Point(738, 380);
+            this.customerRadio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customerRadio.Name = "customerRadio";
-            this.customerRadio.Size = new System.Drawing.Size(93, 24);
+            this.customerRadio.Size = new System.Drawing.Size(77, 19);
             this.customerRadio.TabIndex = 6;
             this.customerRadio.TabStop = true;
             this.customerRadio.Text = "Customer";
@@ -130,10 +138,10 @@
             // 
             // LogInPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1150, 664);
             this.Controls.Add(this.customerRadio);
             this.Controls.Add(this.employeeRadio);
             this.Controls.Add(this.pictureBox1);
@@ -144,6 +152,7 @@
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Username);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LogInPage";
             this.Text = "LogInPage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

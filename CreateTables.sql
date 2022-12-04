@@ -50,10 +50,11 @@ ReleaseYear int
 )
 
 CREATE TABLE Copies(
-CopyID int NOT NULL PRIMARY KEY,
+CopyID int NOT NULL,
 MovieID int NOT NULL FOREIGN KEY REFERENCES Movies(MovieID),
 CopyType char(20),
-OrderStatus int
+OrderStatus int,
+Constraint PK_Copies primary key (CopyID, MovieID)
 )
 
 
@@ -69,15 +70,20 @@ ActorRating int
 CREATE TABLE Acts_In(
 MovieID int NOT NULL FOREIGN KEY REFERENCES Movies(MovieID),
 ActorsID int NOT NULL FOREIGN KEY REFERENCES Actors(ActorID),
-ActorRating int)
+ActorRating int,
+Constraint PK_Acts_In primary key (MovieID, ActorsID))
 
 CREATE TABLE Orders(
 OrderID int NOT NULL PRIMARY KEY,
 CustomerID int NOT NULL FOREIGN KEY REFERENCES Customer(CustomerID),
 EmployeeID int NOT NULL FOREIGN KEY REFERENCES Employee(EmployeeID),
-CopyID int NOT NULL FOREIGN KEY REFERENCES Copies(CopyID),
-MovieID int NOT NULL FOREIGN KEY REFERENCES Movies(MovieID),
+CopyID int NOT NULL,
+MovieID int NOT NULL,
 DateFrom DATE,
 DateTo DATE,
-OrderStatus int)
+OrderStatus int,
+Constraint FK_Copies 
+FOREIGN KEY (CopyID, MovieID) REFERENCES Copies(CopyID, MovieID)
+)
+
 

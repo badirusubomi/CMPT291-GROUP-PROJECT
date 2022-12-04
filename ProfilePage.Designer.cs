@@ -82,7 +82,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 98);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(960, 46);
+            this.panel2.Size = new System.Drawing.Size(1150, 46);
             this.panel2.TabIndex = 10;
             // 
             // label1
@@ -90,7 +90,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(429, 0);
+            this.label1.Location = new System.Drawing.Point(553, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 41);
             this.label1.TabIndex = 0;
@@ -109,13 +109,13 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(960, 98);
+            this.panel3.Size = new System.Drawing.Size(1150, 98);
             this.panel3.TabIndex = 9;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(865, 59);
+            this.button1.Location = new System.Drawing.Point(1024, 63);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 22);
@@ -141,7 +141,7 @@
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(872, 7);
+            this.button9.Location = new System.Drawing.Point(1031, 11);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(38, 40);
@@ -154,7 +154,7 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(786, 7);
+            this.button8.Location = new System.Drawing.Point(945, 11);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(38, 40);
@@ -167,7 +167,7 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(829, 7);
+            this.button7.Location = new System.Drawing.Point(988, 11);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(38, 40);
@@ -180,7 +180,7 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(915, 7);
+            this.button6.Location = new System.Drawing.Point(1074, 11);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(38, 40);
@@ -195,7 +195,7 @@
             this.tabControl1.Location = new System.Drawing.Point(37, 149);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(894, 217);
+            this.tabControl1.Size = new System.Drawing.Size(1069, 435);
             this.tabControl1.TabIndex = 11;
             // 
             // tabPage1
@@ -379,7 +379,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(886, 189);
+            this.tabPage2.Size = new System.Drawing.Size(1061, 407);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Order History";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -398,7 +398,7 @@
             this.orderHistory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderHistory.Location = new System.Drawing.Point(3, 3);
             this.orderHistory.Name = "orderHistory";
-            this.orderHistory.Size = new System.Drawing.Size(880, 183);
+            this.orderHistory.Size = new System.Drawing.Size(1055, 401);
             this.orderHistory.TabIndex = 0;
             this.orderHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -437,7 +437,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(960, 378);
+            this.ClientSize = new System.Drawing.Size(1150, 664);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);

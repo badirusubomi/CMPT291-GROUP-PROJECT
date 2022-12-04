@@ -34,6 +34,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.signOut = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
@@ -41,7 +42,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.signOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,7 +57,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(976, 413);
+            this.panel1.Size = new System.Drawing.Size(1150, 664);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -70,7 +70,7 @@
             this.panel3.Location = new System.Drawing.Point(178, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(798, 99);
+            this.panel3.Size = new System.Drawing.Size(972, 99);
             this.panel3.TabIndex = 1;
             // 
             // button6
@@ -79,7 +79,7 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(743, 47);
+            this.button6.Location = new System.Drawing.Point(922, 51);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(38, 40);
@@ -106,8 +106,18 @@
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(798, 47);
+            this.panel4.Size = new System.Drawing.Size(972, 47);
             this.panel4.TabIndex = 0;
+            // 
+            // signOut
+            // 
+            this.signOut.Location = new System.Drawing.Point(883, 12);
+            this.signOut.Name = "signOut";
+            this.signOut.Size = new System.Drawing.Size(77, 23);
+            this.signOut.TabIndex = 0;
+            this.signOut.Text = "Sign Out";
+            this.signOut.UseVisualStyleBackColor = true;
+            this.signOut.Click += new System.EventHandler(this.signOut_Click);
             // 
             // panel2
             // 
@@ -121,7 +131,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(178, 413);
+            this.panel2.Size = new System.Drawing.Size(178, 664);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -131,7 +141,7 @@
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button10.Location = new System.Drawing.Point(15, 364);
+            this.button10.Location = new System.Drawing.Point(15, 430);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(43, 40);
@@ -143,7 +153,7 @@
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
-            this.sidePanel.Location = new System.Drawing.Point(2, 63);
+            this.sidePanel.Location = new System.Drawing.Point(2, 129);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(11, 56);
@@ -158,7 +168,7 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(15, 236);
+            this.button3.Location = new System.Drawing.Point(15, 302);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(161, 53);
@@ -176,7 +186,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(15, 66);
+            this.button4.Location = new System.Drawing.Point(15, 132);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(161, 53);
@@ -194,7 +204,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(14, 178);
+            this.button1.Location = new System.Drawing.Point(14, 244);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(161, 53);
@@ -212,7 +222,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(14, 121);
+            this.button2.Location = new System.Drawing.Point(14, 187);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(161, 53);
@@ -221,22 +231,12 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // signOut
-            // 
-            this.signOut.Location = new System.Drawing.Point(701, 11);
-            this.signOut.Name = "signOut";
-            this.signOut.Size = new System.Drawing.Size(77, 23);
-            this.signOut.TabIndex = 0;
-            this.signOut.Text = "Sign Out";
-            this.signOut.UseVisualStyleBackColor = true;
-            this.signOut.Click += new System.EventHandler(this.signOut_Click);
-            // 
             // EmployeeWelcomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(976, 413);
+            this.ClientSize = new System.Drawing.Size(1150, 664);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.SelectMovie = new System.Windows.Forms.Button();
             this.searchResult = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ttile = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.SelectMovie = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +51,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Search Result:";
             // 
+            // searchResult
+            // 
+            this.searchResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.searchResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.searchResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Title,
+            this.Genre,
+            this.Year,
+            this.Fee,
+            this.Rating});
+            this.searchResult.Location = new System.Drawing.Point(27, 65);
+            this.searchResult.Name = "searchResult";
+            this.searchResult.RowTemplate.Height = 25;
+            this.searchResult.Size = new System.Drawing.Size(744, 125);
+            this.searchResult.TabIndex = 2;
+            this.searchResult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchResult_CellContentClick);
+            // 
             // SelectMovie
             // 
             this.SelectMovie.Location = new System.Drawing.Point(604, 195);
@@ -62,52 +80,45 @@
             this.SelectMovie.UseVisualStyleBackColor = true;
             this.SelectMovie.Click += new System.EventHandler(this.SelectMovie_Click);
             // 
-            // searchResult
-            // 
-            this.searchResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.searchResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.searchResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Ttile,
-            this.Genre,
-            this.Year,
-            this.Fee,
-            this.Rating});
-            this.searchResult.Location = new System.Drawing.Point(27, 65);
-            this.searchResult.Name = "searchResult";
-            this.searchResult.RowTemplate.Height = 25;
-            this.searchResult.Size = new System.Drawing.Size(744, 125);
-            this.searchResult.TabIndex = 2;
-            // 
             // ID
             // 
             this.ID.HeaderText = "movieID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // Ttile
+            // Title
             // 
-            this.Ttile.HeaderText = "title";
-            this.Ttile.Name = "Ttile";
+            this.Title.HeaderText = "title";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            this.Title.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Title.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Genre
             // 
             this.Genre.HeaderText = "Genre";
             this.Genre.Name = "Genre";
+            this.Genre.ReadOnly = true;
             // 
             // Year
             // 
             this.Year.HeaderText = "year";
             this.Year.Name = "Year";
+            this.Year.ReadOnly = true;
             // 
             // Fee
             // 
             this.Fee.HeaderText = "Fee";
             this.Fee.Name = "Fee";
+            this.Fee.ReadOnly = true;
             // 
             // Rating
             // 
             this.Rating.HeaderText = "rating";
             this.Rating.Name = "Rating";
+            this.Rating.ReadOnly = true;
             // 
             // searchResultForm
             // 
@@ -132,10 +143,10 @@
         #endregion
 
         private Label label1;
-        private Button SelectMovie;
         private DataGridView searchResult;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewButtonColumn Ttile;
+        private Button SelectMovie;
+        private DataGridViewButtonColumn ID;
+        private DataGridViewTextBoxColumn Title;
         private DataGridViewTextBoxColumn Genre;
         private DataGridViewTextBoxColumn Year;
         private DataGridViewTextBoxColumn Fee;

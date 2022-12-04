@@ -30,12 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.RentButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.idDelete = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.titleDelete = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.CopyTable = new System.Windows.Forms.DataGridView();
+            this.CopyID = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Format = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.CopyTable)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -43,96 +42,76 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 28);
+            this.label1.Location = new System.Drawing.Point(22, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 25);
+            this.label1.Size = new System.Drawing.Size(137, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Existing Copies:";
             // 
             // RentButton
             // 
             this.RentButton.ForeColor = System.Drawing.Color.Black;
-            this.RentButton.Location = new System.Drawing.Point(757, 467);
+            this.RentButton.Location = new System.Drawing.Point(662, 350);
+            this.RentButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RentButton.Name = "RentButton";
-            this.RentButton.Size = new System.Drawing.Size(183, 59);
+            this.RentButton.Size = new System.Drawing.Size(160, 44);
             this.RentButton.TabIndex = 2;
             this.RentButton.Text = "Rent Now!";
             this.RentButton.UseVisualStyleBackColor = true;
             this.RentButton.Click += new System.EventHandler(this.RentButton_Click);
             // 
-            // button3
+            // CopyTable
             // 
-            this.button3.Location = new System.Drawing.Point(164, 193);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 29);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Search ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.CopyTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CopyTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CopyTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CopyID,
+            this.Title,
+            this.Format});
+            this.CopyTable.Location = new System.Drawing.Point(22, 94);
+            this.CopyTable.Name = "CopyTable";
+            this.CopyTable.RowTemplate.Height = 25;
+            this.CopyTable.Size = new System.Drawing.Size(800, 237);
+            this.CopyTable.TabIndex = 3;
+            this.CopyTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CopyTable_CellContentClick);
             // 
-            // idDelete
+            // CopyID
             // 
-            this.idDelete.Location = new System.Drawing.Point(164, 135);
-            this.idDelete.Name = "idDelete";
-            this.idDelete.Size = new System.Drawing.Size(317, 27);
-            this.idDelete.TabIndex = 16;
+            this.CopyID.HeaderText = "Copy ID";
+            this.CopyID.Name = "CopyID";
+            this.CopyID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // label6
+            // Title
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(25, 135);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 20);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Movie ID";
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            this.Title.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Title.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // titleDelete
+            // Format
             // 
-            this.titleDelete.Location = new System.Drawing.Point(164, 85);
-            this.titleDelete.Name = "titleDelete";
-            this.titleDelete.Size = new System.Drawing.Size(317, 27);
-            this.titleDelete.TabIndex = 17;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(25, 85);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 20);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Title";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(149, 364);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(233, 31);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Insert Data Grid here";
+            this.Format.HeaderText = "Format";
+            this.Format.Name = "Format";
+            this.Format.ReadOnly = true;
+            this.Format.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Format.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // PresentCopies
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(980, 547);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.idDelete);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.titleDelete);
-            this.Controls.Add(this.label11);
+            this.ClientSize = new System.Drawing.Size(858, 410);
+            this.Controls.Add(this.CopyTable);
             this.Controls.Add(this.RentButton);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PresentCopies";
             this.Text = "PresentCopies";
+            this.Load += new System.EventHandler(this.PresentCopies_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CopyTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,11 +121,9 @@
 
         private Label label1;
         private Button RentButton;
-        private Button button3;
-        private TextBox idDelete;
-        private Label label6;
-        private TextBox titleDelete;
-        private Label label11;
-        private Label label2;
+        private DataGridView CopyTable;
+        private DataGridViewButtonColumn CopyID;
+        private DataGridViewTextBoxColumn Title;
+        private DataGridViewTextBoxColumn Format;
     }
 }

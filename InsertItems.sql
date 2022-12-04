@@ -47,12 +47,20 @@ insert into Customer values (1,'Mohammed','ElHajj','mohammed@mymacewan.ca','M','
 
 select * from Employee;
 
-
 select * from Movies;
 
 select * from AccType;
 
+select * from Actors;
+
 select * from Customer;
+
+select * from Acts_In;
+
+select * from Orders;
+
+select * from Copies;
+
 
 
 
@@ -80,3 +88,4 @@ drop table Employee;
 /*		Testing Queries		*/
 
 select C.Passwords from Customer as C where C.email = 'badiruo@mymacewan.ca'
+Select * from Copies as C, Movies as M where C.MovieID = M.MovieID and C.OrderStatus = 1;
