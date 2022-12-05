@@ -63,3 +63,19 @@ Insert into Orders values (3, 1, 1, 01, 3, '2008-11-11', '2008-11-30', 0);
 select * from Orders;
 select Customer.CustomerID as ID from Customer where Customer.email = 'elhajjm@macewan.ca'
 select * from Orders, Movies where Orders.MovieID = Movies.MovieID and Orders.CustomerID = 1;
+
+/*
+UPDATE Employee
+
+SET EmployeeID = {}, FName = {}, LName = {}, Email = {}, Gender = {},
+	Street = {}, City = {}, Province = {}, ZipCode = {}, StartDate = {},
+	Wage = {}, Passwords = {}
+WHERE CustomerID = {};
+
+*/
+
+UPDATE Employee SET EmployeeID = {employeeIDEdit.Text}, FName = '{employeeEditFNameLabel.Text}', LName = '{employeeEditLNameLabel.Text}', Email = '{employeeEditEmailLabel.Text}',
+                                            Gender = '{employeeEditGenderLabel.Text}', Street = '{employeeEditStreetLabel.Text}',
+                                            City = '{employeeEditCityLabel.Text}', Province = '{employeeEditStateLabel.Text}', 
+                                            ZipCode = '{employeeEditPostalLabel.Text}',Wage = {employeeEditWageLabel.Text},
+                                            Passwords = '{employeeEditPasswordLabel.Text}' WHERE EmployeeID = {employeeIDEdit.Text};
