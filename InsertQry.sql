@@ -72,10 +72,16 @@ SET EmployeeID = {}, FName = {}, LName = {}, Email = {}, Gender = {},
 	Wage = {}, Passwords = {}
 WHERE CustomerID = {};
 
+
 */
 
+select * from Customer;
 UPDATE Employee SET EmployeeID = {employeeIDEdit.Text}, FName = '{employeeEditFNameLabel.Text}', LName = '{employeeEditLNameLabel.Text}', Email = '{employeeEditEmailLabel.Text}',
                                             Gender = '{employeeEditGenderLabel.Text}', Street = '{employeeEditStreetLabel.Text}',
                                             City = '{employeeEditCityLabel.Text}', Province = '{employeeEditStateLabel.Text}', 
                                             ZipCode = '{employeeEditPostalLabel.Text}',Wage = {employeeEditWageLabel.Text},
                                             Passwords = '{employeeEditPasswordLabel.Text}' WHERE EmployeeID = {employeeIDEdit.Text};
+
+
+UPDATE CUSTOMER SET 
+Passwords = 'HalaMadrid' WHERE CustomerID = 1

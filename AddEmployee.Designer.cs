@@ -35,19 +35,25 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.AddEmployeeTab = new System.Windows.Forms.TabPage();
+            this.label49 = new System.Windows.Forms.Label();
+            this.EmployeeAddStartDate = new System.Windows.Forms.DateTimePicker();
+            this.employeeAddPostal = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.employeeAddWage = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.employeeAddGender = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.employeeAddLName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.employeeAddButton = new System.Windows.Forms.Button();
+            this.employeeAddFName = new System.Windows.Forms.TextBox();
+            this.employeeAddState = new System.Windows.Forms.TextBox();
+            this.employeeAddCity = new System.Windows.Forms.TextBox();
+            this.employeeAddStreet = new System.Windows.Forms.TextBox();
+            this.employeeAddPassword = new System.Windows.Forms.TextBox();
+            this.employeeAddEmail = new System.Windows.Forms.TextBox();
+            this.employeeAddEmployeeID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,12 +61,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.EditEmployeeTab = new System.Windows.Forms.TabPage();
             this.button10 = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.idSearch = new System.Windows.Forms.TextBox();
             this.employeeEditPostalLabel = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.employeeEditWageLabel = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.employeeEditGenderLabel = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.employeeEditLNameLabel = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.employeeEditConfirmButton = new System.Windows.Forms.Button();
@@ -78,32 +88,43 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.employeeNamelabel = new System.Windows.Forms.Label();
-            this.employeeStartDatelabel = new System.Windows.Forms.Label();
-            this.employeeEmailLabel = new System.Windows.Forms.Label();
-            this.employeeIDlabel = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.DeleteEmployeetab = new System.Windows.Forms.TabPage();
+            this.employeeDeleteNamelabel = new System.Windows.Forms.Label();
+            this.employeeDeleteStartDatelabel = new System.Windows.Forms.Label();
+            this.employeeDeleteEmailLabel = new System.Windows.Forms.Label();
+            this.employeeDeleteIDlabel = new System.Windows.Forms.Label();
+            this.employeeDeleteButton = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.employeeSearchDeleteButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.employeeSearchDeletelabel = new System.Windows.Forms.TextBox();
+            this.AddCustomerTab = new System.Windows.Forms.TabPage();
+            this.customerAddAccountType = new System.Windows.Forms.ComboBox();
+            this.customerAddExpiryDate = new System.Windows.Forms.DateTimePicker();
+            this.customerAddCreationDate = new System.Windows.Forms.DateTimePicker();
+            this.customerAddPostal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.customerAddGender = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.customerAddCreditCard = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.customerAddLName = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.customerAddButton = new System.Windows.Forms.Button();
+            this.CustomerAddFName = new System.Windows.Forms.TextBox();
+            this.customerAddProvince = new System.Windows.Forms.TextBox();
+            this.customerAddCity = new System.Windows.Forms.TextBox();
+            this.customerAddStreet = new System.Windows.Forms.TextBox();
+            this.customerAddPassword = new System.Windows.Forms.TextBox();
+            this.customerAddEmail = new System.Windows.Forms.TextBox();
+            this.CustomerAddID = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -111,22 +132,26 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button8 = new System.Windows.Forms.Button();
+            this.EditCustomerTab = new System.Windows.Forms.TabPage();
+            this.customerEditAccountType = new System.Windows.Forms.ComboBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.customerEditSearchButton = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.customerEditSearchID = new System.Windows.Forms.TextBox();
+            this.customerEditPostal = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.customerEditGender = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.customerEditLName = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
+            this.customerEditConfirmButton = new System.Windows.Forms.Button();
+            this.customerEditFName = new System.Windows.Forms.TextBox();
+            this.customerEditProvince = new System.Windows.Forms.TextBox();
+            this.customerEditCity = new System.Windows.Forms.TextBox();
+            this.customerEditStreet = new System.Windows.Forms.TextBox();
+            this.customerEditPassword = new System.Windows.Forms.TextBox();
+            this.customerEditEmail = new System.Windows.Forms.TextBox();
+            this.customerEditID = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
@@ -134,14 +159,30 @@
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
+            this.DeleteCustomerTab = new System.Windows.Forms.TabPage();
+            this.customerDeleteButton = new System.Windows.Forms.Button();
+            this.customerDeleteName = new System.Windows.Forms.Label();
+            this.customerDeleteAccountCreation = new System.Windows.Forms.Label();
+            this.customerDeleteEmail = new System.Windows.Forms.Label();
+            this.customerDeletePlanType = new System.Windows.Forms.Label();
+            this.customerDeleteID = new System.Windows.Forms.Label();
+            this.irreqgularlabel = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label65 = new System.Windows.Forms.Label();
+            this.customerDeleteSearchID = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
+            this.AddEmployeeTab.SuspendLayout();
+            this.EditEmployeeTab.SuspendLayout();
+            this.DeleteEmployeetab.SuspendLayout();
+            this.AddCustomerTab.SuspendLayout();
+            this.EditCustomerTab.SuspendLayout();
+            this.DeleteCustomerTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -166,9 +207,9 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(489, 53);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(155, 41);
+            this.label10.Size = new System.Drawing.Size(94, 41);
             this.label10.TabIndex = 47;
-            this.label10.Text = "Employee";
+            this.label10.Text = "Users";
             // 
             // button2
             // 
@@ -208,54 +249,78 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.AddEmployeeTab);
+            this.tabControl1.Controls.Add(this.EditEmployeeTab);
+            this.tabControl1.Controls.Add(this.DeleteEmployeetab);
+            this.tabControl1.Controls.Add(this.AddCustomerTab);
+            this.tabControl1.Controls.Add(this.EditCustomerTab);
+            this.tabControl1.Controls.Add(this.DeleteCustomerTab);
             this.tabControl1.Location = new System.Drawing.Point(48, 123);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1089, 469);
             this.tabControl1.TabIndex = 45;
             // 
-            // tabPage1
+            // AddEmployeeTab
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage1.Controls.Add(this.textBox10);
-            this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.textBox9);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox8);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1081, 441);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Add Employee";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.AddEmployeeTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AddEmployeeTab.Controls.Add(this.label49);
+            this.AddEmployeeTab.Controls.Add(this.EmployeeAddStartDate);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddPostal);
+            this.AddEmployeeTab.Controls.Add(this.label12);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddWage);
+            this.AddEmployeeTab.Controls.Add(this.label20);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddGender);
+            this.AddEmployeeTab.Controls.Add(this.label19);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddLName);
+            this.AddEmployeeTab.Controls.Add(this.label11);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddButton);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddFName);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddState);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddCity);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddStreet);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddPassword);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddEmail);
+            this.AddEmployeeTab.Controls.Add(this.employeeAddEmployeeID);
+            this.AddEmployeeTab.Controls.Add(this.label7);
+            this.AddEmployeeTab.Controls.Add(this.label6);
+            this.AddEmployeeTab.Controls.Add(this.label5);
+            this.AddEmployeeTab.Controls.Add(this.label4);
+            this.AddEmployeeTab.Controls.Add(this.label3);
+            this.AddEmployeeTab.Controls.Add(this.label2);
+            this.AddEmployeeTab.Controls.Add(this.label1);
+            this.AddEmployeeTab.Location = new System.Drawing.Point(4, 24);
+            this.AddEmployeeTab.Name = "AddEmployeeTab";
+            this.AddEmployeeTab.Padding = new System.Windows.Forms.Padding(3);
+            this.AddEmployeeTab.Size = new System.Drawing.Size(1081, 441);
+            this.AddEmployeeTab.TabIndex = 0;
+            this.AddEmployeeTab.Text = "Add Employee";
+            this.AddEmployeeTab.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // textBox10
+            // label49
             // 
-            this.textBox10.Location = new System.Drawing.Point(427, 183);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(51, 23);
-            this.textBox10.TabIndex = 68;
+            this.label49.AutoSize = true;
+            this.label49.ForeColor = System.Drawing.Color.White;
+            this.label49.Location = new System.Drawing.Point(638, 65);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(55, 15);
+            this.label49.TabIndex = 70;
+            this.label49.Text = "StartDate";
+            // 
+            // EmployeeAddStartDate
+            // 
+            this.EmployeeAddStartDate.Location = new System.Drawing.Point(707, 62);
+            this.EmployeeAddStartDate.Name = "EmployeeAddStartDate";
+            this.EmployeeAddStartDate.Size = new System.Drawing.Size(242, 23);
+            this.EmployeeAddStartDate.TabIndex = 69;
+            // 
+            // employeeAddPostal
+            // 
+            this.employeeAddPostal.Location = new System.Drawing.Point(427, 183);
+            this.employeeAddPostal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddPostal.Name = "employeeAddPostal";
+            this.employeeAddPostal.Size = new System.Drawing.Size(51, 23);
+            this.employeeAddPostal.TabIndex = 68;
             // 
             // label12
             // 
@@ -267,14 +332,52 @@
             this.label12.TabIndex = 67;
             this.label12.Text = "Postal Code";
             // 
-            // textBox9
+            // employeeAddWage
             // 
-            this.textBox9.Location = new System.Drawing.Point(427, 62);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(110, 23);
-            this.textBox9.TabIndex = 66;
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.employeeAddWage.Location = new System.Drawing.Point(427, 141);
+            this.employeeAddWage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddWage.Name = "employeeAddWage";
+            this.employeeAddWage.Size = new System.Drawing.Size(110, 23);
+            this.employeeAddWage.TabIndex = 66;
+            this.employeeAddWage.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(319, 144);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(37, 15);
+            this.label20.TabIndex = 65;
+            this.label20.Text = "Wage";
+            // 
+            // employeeAddGender
+            // 
+            this.employeeAddGender.Location = new System.Drawing.Point(427, 99);
+            this.employeeAddGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddGender.Name = "employeeAddGender";
+            this.employeeAddGender.Size = new System.Drawing.Size(110, 23);
+            this.employeeAddGender.TabIndex = 66;
+            this.employeeAddGender.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(319, 102);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(45, 15);
+            this.label19.TabIndex = 65;
+            this.label19.Text = "Gender";
+            // 
+            // employeeAddLName
+            // 
+            this.employeeAddLName.Location = new System.Drawing.Point(427, 62);
+            this.employeeAddLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddLName.Name = "employeeAddLName";
+            this.employeeAddLName.Size = new System.Drawing.Size(110, 23);
+            this.employeeAddLName.TabIndex = 66;
+            this.employeeAddLName.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label11
             // 
@@ -286,76 +389,76 @@
             this.label11.TabIndex = 65;
             this.label11.Text = "Last Name";
             // 
-            // button1
+            // employeeAddButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(587, 259);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 52);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.employeeAddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
+            this.employeeAddButton.FlatAppearance.BorderSize = 2;
+            this.employeeAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.employeeAddButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.employeeAddButton.Location = new System.Drawing.Point(587, 259);
+            this.employeeAddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddButton.Name = "employeeAddButton";
+            this.employeeAddButton.Size = new System.Drawing.Size(164, 52);
+            this.employeeAddButton.TabIndex = 61;
+            this.employeeAddButton.Text = "Add";
+            this.employeeAddButton.UseVisualStyleBackColor = false;
+            this.employeeAddButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox8
+            // employeeAddFName
             // 
-            this.textBox8.Location = new System.Drawing.Point(166, 62);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(110, 23);
-            this.textBox8.TabIndex = 60;
+            this.employeeAddFName.Location = new System.Drawing.Point(166, 62);
+            this.employeeAddFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddFName.Name = "employeeAddFName";
+            this.employeeAddFName.Size = new System.Drawing.Size(110, 23);
+            this.employeeAddFName.TabIndex = 60;
             // 
-            // textBox6
+            // employeeAddState
             // 
-            this.textBox6.Location = new System.Drawing.Point(165, 259);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(42, 23);
-            this.textBox6.TabIndex = 58;
+            this.employeeAddState.Location = new System.Drawing.Point(165, 259);
+            this.employeeAddState.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddState.Name = "employeeAddState";
+            this.employeeAddState.Size = new System.Drawing.Size(42, 23);
+            this.employeeAddState.TabIndex = 58;
             // 
-            // textBox5
+            // employeeAddCity
             // 
-            this.textBox5.Location = new System.Drawing.Point(165, 226);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(110, 23);
-            this.textBox5.TabIndex = 57;
+            this.employeeAddCity.Location = new System.Drawing.Point(165, 226);
+            this.employeeAddCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddCity.Name = "employeeAddCity";
+            this.employeeAddCity.Size = new System.Drawing.Size(110, 23);
+            this.employeeAddCity.TabIndex = 57;
             // 
-            // textBox4
+            // employeeAddStreet
             // 
-            this.textBox4.Location = new System.Drawing.Point(165, 182);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(110, 23);
-            this.textBox4.TabIndex = 56;
+            this.employeeAddStreet.Location = new System.Drawing.Point(165, 182);
+            this.employeeAddStreet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddStreet.Name = "employeeAddStreet";
+            this.employeeAddStreet.Size = new System.Drawing.Size(110, 23);
+            this.employeeAddStreet.TabIndex = 56;
             // 
-            // textBox3
+            // employeeAddPassword
             // 
-            this.textBox3.Location = new System.Drawing.Point(165, 144);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(110, 23);
-            this.textBox3.TabIndex = 55;
+            this.employeeAddPassword.Location = new System.Drawing.Point(165, 144);
+            this.employeeAddPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddPassword.Name = "employeeAddPassword";
+            this.employeeAddPassword.Size = new System.Drawing.Size(110, 23);
+            this.employeeAddPassword.TabIndex = 55;
             // 
-            // textBox2
+            // employeeAddEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 105);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 23);
-            this.textBox2.TabIndex = 54;
+            this.employeeAddEmail.Location = new System.Drawing.Point(166, 105);
+            this.employeeAddEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddEmail.Name = "employeeAddEmail";
+            this.employeeAddEmail.Size = new System.Drawing.Size(110, 23);
+            this.employeeAddEmail.TabIndex = 54;
             // 
-            // textBox1
+            // employeeAddEmployeeID
             // 
-            this.textBox1.Location = new System.Drawing.Point(165, 25);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 23);
-            this.textBox1.TabIndex = 53;
+            this.employeeAddEmployeeID.Location = new System.Drawing.Point(165, 25);
+            this.employeeAddEmployeeID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeAddEmployeeID.Name = "employeeAddEmployeeID";
+            this.employeeAddEmployeeID.Size = new System.Drawing.Size(110, 23);
+            this.employeeAddEmployeeID.TabIndex = 53;
             // 
             // label7
             // 
@@ -427,38 +530,42 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "First Name";
             // 
-            // tabPage2
+            // EditEmployeeTab
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage2.Controls.Add(this.button10);
-            this.tabPage2.Controls.Add(this.label30);
-            this.tabPage2.Controls.Add(this.idSearch);
-            this.tabPage2.Controls.Add(this.employeeEditPostalLabel);
-            this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.employeeEditLNameLabel);
-            this.tabPage2.Controls.Add(this.label22);
-            this.tabPage2.Controls.Add(this.employeeEditConfirmButton);
-            this.tabPage2.Controls.Add(this.employeeEditFNameLabel);
-            this.tabPage2.Controls.Add(this.employeeEditStateLabel);
-            this.tabPage2.Controls.Add(this.employeeEditCityLabel);
-            this.tabPage2.Controls.Add(this.employeeEditStreetLabel);
-            this.tabPage2.Controls.Add(this.employeeEditPasswordLabel);
-            this.tabPage2.Controls.Add(this.employeeEditEmailLabel);
-            this.tabPage2.Controls.Add(this.employeeIDEdit);
-            this.tabPage2.Controls.Add(this.label23);
-            this.tabPage2.Controls.Add(this.label24);
-            this.tabPage2.Controls.Add(this.label25);
-            this.tabPage2.Controls.Add(this.label26);
-            this.tabPage2.Controls.Add(this.label27);
-            this.tabPage2.Controls.Add(this.label28);
-            this.tabPage2.Controls.Add(this.label29);
-            this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1081, 441);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Edit Info";
+            this.EditEmployeeTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EditEmployeeTab.Controls.Add(this.button10);
+            this.EditEmployeeTab.Controls.Add(this.label30);
+            this.EditEmployeeTab.Controls.Add(this.idSearch);
+            this.EditEmployeeTab.Controls.Add(this.employeeEditPostalLabel);
+            this.EditEmployeeTab.Controls.Add(this.label21);
+            this.EditEmployeeTab.Controls.Add(this.employeeEditWageLabel);
+            this.EditEmployeeTab.Controls.Add(this.label18);
+            this.EditEmployeeTab.Controls.Add(this.employeeEditGenderLabel);
+            this.EditEmployeeTab.Controls.Add(this.label17);
+            this.EditEmployeeTab.Controls.Add(this.employeeEditLNameLabel);
+            this.EditEmployeeTab.Controls.Add(this.label22);
+            this.EditEmployeeTab.Controls.Add(this.employeeEditConfirmButton);
+            this.EditEmployeeTab.Controls.Add(this.employeeEditFNameLabel);
+            this.EditEmployeeTab.Controls.Add(this.employeeEditStateLabel);
+            this.EditEmployeeTab.Controls.Add(this.employeeEditCityLabel);
+            this.EditEmployeeTab.Controls.Add(this.employeeEditStreetLabel);
+            this.EditEmployeeTab.Controls.Add(this.employeeEditPasswordLabel);
+            this.EditEmployeeTab.Controls.Add(this.employeeEditEmailLabel);
+            this.EditEmployeeTab.Controls.Add(this.employeeIDEdit);
+            this.EditEmployeeTab.Controls.Add(this.label23);
+            this.EditEmployeeTab.Controls.Add(this.label24);
+            this.EditEmployeeTab.Controls.Add(this.label25);
+            this.EditEmployeeTab.Controls.Add(this.label26);
+            this.EditEmployeeTab.Controls.Add(this.label27);
+            this.EditEmployeeTab.Controls.Add(this.label28);
+            this.EditEmployeeTab.Controls.Add(this.label29);
+            this.EditEmployeeTab.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.EditEmployeeTab.Location = new System.Drawing.Point(4, 24);
+            this.EditEmployeeTab.Name = "EditEmployeeTab";
+            this.EditEmployeeTab.Padding = new System.Windows.Forms.Padding(3);
+            this.EditEmployeeTab.Size = new System.Drawing.Size(1081, 441);
+            this.EditEmployeeTab.TabIndex = 1;
+            this.EditEmployeeTab.Text = "Edit Employee";
             // 
             // button10
             // 
@@ -508,6 +615,44 @@
             this.label21.Size = new System.Drawing.Size(71, 15);
             this.label21.TabIndex = 86;
             this.label21.Text = "Postal Code";
+            // 
+            // employeeEditWageLabel
+            // 
+            this.employeeEditWageLabel.Location = new System.Drawing.Point(644, 136);
+            this.employeeEditWageLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeEditWageLabel.Name = "employeeEditWageLabel";
+            this.employeeEditWageLabel.Size = new System.Drawing.Size(110, 23);
+            this.employeeEditWageLabel.TabIndex = 85;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Location = new System.Drawing.Point(544, 139);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(39, 15);
+            this.label18.TabIndex = 84;
+            this.label18.Text = "Wage";
+            // 
+            // employeeEditGenderLabel
+            // 
+            this.employeeEditGenderLabel.Location = new System.Drawing.Point(644, 94);
+            this.employeeEditGenderLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeEditGenderLabel.Name = "employeeEditGenderLabel";
+            this.employeeEditGenderLabel.Size = new System.Drawing.Size(110, 23);
+            this.employeeEditGenderLabel.TabIndex = 85;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(544, 97);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(49, 15);
+            this.label17.TabIndex = 84;
+            this.label17.Text = "Gender";
             // 
             // employeeEditLNameLabel
             // 
@@ -677,79 +822,80 @@
             this.label29.TabIndex = 69;
             this.label29.Text = "First Name";
             // 
-            // tabPage3
+            // DeleteEmployeetab
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage3.Controls.Add(this.employeeNamelabel);
-            this.tabPage3.Controls.Add(this.employeeStartDatelabel);
-            this.tabPage3.Controls.Add(this.employeeEmailLabel);
-            this.tabPage3.Controls.Add(this.employeeIDlabel);
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.textBox7);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(1081, 441);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Delete Employee";
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            this.DeleteEmployeetab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.DeleteEmployeetab.Controls.Add(this.employeeDeleteNamelabel);
+            this.DeleteEmployeetab.Controls.Add(this.employeeDeleteStartDatelabel);
+            this.DeleteEmployeetab.Controls.Add(this.employeeDeleteEmailLabel);
+            this.DeleteEmployeetab.Controls.Add(this.employeeDeleteIDlabel);
+            this.DeleteEmployeetab.Controls.Add(this.employeeDeleteButton);
+            this.DeleteEmployeetab.Controls.Add(this.label16);
+            this.DeleteEmployeetab.Controls.Add(this.label15);
+            this.DeleteEmployeetab.Controls.Add(this.label14);
+            this.DeleteEmployeetab.Controls.Add(this.label13);
+            this.DeleteEmployeetab.Controls.Add(this.employeeSearchDeleteButton);
+            this.DeleteEmployeetab.Controls.Add(this.label8);
+            this.DeleteEmployeetab.Controls.Add(this.employeeSearchDeletelabel);
+            this.DeleteEmployeetab.Location = new System.Drawing.Point(4, 24);
+            this.DeleteEmployeetab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteEmployeetab.Name = "DeleteEmployeetab";
+            this.DeleteEmployeetab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteEmployeetab.Size = new System.Drawing.Size(1081, 441);
+            this.DeleteEmployeetab.TabIndex = 2;
+            this.DeleteEmployeetab.Text = "Delete Employee";
+            this.DeleteEmployeetab.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // employeeNamelabel
+            // employeeDeleteNamelabel
             // 
-            this.employeeNamelabel.AutoSize = true;
-            this.employeeNamelabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.employeeNamelabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.employeeNamelabel.Location = new System.Drawing.Point(556, 87);
-            this.employeeNamelabel.Name = "employeeNamelabel";
-            this.employeeNamelabel.Size = new System.Drawing.Size(0, 15);
-            this.employeeNamelabel.TabIndex = 64;
+            this.employeeDeleteNamelabel.AutoSize = true;
+            this.employeeDeleteNamelabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.employeeDeleteNamelabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.employeeDeleteNamelabel.Location = new System.Drawing.Point(556, 87);
+            this.employeeDeleteNamelabel.Name = "employeeDeleteNamelabel";
+            this.employeeDeleteNamelabel.Size = new System.Drawing.Size(0, 15);
+            this.employeeDeleteNamelabel.TabIndex = 64;
             // 
-            // employeeStartDatelabel
+            // employeeDeleteStartDatelabel
             // 
-            this.employeeStartDatelabel.AutoSize = true;
-            this.employeeStartDatelabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.employeeStartDatelabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.employeeStartDatelabel.Location = new System.Drawing.Point(556, 128);
-            this.employeeStartDatelabel.Name = "employeeStartDatelabel";
-            this.employeeStartDatelabel.Size = new System.Drawing.Size(0, 15);
-            this.employeeStartDatelabel.TabIndex = 63;
+            this.employeeDeleteStartDatelabel.AutoSize = true;
+            this.employeeDeleteStartDatelabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.employeeDeleteStartDatelabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.employeeDeleteStartDatelabel.Location = new System.Drawing.Point(556, 128);
+            this.employeeDeleteStartDatelabel.Name = "employeeDeleteStartDatelabel";
+            this.employeeDeleteStartDatelabel.Size = new System.Drawing.Size(0, 15);
+            this.employeeDeleteStartDatelabel.TabIndex = 63;
             // 
-            // employeeEmailLabel
+            // employeeDeleteEmailLabel
             // 
-            this.employeeEmailLabel.AutoSize = true;
-            this.employeeEmailLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.employeeEmailLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.employeeEmailLabel.Location = new System.Drawing.Point(556, 178);
-            this.employeeEmailLabel.Name = "employeeEmailLabel";
-            this.employeeEmailLabel.Size = new System.Drawing.Size(0, 15);
-            this.employeeEmailLabel.TabIndex = 62;
+            this.employeeDeleteEmailLabel.AutoSize = true;
+            this.employeeDeleteEmailLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.employeeDeleteEmailLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.employeeDeleteEmailLabel.Location = new System.Drawing.Point(556, 178);
+            this.employeeDeleteEmailLabel.Name = "employeeDeleteEmailLabel";
+            this.employeeDeleteEmailLabel.Size = new System.Drawing.Size(0, 15);
+            this.employeeDeleteEmailLabel.TabIndex = 62;
             // 
-            // employeeIDlabel
+            // employeeDeleteIDlabel
             // 
-            this.employeeIDlabel.AutoSize = true;
-            this.employeeIDlabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.employeeIDlabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.employeeIDlabel.Location = new System.Drawing.Point(556, 43);
-            this.employeeIDlabel.Name = "employeeIDlabel";
-            this.employeeIDlabel.Size = new System.Drawing.Size(0, 15);
-            this.employeeIDlabel.TabIndex = 61;
+            this.employeeDeleteIDlabel.AutoSize = true;
+            this.employeeDeleteIDlabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.employeeDeleteIDlabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.employeeDeleteIDlabel.Location = new System.Drawing.Point(556, 43);
+            this.employeeDeleteIDlabel.Name = "employeeDeleteIDlabel";
+            this.employeeDeleteIDlabel.Size = new System.Drawing.Size(0, 15);
+            this.employeeDeleteIDlabel.TabIndex = 61;
             // 
-            // button4
+            // employeeDeleteButton
             // 
-            this.button4.Location = new System.Drawing.Point(470, 224);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(82, 22);
-            this.button4.TabIndex = 60;
-            this.button4.Text = "Delete Employee";
-            this.button4.UseVisualStyleBackColor = true;
+            this.employeeDeleteButton.Location = new System.Drawing.Point(470, 224);
+            this.employeeDeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeDeleteButton.Name = "employeeDeleteButton";
+            this.employeeDeleteButton.Size = new System.Drawing.Size(82, 22);
+            this.employeeDeleteButton.TabIndex = 60;
+            this.employeeDeleteButton.Text = "Delete Employee";
+            this.employeeDeleteButton.UseVisualStyleBackColor = true;
+            this.employeeDeleteButton.Click += new System.EventHandler(this.employeeDeleteButton_Click);
             // 
             // label16
             // 
@@ -791,19 +937,20 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label13.Location = new System.Drawing.Point(396, 178);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(55, 15);
+            this.label13.Size = new System.Drawing.Size(39, 15);
             this.label13.TabIndex = 56;
-            this.label13.Text = "Email ID:";
+            this.label13.Text = "Email:";
             // 
-            // button3
+            // employeeSearchDeleteButton
             // 
-            this.button3.Location = new System.Drawing.Point(165, 87);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 22);
-            this.button3.TabIndex = 55;
-            this.button3.Text = "Search";
-            this.button3.UseVisualStyleBackColor = true;
+            this.employeeSearchDeleteButton.Location = new System.Drawing.Point(165, 87);
+            this.employeeSearchDeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeSearchDeleteButton.Name = "employeeSearchDeleteButton";
+            this.employeeSearchDeleteButton.Size = new System.Drawing.Size(82, 22);
+            this.employeeSearchDeleteButton.TabIndex = 55;
+            this.employeeSearchDeleteButton.Text = "Search";
+            this.employeeSearchDeleteButton.UseVisualStyleBackColor = true;
+            this.employeeSearchDeleteButton.Click += new System.EventHandler(this.employeeSearchDeleteButton_Click);
             // 
             // label8
             // 
@@ -816,50 +963,87 @@
             this.label8.TabIndex = 54;
             this.label8.Text = "Enter Employee ID:";
             // 
-            // textBox7
+            // employeeSearchDeletelabel
             // 
-            this.textBox7.Location = new System.Drawing.Point(165, 26);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(110, 23);
-            this.textBox7.TabIndex = 53;
+            this.employeeSearchDeletelabel.Location = new System.Drawing.Point(165, 26);
+            this.employeeSearchDeletelabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeSearchDeletelabel.Name = "employeeSearchDeletelabel";
+            this.employeeSearchDeletelabel.Size = new System.Drawing.Size(110, 23);
+            this.employeeSearchDeletelabel.TabIndex = 53;
             // 
-            // tabPage4
+            // AddCustomerTab
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage4.Controls.Add(this.textBox21);
-            this.tabPage4.Controls.Add(this.label9);
-            this.tabPage4.Controls.Add(this.textBox22);
-            this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Controls.Add(this.button7);
-            this.tabPage4.Controls.Add(this.textBox23);
-            this.tabPage4.Controls.Add(this.textBox24);
-            this.tabPage4.Controls.Add(this.textBox25);
-            this.tabPage4.Controls.Add(this.textBox26);
-            this.tabPage4.Controls.Add(this.textBox27);
-            this.tabPage4.Controls.Add(this.textBox28);
-            this.tabPage4.Controls.Add(this.textBox29);
-            this.tabPage4.Controls.Add(this.label32);
-            this.tabPage4.Controls.Add(this.label33);
-            this.tabPage4.Controls.Add(this.label34);
-            this.tabPage4.Controls.Add(this.label35);
-            this.tabPage4.Controls.Add(this.label36);
-            this.tabPage4.Controls.Add(this.label37);
-            this.tabPage4.Controls.Add(this.label38);
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1081, 441);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Add Customer";
+            this.AddCustomerTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AddCustomerTab.Controls.Add(this.customerAddAccountType);
+            this.AddCustomerTab.Controls.Add(this.customerAddExpiryDate);
+            this.AddCustomerTab.Controls.Add(this.customerAddCreationDate);
+            this.AddCustomerTab.Controls.Add(this.customerAddPostal);
+            this.AddCustomerTab.Controls.Add(this.label9);
+            this.AddCustomerTab.Controls.Add(this.customerAddGender);
+            this.AddCustomerTab.Controls.Add(this.label50);
+            this.AddCustomerTab.Controls.Add(this.customerAddCreditCard);
+            this.AddCustomerTab.Controls.Add(this.label53);
+            this.AddCustomerTab.Controls.Add(this.label54);
+            this.AddCustomerTab.Controls.Add(this.label52);
+            this.AddCustomerTab.Controls.Add(this.label51);
+            this.AddCustomerTab.Controls.Add(this.customerAddLName);
+            this.AddCustomerTab.Controls.Add(this.label31);
+            this.AddCustomerTab.Controls.Add(this.button1);
+            this.AddCustomerTab.Controls.Add(this.customerAddButton);
+            this.AddCustomerTab.Controls.Add(this.CustomerAddFName);
+            this.AddCustomerTab.Controls.Add(this.customerAddProvince);
+            this.AddCustomerTab.Controls.Add(this.customerAddCity);
+            this.AddCustomerTab.Controls.Add(this.customerAddStreet);
+            this.AddCustomerTab.Controls.Add(this.customerAddPassword);
+            this.AddCustomerTab.Controls.Add(this.customerAddEmail);
+            this.AddCustomerTab.Controls.Add(this.CustomerAddID);
+            this.AddCustomerTab.Controls.Add(this.label32);
+            this.AddCustomerTab.Controls.Add(this.label33);
+            this.AddCustomerTab.Controls.Add(this.label34);
+            this.AddCustomerTab.Controls.Add(this.label35);
+            this.AddCustomerTab.Controls.Add(this.label36);
+            this.AddCustomerTab.Controls.Add(this.label37);
+            this.AddCustomerTab.Controls.Add(this.label38);
+            this.AddCustomerTab.Location = new System.Drawing.Point(4, 24);
+            this.AddCustomerTab.Name = "AddCustomerTab";
+            this.AddCustomerTab.Padding = new System.Windows.Forms.Padding(3);
+            this.AddCustomerTab.Size = new System.Drawing.Size(1081, 441);
+            this.AddCustomerTab.TabIndex = 3;
+            this.AddCustomerTab.Text = "Add Customer";
             // 
-            // textBox21
+            // customerAddAccountType
             // 
-            this.textBox21.Location = new System.Drawing.Point(431, 193);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(51, 23);
-            this.textBox21.TabIndex = 87;
+            this.customerAddAccountType.FormattingEnabled = true;
+            this.customerAddAccountType.Items.AddRange(new object[] {
+            "Essential",
+            "Extra",
+            "Premium"});
+            this.customerAddAccountType.Location = new System.Drawing.Point(760, 199);
+            this.customerAddAccountType.Name = "customerAddAccountType";
+            this.customerAddAccountType.Size = new System.Drawing.Size(200, 23);
+            this.customerAddAccountType.TabIndex = 89;
+            // 
+            // customerAddExpiryDate
+            // 
+            this.customerAddExpiryDate.Location = new System.Drawing.Point(760, 140);
+            this.customerAddExpiryDate.Name = "customerAddExpiryDate";
+            this.customerAddExpiryDate.Size = new System.Drawing.Size(200, 23);
+            this.customerAddExpiryDate.TabIndex = 88;
+            // 
+            // customerAddCreationDate
+            // 
+            this.customerAddCreationDate.Location = new System.Drawing.Point(760, 102);
+            this.customerAddCreationDate.Name = "customerAddCreationDate";
+            this.customerAddCreationDate.Size = new System.Drawing.Size(200, 23);
+            this.customerAddCreationDate.TabIndex = 88;
+            // 
+            // customerAddPostal
+            // 
+            this.customerAddPostal.Location = new System.Drawing.Point(431, 193);
+            this.customerAddPostal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerAddPostal.Name = "customerAddPostal";
+            this.customerAddPostal.Size = new System.Drawing.Size(51, 23);
+            this.customerAddPostal.TabIndex = 87;
             // 
             // label9
             // 
@@ -871,13 +1055,79 @@
             this.label9.TabIndex = 86;
             this.label9.Text = "Postal Code";
             // 
-            // textBox22
+            // customerAddGender
             // 
-            this.textBox22.Location = new System.Drawing.Point(431, 72);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(110, 23);
-            this.textBox22.TabIndex = 85;
+            this.customerAddGender.Location = new System.Drawing.Point(431, 112);
+            this.customerAddGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerAddGender.Name = "customerAddGender";
+            this.customerAddGender.Size = new System.Drawing.Size(110, 23);
+            this.customerAddGender.TabIndex = 85;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.ForeColor = System.Drawing.Color.White;
+            this.label50.Location = new System.Drawing.Point(323, 115);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(45, 15);
+            this.label50.TabIndex = 84;
+            this.label50.Text = "Gender";
+            // 
+            // customerAddCreditCard
+            // 
+            this.customerAddCreditCard.Location = new System.Drawing.Point(760, 64);
+            this.customerAddCreditCard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerAddCreditCard.Name = "customerAddCreditCard";
+            this.customerAddCreditCard.Size = new System.Drawing.Size(200, 23);
+            this.customerAddCreditCard.TabIndex = 85;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.ForeColor = System.Drawing.Color.White;
+            this.label53.Location = new System.Drawing.Point(662, 145);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(66, 15);
+            this.label53.TabIndex = 84;
+            this.label53.Text = "Expiry Date";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.ForeColor = System.Drawing.Color.White;
+            this.label54.Location = new System.Drawing.Point(662, 199);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(57, 15);
+            this.label54.TabIndex = 84;
+            this.label54.Text = "Plan Type";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.ForeColor = System.Drawing.Color.White;
+            this.label52.Location = new System.Drawing.Point(662, 107);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(79, 15);
+            this.label52.TabIndex = 84;
+            this.label52.Text = "Creation Date";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.ForeColor = System.Drawing.Color.White;
+            this.label51.Location = new System.Drawing.Point(662, 69);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(67, 15);
+            this.label51.TabIndex = 84;
+            this.label51.Text = "Credit Card";
+            // 
+            // customerAddLName
+            // 
+            this.customerAddLName.Location = new System.Drawing.Point(431, 72);
+            this.customerAddLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerAddLName.Name = "customerAddLName";
+            this.customerAddLName.Size = new System.Drawing.Size(110, 23);
+            this.customerAddLName.TabIndex = 85;
             // 
             // label31
             // 
@@ -889,75 +1139,91 @@
             this.label31.TabIndex = 84;
             this.label31.Text = "Last Name";
             // 
-            // button7
+            // button1
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
-            this.button7.FlatAppearance.BorderSize = 2;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(591, 269);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(164, 52);
-            this.button7.TabIndex = 83;
-            this.button7.Text = "Add";
-            this.button7.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(407, 35);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 24);
+            this.button1.TabIndex = 83;
+            this.button1.Text = "Generate ID";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // textBox23
+            // customerAddButton
             // 
-            this.textBox23.Location = new System.Drawing.Point(170, 72);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(110, 23);
-            this.textBox23.TabIndex = 82;
+            this.customerAddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
+            this.customerAddButton.FlatAppearance.BorderSize = 2;
+            this.customerAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customerAddButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.customerAddButton.Location = new System.Drawing.Point(796, 340);
+            this.customerAddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerAddButton.Name = "customerAddButton";
+            this.customerAddButton.Size = new System.Drawing.Size(164, 52);
+            this.customerAddButton.TabIndex = 83;
+            this.customerAddButton.Text = "Add";
+            this.customerAddButton.UseVisualStyleBackColor = false;
+            this.customerAddButton.Click += new System.EventHandler(this.customerAddButton_Click);
             // 
-            // textBox24
+            // CustomerAddFName
             // 
-            this.textBox24.Location = new System.Drawing.Point(169, 269);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(42, 23);
-            this.textBox24.TabIndex = 81;
+            this.CustomerAddFName.Location = new System.Drawing.Point(170, 72);
+            this.CustomerAddFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CustomerAddFName.Name = "CustomerAddFName";
+            this.CustomerAddFName.Size = new System.Drawing.Size(110, 23);
+            this.CustomerAddFName.TabIndex = 82;
             // 
-            // textBox25
+            // customerAddProvince
             // 
-            this.textBox25.Location = new System.Drawing.Point(169, 236);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(110, 23);
-            this.textBox25.TabIndex = 80;
+            this.customerAddProvince.Location = new System.Drawing.Point(169, 269);
+            this.customerAddProvince.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerAddProvince.Name = "customerAddProvince";
+            this.customerAddProvince.Size = new System.Drawing.Size(42, 23);
+            this.customerAddProvince.TabIndex = 81;
             // 
-            // textBox26
+            // customerAddCity
             // 
-            this.textBox26.Location = new System.Drawing.Point(169, 192);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(110, 23);
-            this.textBox26.TabIndex = 79;
+            this.customerAddCity.Location = new System.Drawing.Point(169, 236);
+            this.customerAddCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerAddCity.Name = "customerAddCity";
+            this.customerAddCity.Size = new System.Drawing.Size(110, 23);
+            this.customerAddCity.TabIndex = 80;
             // 
-            // textBox27
+            // customerAddStreet
             // 
-            this.textBox27.Location = new System.Drawing.Point(169, 154);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(110, 23);
-            this.textBox27.TabIndex = 78;
+            this.customerAddStreet.Location = new System.Drawing.Point(169, 192);
+            this.customerAddStreet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerAddStreet.Name = "customerAddStreet";
+            this.customerAddStreet.Size = new System.Drawing.Size(110, 23);
+            this.customerAddStreet.TabIndex = 79;
             // 
-            // textBox28
+            // customerAddPassword
             // 
-            this.textBox28.Location = new System.Drawing.Point(170, 115);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(110, 23);
-            this.textBox28.TabIndex = 77;
+            this.customerAddPassword.Location = new System.Drawing.Point(169, 154);
+            this.customerAddPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerAddPassword.Name = "customerAddPassword";
+            this.customerAddPassword.Size = new System.Drawing.Size(110, 23);
+            this.customerAddPassword.TabIndex = 78;
             // 
-            // textBox29
+            // customerAddEmail
             // 
-            this.textBox29.Location = new System.Drawing.Point(169, 35);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(110, 23);
-            this.textBox29.TabIndex = 76;
+            this.customerAddEmail.Location = new System.Drawing.Point(170, 115);
+            this.customerAddEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerAddEmail.Name = "customerAddEmail";
+            this.customerAddEmail.Size = new System.Drawing.Size(110, 23);
+            this.customerAddEmail.TabIndex = 77;
+            // 
+            // CustomerAddID
+            // 
+            this.CustomerAddID.Location = new System.Drawing.Point(169, 35);
+            this.CustomerAddID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CustomerAddID.Name = "CustomerAddID";
+            this.CustomerAddID.Size = new System.Drawing.Size(110, 23);
+            this.CustomerAddID.TabIndex = 76;
             // 
             // label32
             // 
@@ -965,9 +1231,9 @@
             this.label32.ForeColor = System.Drawing.Color.White;
             this.label32.Location = new System.Drawing.Point(57, 276);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(33, 15);
+            this.label32.Size = new System.Drawing.Size(53, 15);
             this.label32.TabIndex = 75;
-            this.label32.Text = "State";
+            this.label32.Text = "Province";
             // 
             // label33
             // 
@@ -1029,46 +1295,73 @@
             this.label38.TabIndex = 69;
             this.label38.Text = "First Name";
             // 
-            // tabPage5
+            // EditCustomerTab
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage5.Controls.Add(this.button8);
-            this.tabPage5.Controls.Add(this.label39);
-            this.tabPage5.Controls.Add(this.textBox30);
-            this.tabPage5.Controls.Add(this.textBox31);
-            this.tabPage5.Controls.Add(this.label40);
-            this.tabPage5.Controls.Add(this.textBox32);
-            this.tabPage5.Controls.Add(this.label41);
-            this.tabPage5.Controls.Add(this.button9);
-            this.tabPage5.Controls.Add(this.textBox33);
-            this.tabPage5.Controls.Add(this.textBox34);
-            this.tabPage5.Controls.Add(this.textBox35);
-            this.tabPage5.Controls.Add(this.textBox36);
-            this.tabPage5.Controls.Add(this.textBox37);
-            this.tabPage5.Controls.Add(this.textBox38);
-            this.tabPage5.Controls.Add(this.textBox39);
-            this.tabPage5.Controls.Add(this.label42);
-            this.tabPage5.Controls.Add(this.label43);
-            this.tabPage5.Controls.Add(this.label44);
-            this.tabPage5.Controls.Add(this.label45);
-            this.tabPage5.Controls.Add(this.label46);
-            this.tabPage5.Controls.Add(this.label47);
-            this.tabPage5.Controls.Add(this.label48);
-            this.tabPage5.Location = new System.Drawing.Point(4, 24);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1081, 441);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Edit cutomer";
+            this.EditCustomerTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.EditCustomerTab.Controls.Add(this.customerEditAccountType);
+            this.EditCustomerTab.Controls.Add(this.label56);
+            this.EditCustomerTab.Controls.Add(this.customerEditSearchButton);
+            this.EditCustomerTab.Controls.Add(this.label39);
+            this.EditCustomerTab.Controls.Add(this.customerEditSearchID);
+            this.EditCustomerTab.Controls.Add(this.customerEditPostal);
+            this.EditCustomerTab.Controls.Add(this.label40);
+            this.EditCustomerTab.Controls.Add(this.customerEditGender);
+            this.EditCustomerTab.Controls.Add(this.label55);
+            this.EditCustomerTab.Controls.Add(this.customerEditLName);
+            this.EditCustomerTab.Controls.Add(this.label41);
+            this.EditCustomerTab.Controls.Add(this.customerEditConfirmButton);
+            this.EditCustomerTab.Controls.Add(this.customerEditFName);
+            this.EditCustomerTab.Controls.Add(this.customerEditProvince);
+            this.EditCustomerTab.Controls.Add(this.customerEditCity);
+            this.EditCustomerTab.Controls.Add(this.customerEditStreet);
+            this.EditCustomerTab.Controls.Add(this.customerEditPassword);
+            this.EditCustomerTab.Controls.Add(this.customerEditEmail);
+            this.EditCustomerTab.Controls.Add(this.customerEditID);
+            this.EditCustomerTab.Controls.Add(this.label42);
+            this.EditCustomerTab.Controls.Add(this.label43);
+            this.EditCustomerTab.Controls.Add(this.label44);
+            this.EditCustomerTab.Controls.Add(this.label45);
+            this.EditCustomerTab.Controls.Add(this.label46);
+            this.EditCustomerTab.Controls.Add(this.label47);
+            this.EditCustomerTab.Controls.Add(this.label48);
+            this.EditCustomerTab.Location = new System.Drawing.Point(4, 24);
+            this.EditCustomerTab.Name = "EditCustomerTab";
+            this.EditCustomerTab.Size = new System.Drawing.Size(1081, 441);
+            this.EditCustomerTab.TabIndex = 4;
+            this.EditCustomerTab.Text = "Edit cutomer";
             // 
-            // button8
+            // customerEditAccountType
             // 
-            this.button8.Location = new System.Drawing.Point(168, 88);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(82, 22);
-            this.button8.TabIndex = 112;
-            this.button8.Text = "Search";
-            this.button8.UseVisualStyleBackColor = true;
+            this.customerEditAccountType.FormattingEnabled = true;
+            this.customerEditAccountType.Items.AddRange(new object[] {
+            "Essential",
+            "Extra",
+            "Premium"});
+            this.customerEditAccountType.Location = new System.Drawing.Point(658, 143);
+            this.customerEditAccountType.Name = "customerEditAccountType";
+            this.customerEditAccountType.Size = new System.Drawing.Size(110, 23);
+            this.customerEditAccountType.TabIndex = 91;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.ForeColor = System.Drawing.Color.White;
+            this.label56.Location = new System.Drawing.Point(560, 143);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(57, 15);
+            this.label56.TabIndex = 90;
+            this.label56.Text = "Plan Type";
+            // 
+            // customerEditSearchButton
+            // 
+            this.customerEditSearchButton.Location = new System.Drawing.Point(168, 88);
+            this.customerEditSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditSearchButton.Name = "customerEditSearchButton";
+            this.customerEditSearchButton.Size = new System.Drawing.Size(82, 22);
+            this.customerEditSearchButton.TabIndex = 112;
+            this.customerEditSearchButton.Text = "Search";
+            this.customerEditSearchButton.UseVisualStyleBackColor = true;
+            this.customerEditSearchButton.Click += new System.EventHandler(this.customerEditSearchButton_Click);
             // 
             // label39
             // 
@@ -1081,40 +1374,59 @@
             this.label39.TabIndex = 111;
             this.label39.Text = "Enter Customer ID:";
             // 
-            // textBox30
+            // customerEditSearchID
             // 
-            this.textBox30.Location = new System.Drawing.Point(168, 26);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(110, 23);
-            this.textBox30.TabIndex = 110;
+            this.customerEditSearchID.Location = new System.Drawing.Point(168, 26);
+            this.customerEditSearchID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditSearchID.Name = "customerEditSearchID";
+            this.customerEditSearchID.Size = new System.Drawing.Size(110, 23);
+            this.customerEditSearchID.TabIndex = 110;
             // 
-            // textBox31
+            // customerEditPostal
             // 
-            this.textBox31.Location = new System.Drawing.Point(610, 268);
-            this.textBox31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(51, 23);
-            this.textBox31.TabIndex = 109;
+            this.customerEditPostal.Location = new System.Drawing.Point(658, 268);
+            this.customerEditPostal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditPostal.Name = "customerEditPostal";
+            this.customerEditPostal.Size = new System.Drawing.Size(63, 23);
+            this.customerEditPostal.TabIndex = 109;
             // 
             // label40
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label40.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label40.Location = new System.Drawing.Point(502, 269);
+            this.label40.Location = new System.Drawing.Point(560, 268);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(71, 15);
             this.label40.TabIndex = 108;
             this.label40.Text = "Postal Code";
             // 
-            // textBox32
+            // customerEditGender
             // 
-            this.textBox32.Location = new System.Drawing.Point(658, 64);
-            this.textBox32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(110, 23);
-            this.textBox32.TabIndex = 107;
+            this.customerEditGender.Location = new System.Drawing.Point(658, 104);
+            this.customerEditGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditGender.Name = "customerEditGender";
+            this.customerEditGender.Size = new System.Drawing.Size(110, 23);
+            this.customerEditGender.TabIndex = 107;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label55.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label55.Location = new System.Drawing.Point(558, 107);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(49, 15);
+            this.label55.TabIndex = 106;
+            this.label55.Text = "Gender";
+            // 
+            // customerEditLName
+            // 
+            this.customerEditLName.Location = new System.Drawing.Point(658, 64);
+            this.customerEditLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditLName.Name = "customerEditLName";
+            this.customerEditLName.Size = new System.Drawing.Size(110, 23);
+            this.customerEditLName.TabIndex = 107;
             // 
             // label41
             // 
@@ -1127,75 +1439,76 @@
             this.label41.TabIndex = 106;
             this.label41.Text = "Last Name";
             // 
-            // button9
+            // customerEditConfirmButton
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(843, 237);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(173, 54);
-            this.button9.TabIndex = 105;
-            this.button9.Text = "Confirm";
-            this.button9.UseVisualStyleBackColor = false;
+            this.customerEditConfirmButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
+            this.customerEditConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customerEditConfirmButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.customerEditConfirmButton.ForeColor = System.Drawing.Color.Black;
+            this.customerEditConfirmButton.Location = new System.Drawing.Point(843, 237);
+            this.customerEditConfirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditConfirmButton.Name = "customerEditConfirmButton";
+            this.customerEditConfirmButton.Size = new System.Drawing.Size(173, 54);
+            this.customerEditConfirmButton.TabIndex = 105;
+            this.customerEditConfirmButton.Text = "Confirm";
+            this.customerEditConfirmButton.UseVisualStyleBackColor = false;
+            this.customerEditConfirmButton.Click += new System.EventHandler(this.customerEditConfirmButton_Click);
             // 
-            // textBox33
+            // customerEditFName
             // 
-            this.textBox33.Location = new System.Drawing.Point(426, 64);
-            this.textBox33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(110, 23);
-            this.textBox33.TabIndex = 104;
+            this.customerEditFName.Location = new System.Drawing.Point(426, 64);
+            this.customerEditFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditFName.Name = "customerEditFName";
+            this.customerEditFName.Size = new System.Drawing.Size(110, 23);
+            this.customerEditFName.TabIndex = 104;
             // 
-            // textBox34
+            // customerEditProvince
             // 
-            this.textBox34.Location = new System.Drawing.Point(425, 260);
-            this.textBox34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(42, 23);
-            this.textBox34.TabIndex = 103;
+            this.customerEditProvince.Location = new System.Drawing.Point(425, 260);
+            this.customerEditProvince.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditProvince.Name = "customerEditProvince";
+            this.customerEditProvince.Size = new System.Drawing.Size(42, 23);
+            this.customerEditProvince.TabIndex = 103;
             // 
-            // textBox35
+            // customerEditCity
             // 
-            this.textBox35.Location = new System.Drawing.Point(425, 228);
-            this.textBox35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(110, 23);
-            this.textBox35.TabIndex = 102;
+            this.customerEditCity.Location = new System.Drawing.Point(425, 228);
+            this.customerEditCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditCity.Name = "customerEditCity";
+            this.customerEditCity.Size = new System.Drawing.Size(110, 23);
+            this.customerEditCity.TabIndex = 102;
             // 
-            // textBox36
+            // customerEditStreet
             // 
-            this.textBox36.Location = new System.Drawing.Point(425, 184);
-            this.textBox36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(110, 23);
-            this.textBox36.TabIndex = 101;
+            this.customerEditStreet.Location = new System.Drawing.Point(425, 184);
+            this.customerEditStreet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditStreet.Name = "customerEditStreet";
+            this.customerEditStreet.Size = new System.Drawing.Size(110, 23);
+            this.customerEditStreet.TabIndex = 101;
             // 
-            // textBox37
+            // customerEditPassword
             // 
-            this.textBox37.Location = new System.Drawing.Point(425, 146);
-            this.textBox37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(110, 23);
-            this.textBox37.TabIndex = 100;
+            this.customerEditPassword.Location = new System.Drawing.Point(425, 146);
+            this.customerEditPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditPassword.Name = "customerEditPassword";
+            this.customerEditPassword.Size = new System.Drawing.Size(110, 23);
+            this.customerEditPassword.TabIndex = 100;
             // 
-            // textBox38
+            // customerEditEmail
             // 
-            this.textBox38.Location = new System.Drawing.Point(426, 107);
-            this.textBox38.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(110, 23);
-            this.textBox38.TabIndex = 99;
+            this.customerEditEmail.Location = new System.Drawing.Point(426, 107);
+            this.customerEditEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditEmail.Name = "customerEditEmail";
+            this.customerEditEmail.Size = new System.Drawing.Size(110, 23);
+            this.customerEditEmail.TabIndex = 99;
             // 
-            // textBox39
+            // customerEditID
             // 
-            this.textBox39.Location = new System.Drawing.Point(425, 26);
-            this.textBox39.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(110, 23);
-            this.textBox39.TabIndex = 98;
+            this.customerEditID.Location = new System.Drawing.Point(425, 26);
+            this.customerEditID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerEditID.Name = "customerEditID";
+            this.customerEditID.Size = new System.Drawing.Size(110, 23);
+            this.customerEditID.TabIndex = 98;
             // 
             // label42
             // 
@@ -1204,9 +1517,9 @@
             this.label42.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label42.Location = new System.Drawing.Point(313, 268);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(37, 15);
+            this.label42.Size = new System.Drawing.Size(56, 15);
             this.label42.TabIndex = 97;
-            this.label42.Text = "State";
+            this.label42.Text = "Province";
             // 
             // label43
             // 
@@ -1274,6 +1587,180 @@
             this.label48.TabIndex = 91;
             this.label48.Text = "First Name";
             // 
+            // DeleteCustomerTab
+            // 
+            this.DeleteCustomerTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.DeleteCustomerTab.Controls.Add(this.customerDeleteButton);
+            this.DeleteCustomerTab.Controls.Add(this.customerDeleteName);
+            this.DeleteCustomerTab.Controls.Add(this.customerDeleteAccountCreation);
+            this.DeleteCustomerTab.Controls.Add(this.customerDeleteEmail);
+            this.DeleteCustomerTab.Controls.Add(this.customerDeletePlanType);
+            this.DeleteCustomerTab.Controls.Add(this.customerDeleteID);
+            this.DeleteCustomerTab.Controls.Add(this.irreqgularlabel);
+            this.DeleteCustomerTab.Controls.Add(this.label61);
+            this.DeleteCustomerTab.Controls.Add(this.label62);
+            this.DeleteCustomerTab.Controls.Add(this.label63);
+            this.DeleteCustomerTab.Controls.Add(this.label64);
+            this.DeleteCustomerTab.Controls.Add(this.button4);
+            this.DeleteCustomerTab.Controls.Add(this.label65);
+            this.DeleteCustomerTab.Controls.Add(this.customerDeleteSearchID);
+            this.DeleteCustomerTab.Location = new System.Drawing.Point(4, 24);
+            this.DeleteCustomerTab.Name = "DeleteCustomerTab";
+            this.DeleteCustomerTab.Size = new System.Drawing.Size(1081, 441);
+            this.DeleteCustomerTab.TabIndex = 5;
+            this.DeleteCustomerTab.Text = "Delete Customer";
+            this.DeleteCustomerTab.Click += new System.EventHandler(this.DeleteCustomerTab_Click);
+            // 
+            // customerDeleteButton
+            // 
+            this.customerDeleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
+            this.customerDeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customerDeleteButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.customerDeleteButton.ForeColor = System.Drawing.Color.Black;
+            this.customerDeleteButton.Location = new System.Drawing.Point(696, 239);
+            this.customerDeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerDeleteButton.Name = "customerDeleteButton";
+            this.customerDeleteButton.Size = new System.Drawing.Size(173, 54);
+            this.customerDeleteButton.TabIndex = 106;
+            this.customerDeleteButton.Text = "Confirm";
+            this.customerDeleteButton.UseVisualStyleBackColor = false;
+            this.customerDeleteButton.Click += new System.EventHandler(this.customerDeleteButton_Click);
+            // 
+            // customerDeleteName
+            // 
+            this.customerDeleteName.AutoSize = true;
+            this.customerDeleteName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customerDeleteName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.customerDeleteName.Location = new System.Drawing.Point(597, 103);
+            this.customerDeleteName.Name = "customerDeleteName";
+            this.customerDeleteName.Size = new System.Drawing.Size(0, 15);
+            this.customerDeleteName.TabIndex = 76;
+            // 
+            // customerDeleteAccountCreation
+            // 
+            this.customerDeleteAccountCreation.AutoSize = true;
+            this.customerDeleteAccountCreation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customerDeleteAccountCreation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.customerDeleteAccountCreation.Location = new System.Drawing.Point(597, 144);
+            this.customerDeleteAccountCreation.Name = "customerDeleteAccountCreation";
+            this.customerDeleteAccountCreation.Size = new System.Drawing.Size(0, 15);
+            this.customerDeleteAccountCreation.TabIndex = 75;
+            // 
+            // customerDeleteEmail
+            // 
+            this.customerDeleteEmail.AutoSize = true;
+            this.customerDeleteEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customerDeleteEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.customerDeleteEmail.Location = new System.Drawing.Point(597, 194);
+            this.customerDeleteEmail.Name = "customerDeleteEmail";
+            this.customerDeleteEmail.Size = new System.Drawing.Size(0, 15);
+            this.customerDeleteEmail.TabIndex = 74;
+            // 
+            // customerDeletePlanType
+            // 
+            this.customerDeletePlanType.AutoSize = true;
+            this.customerDeletePlanType.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customerDeletePlanType.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.customerDeletePlanType.Location = new System.Drawing.Point(978, 58);
+            this.customerDeletePlanType.Name = "customerDeletePlanType";
+            this.customerDeletePlanType.Size = new System.Drawing.Size(0, 15);
+            this.customerDeletePlanType.TabIndex = 73;
+            // 
+            // customerDeleteID
+            // 
+            this.customerDeleteID.AutoSize = true;
+            this.customerDeleteID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customerDeleteID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.customerDeleteID.Location = new System.Drawing.Point(597, 59);
+            this.customerDeleteID.Name = "customerDeleteID";
+            this.customerDeleteID.Size = new System.Drawing.Size(0, 15);
+            this.customerDeleteID.TabIndex = 73;
+            // 
+            // irreqgularlabel
+            // 
+            this.irreqgularlabel.AutoSize = true;
+            this.irreqgularlabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.irreqgularlabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.irreqgularlabel.Location = new System.Drawing.Point(818, 58);
+            this.irreqgularlabel.Name = "irreqgularlabel";
+            this.irreqgularlabel.Size = new System.Drawing.Size(62, 15);
+            this.irreqgularlabel.TabIndex = 71;
+            this.irreqgularlabel.Text = "Plan Type:";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label61.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label61.Location = new System.Drawing.Point(437, 59);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(80, 15);
+            this.label61.TabIndex = 71;
+            this.label61.Text = "Customer ID:";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label62.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label62.Location = new System.Drawing.Point(437, 103);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(43, 15);
+            this.label62.TabIndex = 70;
+            this.label62.Text = "Name:";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label63.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label63.Location = new System.Drawing.Point(437, 144);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(136, 15);
+            this.label63.TabIndex = 69;
+            this.label63.Text = "Account Creation Date:";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label64.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label64.Location = new System.Drawing.Point(437, 194);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(39, 15);
+            this.label64.TabIndex = 68;
+            this.label64.Text = "Email:";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(206, 116);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(82, 22);
+            this.button4.TabIndex = 67;
+            this.button4.Text = "Search";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label65.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label65.Location = new System.Drawing.Point(59, 60);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(113, 15);
+            this.label65.TabIndex = 66;
+            this.label65.Text = "Enter Customer ID:";
+            // 
+            // customerDeleteSearchID
+            // 
+            this.customerDeleteSearchID.Location = new System.Drawing.Point(206, 55);
+            this.customerDeleteSearchID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerDeleteSearchID.Name = "customerDeleteSearchID";
+            this.customerDeleteSearchID.Size = new System.Drawing.Size(110, 23);
+            this.customerDeleteSearchID.TabIndex = 65;
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1289,16 +1776,18 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.AddEmployeeTab.ResumeLayout(false);
+            this.AddEmployeeTab.PerformLayout();
+            this.EditEmployeeTab.ResumeLayout(false);
+            this.EditEmployeeTab.PerformLayout();
+            this.DeleteEmployeetab.ResumeLayout(false);
+            this.DeleteEmployeetab.PerformLayout();
+            this.AddCustomerTab.ResumeLayout(false);
+            this.AddCustomerTab.PerformLayout();
+            this.EditCustomerTab.ResumeLayout(false);
+            this.EditCustomerTab.PerformLayout();
+            this.DeleteCustomerTab.ResumeLayout(false);
+            this.DeleteCustomerTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1310,17 +1799,17 @@
         private Button button2;
         private Label label10;
         private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TextBox textBox9;
+        private TabPage AddEmployeeTab;
+        private TextBox employeeAddLName;
         private Label label11;
-        private Button button1;
-        private TextBox textBox8;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private Button employeeAddButton;
+        private TextBox employeeAddFName;
+        private TextBox employeeAddState;
+        private TextBox employeeAddCity;
+        private TextBox employeeAddStreet;
+        private TextBox employeeAddPassword;
+        private TextBox employeeAddEmail;
+        private TextBox employeeAddEmployeeID;
         private Label label7;
         private Label label6;
         private Label label5;
@@ -1328,10 +1817,10 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TabPage tabPage2;
-        private TextBox textBox10;
+        private TabPage EditEmployeeTab;
+        private TextBox employeeAddPostal;
         private Label label12;
-        private TabPage tabPage3;
+        private TabPage DeleteEmployeetab;
         private Button button10;
         private Label label30;
         private TextBox idSearch;
@@ -1354,31 +1843,31 @@
         private Label label27;
         private Label label28;
         private Label label29;
-        private Label employeeNamelabel;
-        private Label employeeStartDatelabel;
-        private Label employeeEmailLabel;
-        private Label employeeIDlabel;
-        private Button button4;
+        private Label employeeDeleteNamelabel;
+        private Label employeeDeleteStartDatelabel;
+        private Label employeeDeleteEmailLabel;
+        private Label employeeDeleteIDlabel;
+        private Button employeeDeleteButton;
         private Label label16;
         private Label label15;
         private Label label14;
         private Label label13;
-        private Button button3;
+        private Button employeeSearchDeleteButton;
         private Label label8;
-        private TextBox textBox7;
-        private TabPage tabPage4;
-        private TextBox textBox21;
+        private TextBox employeeSearchDeletelabel;
+        private TabPage AddCustomerTab;
+        private TextBox customerAddPostal;
         private Label label9;
-        private TextBox textBox22;
+        private TextBox customerAddLName;
         private Label label31;
-        private Button button7;
-        private TextBox textBox23;
-        private TextBox textBox24;
-        private TextBox textBox25;
-        private TextBox textBox26;
-        private TextBox textBox27;
-        private TextBox textBox28;
-        private TextBox textBox29;
+        private Button customerAddButton;
+        private TextBox CustomerAddFName;
+        private TextBox customerAddProvince;
+        private TextBox customerAddCity;
+        private TextBox customerAddStreet;
+        private TextBox customerAddPassword;
+        private TextBox customerAddEmail;
+        private TextBox CustomerAddID;
         private Label label32;
         private Label label33;
         private Label label34;
@@ -1386,22 +1875,22 @@
         private Label label36;
         private Label label37;
         private Label label38;
-        private TabPage tabPage5;
-        private Button button8;
+        private TabPage EditCustomerTab;
+        private Button customerEditSearchButton;
         private Label label39;
-        private TextBox textBox30;
-        private TextBox textBox31;
+        private TextBox customerEditSearchID;
+        private TextBox customerEditPostal;
         private Label label40;
-        private TextBox textBox32;
+        private TextBox customerEditLName;
         private Label label41;
-        private Button button9;
-        private TextBox textBox33;
-        private TextBox textBox34;
-        private TextBox textBox35;
-        private TextBox textBox36;
-        private TextBox textBox37;
-        private TextBox textBox38;
-        private TextBox textBox39;
+        private Button customerEditConfirmButton;
+        private TextBox customerEditFName;
+        private TextBox customerEditProvince;
+        private TextBox customerEditCity;
+        private TextBox customerEditStreet;
+        private TextBox customerEditPassword;
+        private TextBox customerEditEmail;
+        private TextBox customerEditID;
         private Label label42;
         private Label label43;
         private Label label44;
@@ -1409,5 +1898,45 @@
         private Label label46;
         private Label label47;
         private Label label48;
+        private TextBox employeeEditWageLabel;
+        private Label label18;
+        private TextBox employeeEditGenderLabel;
+        private Label label17;
+        private TabPage DeleteCustomerTab;
+        private TextBox employeeAddWage;
+        private Label label20;
+        private TextBox employeeAddGender;
+        private Label label19;
+        private Label label49;
+        private DateTimePicker EmployeeAddStartDate;
+        private ComboBox customerAddAccountType;
+        private DateTimePicker customerAddExpiryDate;
+        private DateTimePicker customerAddCreationDate;
+        private TextBox customerAddGender;
+        private Label label50;
+        private TextBox customerAddCreditCard;
+        private Label label53;
+        private Label label54;
+        private Label label52;
+        private Label label51;
+        private Button button1;
+        private ComboBox customerEditAccountType;
+        private Label label56;
+        private TextBox customerEditGender;
+        private Label label55;
+        private Label customerDeleteName;
+        private Label customerDeleteAccountCreation;
+        private Label customerDeleteEmail;
+        private Label customerDeleteID;
+        private Label label61;
+        private Label label62;
+        private Label label63;
+        private Label label64;
+        private Button button4;
+        private Label label65;
+        private TextBox customerDeleteSearchID;
+        private Label customerDeletePlanType;
+        private Label irreqgularlabel;
+        private Button customerDeleteButton;
     }
 }
