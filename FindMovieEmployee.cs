@@ -33,5 +33,10 @@ namespace CMPT291_GROUP_PROJECT
         {
             ths.loadBigForms(new OrderConfirmationEmployee(ths));
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

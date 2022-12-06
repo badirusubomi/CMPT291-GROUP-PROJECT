@@ -31,7 +31,7 @@ namespace CMPT291_GROUP_PROJECT
             string query = "";
             if (title.Checked)
             {
-                query += $"intersect (select * from Movies where Title = '{titleBox.Text}')";
+                query += $"intersect (select * from Movies where Title like '%'+'{titleBox.Text}'+'%')";
             }
             if (year.Checked)
             {
@@ -45,8 +45,8 @@ namespace CMPT291_GROUP_PROJECT
             {
                 query += $"intersect (select M.Title from (select concat(A1.FName,' ' ,A1.LName) " +
                         $"as ActorName, A1.ActorID from Actors as A1) as T, Movies as M, Acts_In " +
-                        $"as AI where M.MoviesID = AI.MovieID AND T.ActorID = AI.ActorID and T.ActorName " +
-                        $"like {actorBox.Text})";
+                        $"as AI where M.MovieID = AI.MovieID AND T.ActorID = AI.ActorsID and T.ActorName " +
+                        $"like '%'+ '{actorBox.Text}' + '%')";
             }
             ths.AppUser._query = query.Remove(0,9);
             ths.loadForms(new searchResultForm(ths));
@@ -74,6 +74,12 @@ namespace CMPT291_GROUP_PROJECT
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             OnCheckedChanged(sender, e);
+            CheckBox cb1 = (CheckBox)sender;
+            /*
+            if (cb1.Checked)
+            {
+                titleBox.ReadOnly = false;
+            }*/
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
