@@ -1,4 +1,5 @@
 /*Edit movies*/
+*Edit movies*/
 update Movies 
 SET title = "",genre = "", fee = ""
 WHERE MovieID = ID;
@@ -70,3 +71,43 @@ select M.Title from
 from Actors as A1) as T, Movies as M, Acts_In as AI
 where M.MoviesID = AI.MovieID AND T.ActorID = AI.ActorID and T.ActorName like '%key%'
 
+	/*Rentals for the month*/
+	select * from orders where Month(DateFrom) = <month>
+
+	/*Rentals for the year*/
+	select * from orders where Year(DateFrom) = <year>
+
+	/*Most Rented Movie of the moive/year */
+select max(Rentals), M.Title from
+(	select count(*) as Rentals, MovieID 
+	from Orders
+	where Month(DateFrom) = <month> or  Year(DateFrom) = year
+	group by MoiveID) as Temp1, Movies as M
+	where Temp1.MovieID = M.MovieID;
+	
+
+	/*Most Rented Format (DVD,VHS ...)*/
+	select max(Rentals), C.CopyType
+	from ( select count(*) as Rentals, MovieID , CopyID
+	from Orders
+	where Month(DateFrom) = <month> or  Year(DateFrom) = year
+	group by MovieID , CopyID) as Temp1, Copies as C
+	where Temp1.MovieID = C.MovieID and Temp1.CopyID = C.CopyID;
+
+	/*Employee with most transactions*/
+	select count(*) as Sales, EmployeeID
+	from Orders
+	where Month(DateFrom) = <month>
+	group by EmployeeID
+
+	/*Most popular plan*/
+	select PlanName, Subscriptions 
+	from (select count(*) as Subscriptions, PLanID 
+	from Customer
+	group by PlanID) as T, AccType as A
+	where T.PlanID = A.PlanID 
+
+	/*Overdue Movies*/
+	select CustomerID, MovieID, CopyID
+	from Orders
+	where OrderStatus = 2
