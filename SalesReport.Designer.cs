@@ -51,8 +51,9 @@
             this.panel3.Controls.Add(this.button6);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1314, 131);
+            this.panel3.Size = new System.Drawing.Size(1150, 98);
             this.panel3.TabIndex = 4;
             // 
             // label9
@@ -60,17 +61,18 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(553, 76);
+            this.label9.Location = new System.Drawing.Point(484, 57);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(157, 50);
+            this.label9.Size = new System.Drawing.Size(128, 41);
             this.label9.TabIndex = 22;
             this.label9.Text = "Reports";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1207, 83);
+            this.button1.Location = new System.Drawing.Point(1056, 62);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(82, 22);
             this.button1.TabIndex = 2;
             this.button1.Text = "back";
             this.button1.UseVisualStyleBackColor = true;
@@ -80,8 +82,9 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(155, 98);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -92,9 +95,10 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(1257, 15);
+            this.button6.Location = new System.Drawing.Point(1100, 11);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(43, 53);
+            this.button6.Size = new System.Drawing.Size(38, 40);
             this.button6.TabIndex = 0;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -108,9 +112,10 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-7, 349);
+            this.button3.Location = new System.Drawing.Point(-6, 262);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(184, 71);
+            this.button3.Size = new System.Drawing.Size(161, 53);
             this.button3.TabIndex = 13;
             this.button3.Text = "Movies";
             this.button3.UseVisualStyleBackColor = true;
@@ -124,9 +129,10 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-7, 204);
+            this.button4.Location = new System.Drawing.Point(-6, 153);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(184, 71);
+            this.button4.Size = new System.Drawing.Size(161, 53);
             this.button4.TabIndex = 14;
             this.button4.Text = "Customers";
             this.button4.UseVisualStyleBackColor = true;
@@ -141,12 +147,14 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-7, 272);
+            this.button2.Location = new System.Drawing.Point(-6, 204);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 71);
+            this.button2.Size = new System.Drawing.Size(161, 53);
             this.button2.TabIndex = 15;
             this.button2.Text = "Employees";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
@@ -157,19 +165,20 @@
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(-7, 426);
+            this.button5.Location = new System.Drawing.Point(-6, 320);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(184, 71);
+            this.button5.Size = new System.Drawing.Size(161, 53);
             this.button5.TabIndex = 16;
             this.button5.Text = "     Sales Reports";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // SalesReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1314, 885);
+            this.ClientSize = new System.Drawing.Size(1150, 664);
             this.ControlBox = false;
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
@@ -177,6 +186,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SalesReport";
             this.Text = "SalesReport";
             this.Load += new System.EventHandler(this.SalesReport_Load);

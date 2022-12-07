@@ -127,5 +127,10 @@ namespace CMPT291_GROUP_PROJECT
         {
             ths.loadBigForms(new CustomerReports(ths));
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
