@@ -45,11 +45,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 37);
+            this.label1.Location = new System.Drawing.Point(27, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 25);
+            this.label1.Size = new System.Drawing.Size(128, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search Result:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // searchResult
             // 
@@ -62,12 +63,11 @@
             this.Year,
             this.Fee,
             this.Rating});
-            this.searchResult.Location = new System.Drawing.Point(31, 87);
-            this.searchResult.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchResult.Location = new System.Drawing.Point(27, 65);
             this.searchResult.Name = "searchResult";
             this.searchResult.RowHeadersWidth = 51;
             this.searchResult.RowTemplate.Height = 25;
-            this.searchResult.Size = new System.Drawing.Size(850, 167);
+            this.searchResult.Size = new System.Drawing.Size(744, 125);
             this.searchResult.TabIndex = 2;
             this.searchResult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchResult_CellContentClick);
             // 
@@ -119,9 +119,10 @@
             // 
             // SelectMovie
             // 
-            this.SelectMovie.Location = new System.Drawing.Point(690, 260);
+            this.SelectMovie.Location = new System.Drawing.Point(604, 195);
+            this.SelectMovie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SelectMovie.Name = "SelectMovie";
-            this.SelectMovie.Size = new System.Drawing.Size(191, 49);
+            this.SelectMovie.Size = new System.Drawing.Size(167, 37);
             this.SelectMovie.TabIndex = 1;
             this.SelectMovie.Text = "Pick Movie";
             this.SelectMovie.UseVisualStyleBackColor = true;
@@ -129,14 +130,15 @@
             // 
             // searchResultForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(895, 324);
+            this.ClientSize = new System.Drawing.Size(783, 243);
             this.Controls.Add(this.searchResult);
             this.Controls.Add(this.SelectMovie);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "searchResultForm";
             this.Text = "searchResultForm";
             this.Load += new System.EventHandler(this.searchResultForm_Load);

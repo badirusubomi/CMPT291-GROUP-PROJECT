@@ -111,5 +111,10 @@ namespace CMPT291_GROUP_PROJECT
         {
             //MessageBox.Show($"{CustomerData.Row.}{}");
         }
+
+        private void EmployeeData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

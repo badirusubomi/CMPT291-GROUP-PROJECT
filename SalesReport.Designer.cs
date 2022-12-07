@@ -159,7 +159,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(659, 274);
+            this.tabPage2.Size = new System.Drawing.Size(931, 433);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Employee";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -180,8 +180,9 @@
             this.EmployeeData.MultiSelect = false;
             this.EmployeeData.Name = "EmployeeData";
             this.EmployeeData.RowTemplate.Height = 25;
-            this.EmployeeData.Size = new System.Drawing.Size(653, 270);
+            this.EmployeeData.Size = new System.Drawing.Size(925, 429);
             this.EmployeeData.TabIndex = 0;
+            this.EmployeeData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeeData_CellContentClick);
             // 
             // EmployeeID
             // 
@@ -221,7 +222,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(659, 274);
+            this.tabPage3.Size = new System.Drawing.Size(931, 433);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Customers";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -242,7 +243,7 @@
             this.CustomerData.MultiSelect = false;
             this.CustomerData.Name = "CustomerData";
             this.CustomerData.RowTemplate.Height = 25;
-            this.CustomerData.Size = new System.Drawing.Size(659, 274);
+            this.CustomerData.Size = new System.Drawing.Size(931, 433);
             this.CustomerData.TabIndex = 1;
             this.CustomerData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -277,7 +278,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(659, 274);
+            this.tabPage4.Size = new System.Drawing.Size(931, 433);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Emails";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -296,7 +297,7 @@
             this.clientEmails.MultiSelect = false;
             this.clientEmails.Name = "clientEmails";
             this.clientEmails.RowTemplate.Height = 25;
-            this.clientEmails.Size = new System.Drawing.Size(659, 274);
+            this.clientEmails.Size = new System.Drawing.Size(931, 433);
             this.clientEmails.TabIndex = 0;
             // 
             // CustomerNames
