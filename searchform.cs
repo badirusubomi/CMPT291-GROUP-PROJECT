@@ -96,5 +96,10 @@ namespace CMPT291_GROUP_PROJECT
         {
             OnCheckedChanged(sender, e);
         }
+
+        private void titleBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

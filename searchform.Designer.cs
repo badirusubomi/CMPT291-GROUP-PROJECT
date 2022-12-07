@@ -47,9 +47,9 @@
             // 
             this.titleBox.Location = new System.Drawing.Point(249, 43);
             this.titleBox.Name = "titleBox";
-            this.titleBox.ReadOnly = true;
             this.titleBox.Size = new System.Drawing.Size(338, 27);
             this.titleBox.TabIndex = 0;
+            this.titleBox.TextChanged += new System.EventHandler(this.titleBox_TextChanged);
             // 
             // label1
             // 

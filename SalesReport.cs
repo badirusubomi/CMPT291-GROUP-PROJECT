@@ -21,7 +21,8 @@ namespace CMPT291_GROUP_PROJECT
         {
             ths = frm;
             InitializeComponent();
-            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show("Succesfully Connected");
@@ -30,7 +31,7 @@ namespace CMPT291_GROUP_PROJECT
                 myConnection.Open();
                 myCommand = new SqlCommand();
                 myCommand.Connection = myConnection;
-
+                /*
                 //Start Queries
                 myCommand.CommandText = $"select * from Customer";
                 try
@@ -69,7 +70,7 @@ namespace CMPT291_GROUP_PROJECT
                 {
                     MessageBox.Show(e3.ToString(), "Error");
                 }
-                //End Queries
+                //End Queries*/
             }
             catch (Exception ex)
             {
@@ -110,6 +111,21 @@ namespace CMPT291_GROUP_PROJECT
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //MessageBox.Show($"{CustomerData.Row.}{}");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            ths.loadBigForms(new CustomerReports(ths));
         }
     }
 }
