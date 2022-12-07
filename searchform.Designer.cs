@@ -52,6 +52,7 @@
             this.titleBox.ReadOnly = true;
             this.titleBox.Size = new System.Drawing.Size(296, 23);
             this.titleBox.TabIndex = 0;
+            this.titleBox.TextChanged += new System.EventHandler(this.titleBox_TextChanged);
             // 
             // label1
             // 

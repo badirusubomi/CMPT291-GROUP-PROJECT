@@ -181,5 +181,10 @@ namespace CMPT291_GROUP_PROJECT
                 actorBox.ReadOnly = false;
             }
         }
+
+        private void titleBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
