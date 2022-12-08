@@ -133,6 +133,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1150, 98);
             this.panel3.TabIndex = 11;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button1
             // 
@@ -294,7 +295,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(896, 167);
+            this.tabPage2.Size = new System.Drawing.Size(1061, 429);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Drama";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -314,7 +315,7 @@
             this.dramaMovies.Location = new System.Drawing.Point(3, 2);
             this.dramaMovies.Name = "dramaMovies";
             this.dramaMovies.RowTemplate.Height = 25;
-            this.dramaMovies.Size = new System.Drawing.Size(890, 163);
+            this.dramaMovies.Size = new System.Drawing.Size(1055, 425);
             this.dramaMovies.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -356,7 +357,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(896, 167);
+            this.tabPage3.Size = new System.Drawing.Size(1061, 429);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Comedy";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -376,7 +377,7 @@
             this.comedyMovies.Location = new System.Drawing.Point(3, 2);
             this.comedyMovies.Name = "comedyMovies";
             this.comedyMovies.RowTemplate.Height = 25;
-            this.comedyMovies.Size = new System.Drawing.Size(890, 163);
+            this.comedyMovies.Size = new System.Drawing.Size(1055, 425);
             this.comedyMovies.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn6
@@ -418,7 +419,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage4.Size = new System.Drawing.Size(896, 167);
+            this.tabPage4.Size = new System.Drawing.Size(1061, 429);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Documentary";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -438,7 +439,7 @@
             this.documentaryMovies.Location = new System.Drawing.Point(3, 2);
             this.documentaryMovies.Name = "documentaryMovies";
             this.documentaryMovies.RowTemplate.Height = 25;
-            this.documentaryMovies.Size = new System.Drawing.Size(890, 163);
+            this.documentaryMovies.Size = new System.Drawing.Size(1055, 425);
             this.documentaryMovies.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn11
@@ -480,7 +481,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage5.Size = new System.Drawing.Size(896, 167);
+            this.tabPage5.Size = new System.Drawing.Size(1061, 429);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Thriller";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -500,7 +501,7 @@
             this.thrillerMovies.Location = new System.Drawing.Point(3, 2);
             this.thrillerMovies.Name = "thrillerMovies";
             this.thrillerMovies.RowTemplate.Height = 25;
-            this.thrillerMovies.Size = new System.Drawing.Size(890, 163);
+            this.thrillerMovies.Size = new System.Drawing.Size(1055, 425);
             this.thrillerMovies.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn16

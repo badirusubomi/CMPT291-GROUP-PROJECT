@@ -101,8 +101,9 @@ namespace CMPT291_GROUP_PROJECT
                 myCommand.CommandText = $"select * from Copies as C7, ({ths.AppUser._query})" +
                                         $" as temp where C7.MovieID = temp.MovieID " +
                                         $"and C7.CopyID not in  (select C8.CopyID from Copies as C8, " +
-                                        $"Orders as O2 where O2.OrderID = C8.CopyID and C8.CopyID = C7.CopyID " +
-                                        $"and O2.Datefrom >= '{dateFrom.Text}' and O2.DateTo <= '{dateTo.Text}') ";
+                                        $"Orders as O2 where O2.OrderID = C8.CopyID and C8.CopyID = C7.CopyID and O2.CopyID = C7.CopyID " +
+                                        $"and O2.Datefrom <= '{dateFrom.Text}' and O2.DateTo >= '{dateTo.Text}') ";
+                                //Query needs revision
                 try
                 {
                     myReader = myCommand.ExecuteReader();

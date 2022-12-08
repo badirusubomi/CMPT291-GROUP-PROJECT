@@ -66,6 +66,21 @@ select * from Orders, Movies where Orders.MovieID = Movies.MovieID and Orders.Cu
 
 UPDATE Customer SET inHand = inHand + 1 where Customer.CustomerID = 1;
 select * from Customer
+
+select * from Orders;
+select C1.CopyID, C1.MovieID from Copies as C1, Orders as O1 where C1.MovieID = O1.MovieID and O1.CopyID = C1.CopyID and  O1.MovieID = 1
+EXCEPT
+(select C2.CopyID, C2.MovieID from Copies as C2, Orders as O2 where C2.MovieID = O2.MovieID and O2.CopyID = C2.CopyID and  O2.MovieID = 1
+and C2.MovieID = 1 and O2.Datefrom >= '2022-12-12' and O2.Dateto <= '2022-12-16');
+
+select * from Copies where MovieID = 1;
+select * from Orders where MovieID = 1;
+
+select * from Copies as C7, (select * from Movies as M1 where M1.MovieID = 1) as temp where C7.MovieID = 1
+and C7.CopyID not in  (select C8.CopyID from Copies as C8,
+Orders as O2 where O2.OrderID = C8.CopyID and C8.CopyID = C7.CopyID and O2.CopyID = C7.CopyID 
+and O2.Datefrom <= '2008-11-12' and O2.DateTo >= '2008-11-20')
+
 /*
 UPDATE Employee
 
