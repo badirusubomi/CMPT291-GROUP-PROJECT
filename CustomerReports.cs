@@ -17,10 +17,10 @@ namespace CMPT291_GROUP_PROJECT
         public SqlConnection myConnection;
         public SqlCommand myCommand;
         public SqlDataReader myReader;
-        Form1 EmpRep;
+        Form1 CusRep;
         public CustomerReports(Form1 frm)
         {
-            EmpRep = frm;
+            CusRep = frm;
             InitializeComponent();
             //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
@@ -40,12 +40,7 @@ namespace CMPT291_GROUP_PROJECT
                     dataGridView1.Rows.Add(myReader["CustomerID"].ToString(), myReader["FName"].ToString().Trim() + " " + myReader["LName"].ToString().Trim(),
                                              myReader["email"].ToString(), myReader["Gender"].ToString(),
                                           $"{myReader["Street"]} {myReader["City"]} {myReader["Province"]}",
-                                          myReader["PlanID"].ToString(), myReader["inHand"].ToString());
-                    /*
-                    clientEmails.Rows.Add(myReader["FName"].ToString().Trim() + " " + myReader["LName"].ToString().Trim(),
-                                          myReader["email"].ToString(), myReader["CustomerID"].ToString());
-                    //MessageBox.Show(myReader["MovieName"].ToString());
-                */
+                                          myReader["PlanID"].ToString(), myReader["inHand"].ToString());                   
                     }
                 myReader.Close();
             }
@@ -85,7 +80,7 @@ namespace CMPT291_GROUP_PROJECT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EmpRep.loadBigForms(new SalesReport(EmpRep));
+            CusRep.loadBigForms(new SalesReport(CusRep));
            
         }
 
