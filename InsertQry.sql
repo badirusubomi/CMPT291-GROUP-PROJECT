@@ -64,6 +64,8 @@ select * from Orders;
 select Customer.CustomerID as ID from Customer where Customer.email = 'elhajjm@macewan.ca'
 select * from Orders, Movies where Orders.MovieID = Movies.MovieID and Orders.CustomerID = 1;
 
+UPDATE Customer SET inHand = inHand + 1 where Customer.CustomerID = 1;
+select * from Customer
 /*
 UPDATE Employee
 
@@ -73,7 +75,6 @@ SET EmployeeID = {}, FName = {}, LName = {}, Email = {}, Gender = {},
 WHERE CustomerID = {};
 
 
-*/
 
 select * from Customer;
 UPDATE Employee SET EmployeeID = {employeeIDEdit.Text}, FName = '{employeeEditFNameLabel.Text}', LName = '{employeeEditLNameLabel.Text}', Email = '{employeeEditEmailLabel.Text}',
@@ -81,7 +82,10 @@ UPDATE Employee SET EmployeeID = {employeeIDEdit.Text}, FName = '{employeeEditFN
                                             City = '{employeeEditCityLabel.Text}', Province = '{employeeEditStateLabel.Text}', 
                                             ZipCode = '{employeeEditPostalLabel.Text}',Wage = {employeeEditWageLabel.Text},
                                             Passwords = '{employeeEditPasswordLabel.Text}' WHERE EmployeeID = {employeeIDEdit.Text};
+*/
 
+select * from Orders
+delete  from Orders where Orders.OrderID >=4;
 
 UPDATE CUSTOMER SET 
 Passwords = 'HalaMadrid' WHERE CustomerID = 1

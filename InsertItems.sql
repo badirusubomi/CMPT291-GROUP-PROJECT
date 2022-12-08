@@ -28,6 +28,7 @@ insert into Employee values (3, 'Brandt','LName','brandt@mymacewan.ca','M','MacE
 insert into Employee values (4, 'Marek','LName','marek@mymacewan.ca','M','MacEwan Residence', 'Edmonton',
 							'Alberta', 'T6V0L5', '2022-01-01', 10000, 'BlockbusterMarek');
 
+select * from Employee as E where E.StartDate >= '2021-12-12';
 
 
 /*		Inserting into Customers*/

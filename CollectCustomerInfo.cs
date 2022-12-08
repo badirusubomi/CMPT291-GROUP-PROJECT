@@ -37,7 +37,7 @@ namespace CMPT291_GROUP_PROJECT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ths.loadBigForms(new FindMovieEmployee(ths));
+            ths.loadBigForms(new FindMovieEmployee(ths, collectCustomerID.Text));
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -127,7 +127,7 @@ namespace CMPT291_GROUP_PROJECT
 
         private void ContinueRental_Click(object sender, EventArgs e)
         {
-            ths.loadBigForms(new FindMovieEmployee(ths));
+            ths.loadBigForms(new FindMovieEmployee(ths, collectCustomerID.Text));
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

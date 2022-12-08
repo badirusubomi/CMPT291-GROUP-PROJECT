@@ -18,11 +18,14 @@ namespace CMPT291_GROUP_PROJECT
         public SqlCommand myCommand;
         public SqlDataReader myReader;
         Form1 ths;
-        public FindMovieEmployee(Form1 frm)
+        string customeridff;
+        string movieIDths;
+        public FindMovieEmployee(Form1 frm, string customerIDf)
         {
             ths = frm;
             InitializeComponent();
             nextButton.Hide();
+            customeridff = customerIDf;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,7 +40,7 @@ namespace CMPT291_GROUP_PROJECT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ths.loadBigForms(new OrderConfirmationEmployee(ths));
+            ths.loadBigForms(new OrderConfirmationEmployee(ths, this.dateFrom.Text, this.dateTo.Text, customeridff, movieIDths));
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -47,10 +50,11 @@ namespace CMPT291_GROUP_PROJECT
 
         private void searchResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (searchResult.Columns[e.ColumnIndex].Name == "ID")
+            if (searchResult.Columns[e.ColumnIndex].Name == "CopyID")
             {
                 ths.AppUser._selectMovie = searchResult.CurrentCell.Value.ToString();
-                ths.AppUser._selectTitle = searchResult.CurrentRow.Cells["Title"].Value.ToString();
+                ths.AppUser._selectTitle = searchResult.CurrentRow.Cells["movieTitle"].Value.ToString();
+                movieIDths = searchResult.CurrentRow.Cells["movieID"].Value.ToString();
                 //MessageBox.Show($"Movie Title: {ths.AppUser._selectTitle}");
                 nextButton.Show();
                 nextButton.PerformClick();
@@ -59,6 +63,7 @@ namespace CMPT291_GROUP_PROJECT
 
         private void button3_Click(object sender, EventArgs e)
         {
+            searchResult.Rows.Clear(); // = null;
             string query = "";
             if (title.Checked)
             {
@@ -94,18 +99,23 @@ namespace CMPT291_GROUP_PROJECT
                 //MessageBox.Show($"Query: {ths.AppUser._query}");
                 //Start Queries
                 myCommand.CommandText = $"select * from Copies as C7, ({ths.AppUser._query})" +
-                                        $" as temp where C7.MovieID = temp.MovieID";
+                                        $" as temp where C7.MovieID = temp.MovieID " +
+                                        $"and C7.CopyID not in  (select C8.CopyID from Copies as C8, " +
+                                        $"Orders as O2 where O2.OrderID = C8.CopyID and C8.CopyID = C7.CopyID " +
+                                        $"and O2.Datefrom >= '{dateFrom.Text}' and O2.DateTo <= '{dateTo.Text}') ";
                 try
                 {
                     myReader = myCommand.ExecuteReader();
                     while (myReader.Read())
                     {
                         searchResult.Rows.Add(myReader["Title"].ToString(), myReader["CopyID"].ToString(),
-                                              myReader["Title"].ToString(), myReader["Genre"].ToString(),
+                                              myReader["MovieID"].ToString(), myReader["Genre"].ToString(),
                                               myReader["ReleaseYear"].ToString(),
                                               myReader["Fee"].ToString(), myReader["MovieRating"]);
+                        
 
                     }
+                    
                     myReader.Close();
                 }
                 catch (Exception e3)
@@ -205,6 +215,21 @@ namespace CMPT291_GROUP_PROJECT
                 yearBox.Enabled = true;
                 yearBox.ReadOnly = false;
             }
+        }
+
+        private void FindMovieEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            ths.loadBigForms(new OrderConfirmationEmployee(ths, this.dateFrom.Text, this.dateTo.Text, customeridff, movieIDths));
         }
     }
 }

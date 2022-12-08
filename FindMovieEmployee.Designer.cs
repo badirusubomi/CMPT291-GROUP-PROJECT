@@ -38,13 +38,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.searchResult = new System.Windows.Forms.DataGridView();
-            this.movieTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CopyID = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.year = new System.Windows.Forms.CheckBox();
@@ -59,6 +52,17 @@
             this.yearBox = new System.Windows.Forms.TextBox();
             this.actorBox = new System.Windows.Forms.TextBox();
             this.titleBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dateFrom = new System.Windows.Forms.DateTimePicker();
+            this.dateTo = new System.Windows.Forms.DateTimePicker();
+            this.movieTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CopyID = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.movieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,7 +78,7 @@
             this.nextButton.TabIndex = 9;
             this.nextButton.Text = "Next Page";
             this.nextButton.UseVisualStyleBackColor = true;
-            this.nextButton.Click += new System.EventHandler(this.button2_Click);
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // panel2
             // 
@@ -110,6 +114,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1150, 98);
             this.panel3.TabIndex = 10;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button1
             // 
@@ -166,7 +171,7 @@
             this.searchResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.movieTitle,
             this.CopyID,
-            this.dataGridViewTextBoxColumn1,
+            this.movieID,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.Fee,
@@ -178,57 +183,6 @@
             this.searchResult.Size = new System.Drawing.Size(787, 125);
             this.searchResult.TabIndex = 26;
             this.searchResult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchResult_CellContentClick);
-            // 
-            // movieTitle
-            // 
-            this.movieTitle.HeaderText = "Title";
-            this.movieTitle.MinimumWidth = 6;
-            this.movieTitle.Name = "movieTitle";
-            this.movieTitle.ReadOnly = true;
-            this.movieTitle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // CopyID
-            // 
-            this.CopyID.HeaderText = "Copy ID";
-            this.CopyID.Name = "CopyID";
-            this.CopyID.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "title";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Genre";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "year";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // Fee
-            // 
-            this.Fee.HeaderText = "Fee";
-            this.Fee.MinimumWidth = 6;
-            this.Fee.Name = "Fee";
-            this.Fee.ReadOnly = true;
-            // 
-            // Rating
-            // 
-            this.Rating.HeaderText = "rating";
-            this.Rating.MinimumWidth = 6;
-            this.Rating.Name = "Rating";
-            this.Rating.ReadOnly = true;
             // 
             // label6
             // 
@@ -247,9 +201,9 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(355, 418);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 15);
+            this.label7.Size = new System.Drawing.Size(96, 15);
             this.label7.TabIndex = 27;
-            this.label7.Text = "Select Your movie";
+            this.label7.Text = "Select Your Copy";
             // 
             // year
             // 
@@ -387,12 +341,99 @@
             this.titleBox.Size = new System.Drawing.Size(296, 23);
             this.titleBox.TabIndex = 30;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(626, 184);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 15);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Date from:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(626, 224);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 15);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Date To:";
+            // 
+            // dateFrom
+            // 
+            this.dateFrom.Location = new System.Drawing.Point(802, 176);
+            this.dateFrom.Name = "dateFrom";
+            this.dateFrom.Size = new System.Drawing.Size(200, 23);
+            this.dateFrom.TabIndex = 42;
+            // 
+            // dateTo
+            // 
+            this.dateTo.Location = new System.Drawing.Point(802, 215);
+            this.dateTo.Name = "dateTo";
+            this.dateTo.Size = new System.Drawing.Size(200, 23);
+            this.dateTo.TabIndex = 42;
+            // 
+            // movieTitle
+            // 
+            this.movieTitle.HeaderText = "Title";
+            this.movieTitle.MinimumWidth = 6;
+            this.movieTitle.Name = "movieTitle";
+            this.movieTitle.ReadOnly = true;
+            this.movieTitle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // CopyID
+            // 
+            this.CopyID.HeaderText = "Copy ID";
+            this.CopyID.Name = "CopyID";
+            this.CopyID.ReadOnly = true;
+            // 
+            // movieID
+            // 
+            this.movieID.HeaderText = "movie ID";
+            this.movieID.MinimumWidth = 6;
+            this.movieID.Name = "movieID";
+            this.movieID.ReadOnly = true;
+            this.movieID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.movieID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Genre";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "year";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // Fee
+            // 
+            this.Fee.HeaderText = "Fee";
+            this.Fee.MinimumWidth = 6;
+            this.Fee.Name = "Fee";
+            this.Fee.ReadOnly = true;
+            // 
+            // Rating
+            // 
+            this.Rating.HeaderText = "rating";
+            this.Rating.MinimumWidth = 6;
+            this.Rating.Name = "Rating";
+            this.Rating.ReadOnly = true;
+            // 
             // FindMovieEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.dateTo);
+            this.Controls.Add(this.dateFrom);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.year);
             this.Controls.Add(this.actor);
             this.Controls.Add(this.genre);
@@ -416,6 +457,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FindMovieEmployee";
             this.Text = "FindMovieEmployee";
+            this.Load += new System.EventHandler(this.FindMovieEmployee_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -437,13 +479,6 @@
         private Button button6;
         public Button button3;
         private DataGridView searchResult;
-        private DataGridViewTextBoxColumn movieTitle;
-        private DataGridViewButtonColumn CopyID;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn Fee;
-        private DataGridViewTextBoxColumn Rating;
         private Label label6;
         private Label label7;
         private CheckBox year;
@@ -458,5 +493,16 @@
         public TextBox yearBox;
         public TextBox actorBox;
         public TextBox titleBox;
+        private Label label8;
+        private Label label9;
+        private DateTimePicker dateFrom;
+        private DateTimePicker dateTo;
+        private DataGridViewTextBoxColumn movieTitle;
+        private DataGridViewButtonColumn CopyID;
+        private DataGridViewTextBoxColumn movieID;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn Fee;
+        private DataGridViewTextBoxColumn Rating;
     }
 }
