@@ -55,6 +55,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1150, 98);
             this.panel3.TabIndex = 4;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label9
             // 
@@ -119,7 +120,7 @@
             this.button3.TabIndex = 13;
             this.button3.Text = "Movies";
             this.button3.UseVisualStyleBackColor = true;
-            //this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 

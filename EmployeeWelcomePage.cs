@@ -51,7 +51,7 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Show();
             sidePanel.Height = button3.Height;
             sidePanel.Top = button3.Top;
-            ths.loadBigForms(new ProcessReturnsPage(ths));
+            ths.loadBigForms(new SalesReport(ths));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,7 +79,12 @@ namespace CMPT291_GROUP_PROJECT
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ths.loadBigForms(new ReturnMovie());
+            ths.loadBigForms(new ProcessReturnsPage(ths));
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

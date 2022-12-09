@@ -25,8 +25,8 @@ namespace CMPT291_GROUP_PROJECT
 
             //SQL Queries
             //string connectionString = "Data Source=(local);Database=BLOCKBUSTER;Integrated Security=sspi;";
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            string connectionString = "Server = LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            //string connectionString = "Server = LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
 
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
@@ -167,14 +167,14 @@ namespace CMPT291_GROUP_PROJECT
 
         private void idradio_CheckedChanged(object sender, EventArgs e)
         {
-            if (titleDelete.Enabled)
+            if (idDelete.Enabled)
             {
-                titleDelete.Enabled = false;
-                titleDelete.Text = "";
+                idDelete.Enabled = false;
+                idDelete.Text = "";
             }
             else
             {
-                titleDelete.Enabled = true;
+                idDelete.Enabled = true;
             }
         }
 

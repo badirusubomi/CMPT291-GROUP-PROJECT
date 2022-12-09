@@ -15,16 +15,6 @@ Insert Into Customer Values(3, 'Alexandra', 'Ferreira', 'alexF@macewan.ca', 'F',
 ALTER TABLE Customer
 ALTER COLUMN CreditCardNo varchar(40);
 
-/* Altering Order table to cascade when customer is deleted  */
-ALTER TABLE TABLEName
-drop CONSTRAINT FK_CONSTRAINTNAME;
-
-ALTER TABLE TABLENAME
-ADD CONSTRAINT FK_CONSTRAINTNAME
-    FOREIGN KEY (FId)
-    REFERENCES OTHERTABLE
-        (Id)
-    ON DELETE CASCADE ON UPDATE NO ACTION;
 
 insert into Employee values (1, 'Jerome','LName','jerome@mymacewan.ca','M','MacEwan Residence', 'Edmonton',
 							'Alberta', 'T6V0L5', '2022-01-01', 10000, 'BlockbusterJerome');
