@@ -74,11 +74,18 @@ namespace CMPT291_GROUP_PROJECT
 
         private void CopyTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (CopyTable.Columns[e.ColumnIndex].Name == "CopyID")
+            try
             {
-                ths.AppUser._selectMovie = CopyTable.CurrentCell.Value.ToString();
-                RentButton.PerformClick();
-                ths.loadForms(new CheckOutPage(ths));
+                if (CopyTable.Columns[e.ColumnIndex].Name == "CopyID")
+                {
+                    ths.AppUser._selectMovie = CopyTable.CurrentCell.Value.ToString();
+                    RentButton.PerformClick();
+                    ths.loadForms(new CheckOutPage(ths));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Picked wrong Cell", "Choose another");
             }
         }
     }

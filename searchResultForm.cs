@@ -72,13 +72,20 @@ namespace CMPT291_GROUP_PROJECT
 
         private void searchResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (searchResult.Columns[e.ColumnIndex].Name == "ID")
+            try
             {
-                ths.AppUser._selectMovie = searchResult.CurrentCell.Value.ToString();
-                ths.AppUser._selectTitle = searchResult.CurrentRow.Cells["Title"].Value.ToString();
-                //MessageBox.Show($"Movie Title: {ths.AppUser._selectTitle}");
-                SelectMovie.Show();
-                SelectMovie.PerformClick();
+                if (searchResult.Columns[e.ColumnIndex].Name == "ID")
+                {
+                    ths.AppUser._selectMovie = searchResult.CurrentCell.Value.ToString();
+                    ths.AppUser._selectTitle = searchResult.CurrentRow.Cells["Title"].Value.ToString();
+                    //MessageBox.Show($"Movie Title: {ths.AppUser._selectTitle}");
+                    SelectMovie.Show();
+                    SelectMovie.PerformClick();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Picked wrong Cell", "Choose another");
             }
         }
 

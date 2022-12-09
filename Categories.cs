@@ -21,6 +21,10 @@ namespace CMPT291_GROUP_PROJECT
         {
             ths = frm;
             InitializeComponent();
+            this.button7.Hide();
+            this.button8.Hide();
+            this.button9.Hide();
+
             //string connectionString = "Data Source=(local);Database=BLOCKBUSTER;Integrated Security=sspi;";
             string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
@@ -174,6 +178,11 @@ namespace CMPT291_GROUP_PROJECT
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void documentaryMovies_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }
