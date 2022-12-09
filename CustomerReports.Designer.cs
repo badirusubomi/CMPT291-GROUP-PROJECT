@@ -115,7 +115,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1189, 98);
             this.panel3.TabIndex = 15;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            //this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dataGridView1
             // 
@@ -188,23 +188,23 @@
             // 
             // emailCB
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1186, 212);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(68, 24);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Email";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // planCB
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(1186, 263);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(78, 24);
-            this.checkBox2.TabIndex = 18;
-            this.checkBox2.Text = "Plan ID";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            //this.checkBox1.AutoSize = true;
+            //this.checkBox1.Location = new System.Drawing.Point(1186, 212);
+            //this.checkBox1.Name = "checkBox1";
+            //this.checkBox1.Size = new System.Drawing.Size(68, 24);
+            //this.checkBox1.TabIndex = 17;
+            //this.checkBox1.Text = "Email";
+            //this.checkBox1.UseVisualStyleBackColor = true;
+            //// 
+            //// planCB
+            //// 
+            //this.checkBox2.AutoSize = true;
+            //this.checkBox2.Location = new System.Drawing.Point(1186, 263);
+            //this.checkBox2.Name = "checkBox2";
+            //this.checkBox2.Size = new System.Drawing.Size(78, 24);
+            //this.checkBox2.TabIndex = 18;
+            //this.checkBox2.Text = "Plan ID";
+            //this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -220,45 +220,45 @@
             // 
             // inhandCB
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(979, 212);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(71, 24);
-            this.checkBox3.TabIndex = 20;
-            this.checkBox3.Text = "Name";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            //this.checkBox3.AutoSize = true;
+            //this.checkBox3.Location = new System.Drawing.Point(979, 212);
+            //this.checkBox3.Name = "checkBox3";
+            //this.checkBox3.Size = new System.Drawing.Size(71, 24);
+            //this.checkBox3.TabIndex = 20;
+            //this.checkBox3.Text = "Name";
+            //this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // adrCB
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(979, 263);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(134, 24);
-            this.checkBox4.TabIndex = 21;
-            this.checkBox4.Text = "Movies In Hand";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            //this.checkBox4.AutoSize = true;
+            //this.checkBox4.Location = new System.Drawing.Point(979, 263);
+            //this.checkBox4.Name = "checkBox4";
+            //this.checkBox4.Size = new System.Drawing.Size(134, 24);
+            //this.checkBox4.TabIndex = 21;
+            //this.checkBox4.Text = "Movies In Hand";
+            //this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // mCB
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(979, 316);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(63, 24);
-            this.radioButton1.TabIndex = 22;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            //this.radioButton1.AutoSize = true;
+            //this.radioButton1.Location = new System.Drawing.Point(979, 316);
+            //this.radioButton1.Name = "radioButton1";
+            //this.radioButton1.Size = new System.Drawing.Size(63, 24);
+            //this.radioButton1.TabIndex = 22;
+            //this.radioButton1.TabStop = true;
+            //this.radioButton1.Text = "Male";
+            //this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // fCB
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(1186, 316);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(78, 24);
-            this.radioButton2.TabIndex = 23;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            //this.radioButton2.AutoSize = true;
+            //this.radioButton2.Location = new System.Drawing.Point(1186, 316);
+            //this.radioButton2.Name = "radioButton2";
+            //this.radioButton2.Size = new System.Drawing.Size(78, 24);
+            //this.radioButton2.TabIndex = 23;
+            //this.radioButton2.TabStop = true;
+            //this.radioButton2.Text = "Female";
+            //this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // CustomerReports
             // 
@@ -266,10 +266,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1359, 564);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
+            //this.Controls.Add(this.radioButton2);
+            //this.Controls.Add(this.radioButton1);
+            //this.Controls.Add(this.checkBox4);
+            //this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.planCB);
             this.Controls.Add(this.emailCB);

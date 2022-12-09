@@ -21,8 +21,8 @@ namespace CMPT291_GROUP_PROJECT
         {
             InitializeComponent();
             EmpRep = frm;
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             myCommand = new SqlCommand();
@@ -264,6 +264,11 @@ namespace CMPT291_GROUP_PROJECT
 
             ordCO.SelectedIndex = -1;
 
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

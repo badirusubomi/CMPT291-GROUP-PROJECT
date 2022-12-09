@@ -21,8 +21,8 @@ namespace CMPT291_GROUP_PROJECT
         {
             ths = frm;
             InitializeComponent();
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show("Succesfully Connected");
@@ -131,6 +131,16 @@ namespace CMPT291_GROUP_PROJECT
         private void button2_Click(object sender, EventArgs e)
         {
             ths.loadBigForms(new EmployeeReports(ths));
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

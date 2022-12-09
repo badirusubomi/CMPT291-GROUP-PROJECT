@@ -130,6 +130,7 @@ namespace CMPT291_GROUP_PROJECT
             employeeDeleteButton.Hide();
             customerEditConfirmButton.Hide();
             customerAddButton.Hide();
+            customerDeleteButton.Hide();
             ths = frm;
            
 
@@ -249,9 +250,22 @@ namespace CMPT291_GROUP_PROJECT
                         MessageBox.Show("Edit Success");
 
                         // Re-usable code section set everything to "" and hide Button
-                        
-                        //
-                        
+
+                        idSearch.Text = "";
+                        employeeIDEdit.Text = "";
+                        employeeEditFNameLabel.Text = "";
+                        employeeEditLNameLabel.Text = "";
+                        employeeEditEmailLabel.Text = "";
+                        employeeEditPasswordLabel.Text = "";
+                        employeeEditStateLabel.Text = "";
+                        employeeEditCityLabel.Text = "";
+                        employeeEditPostalLabel.Text = "";
+                        employeeEditWageLabel.Text = "";
+                        employeeEditGenderLabel.Text = "";
+                        employeeEditStreetLabel.Text = "";
+
+                        employeeEditConfirmButton.Hide();
+
                         //selfRefresh(new TabPage AddEmployeeTab);
                     }
                     catch (Exception e3)
@@ -301,6 +315,7 @@ namespace CMPT291_GROUP_PROJECT
                         myReader.Read();
 
                         myReader.Close();
+                        customerAddButton.Hide();
                     }
                     catch (Exception e3)
                     {
@@ -335,7 +350,7 @@ namespace CMPT291_GROUP_PROJECT
                 if (this.employeeSearchDeletelabel.Text.ToString() != "")
                 {
                     employeeDeleteButton.Show();
-                    myCommand.CommandText = $"Select * from Employee as E where E.EmployeeID = {this.idSearch.Text}";
+                    myCommand.CommandText = $"Select * from Employee as E where E.EmployeeID = {employeeSearchDeletelabel.Text}";
                     try
                     {
                         myReader = myCommand.ExecuteReader();
@@ -457,6 +472,7 @@ namespace CMPT291_GROUP_PROJECT
                 {
                     MessageBox.Show("Either PlanID or CustomerID or Customer Name might be missing, Try again");
                 }
+                MessageBox.Show("Customer Succesfully Created");
             }
             catch (Exception ex)
             {
@@ -580,8 +596,18 @@ namespace CMPT291_GROUP_PROJECT
                         MessageBox.Show("Edit Success");
 
                         // Re-usable code section:
-                        //      - set everything to ""
-                        //      - hide Confirm Button
+                        customerEditSearchID.Text = "";
+                        customerEditID.Text = "";
+                        customerEditFName.Text = "";
+                        customerEditLName.Text = "";
+                        customerEditEmail.Text = "";
+                        customerEditPassword.Text = "";
+                        customerEditProvince.Text = "";
+                        customerEditCity.Text = "";
+                        customerEditPostal.Text = "";
+                        customerEditGender.Text = "";
+                        customerEditStreet.Text = "";
+                        employeeEditStreetLabel.Text = "";
 
                         //
                         customerEditConfirmButton.Hide();
@@ -612,6 +638,13 @@ namespace CMPT291_GROUP_PROJECT
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //
+            customerDeleteID.Text = "";
+            customerDeleteName.Text = "";
+            customerDeleteAccountCreation.Text = "";
+            customerDeleteEmail.Text = "";
+            customerDeletePlanType.Text = "";
+            //
             string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
 
@@ -644,12 +677,14 @@ namespace CMPT291_GROUP_PROJECT
                     }
                     catch (Exception e3)
                     {
-                        MessageBox.Show(e3.ToString(), "Error");
+                        employeeDeleteButton.Hide();
+                        MessageBox.Show("User not found", "Error");
                     }
                 }
                 else
                 {
                     MessageBox.Show("Please insert ID to attempt delete");
+                    customerDeleteButton.Hide();
                 }
                 //End Queries
             }
@@ -679,8 +714,8 @@ namespace CMPT291_GROUP_PROJECT
 
                 if (this.employeeDeleteIDlabel.Text.ToString() != "")
                 {
-                    employeeDeleteButton.Show();
-                    myCommand.CommandText = $"Delete from Employee as E where E.EmployeeID = {this.employeeDeleteIDlabel.Text}";
+                    //employeeDeleteButton.Show();
+                    myCommand.CommandText = $"Delete from Employee where Employee.EmployeeID = {employeeDeleteIDlabel.Text}";
                     try
                     {
                         myReader = myCommand.ExecuteReader();
@@ -698,13 +733,13 @@ namespace CMPT291_GROUP_PROJECT
                         employeeSearchDeletelabel.Text = "";
                         DeleteEmployeetab.Refresh();
                         employeeDeleteButton.Hide();
-
+                        MessageBox.Show("Deletion Succesful");
 
                         //
                     }
                     catch (Exception e3)
                     {
-                        MessageBox.Show("User not Found, try again", "Error");
+                        MessageBox.Show(e3.ToString());
                     }
                 }
                 else
@@ -715,7 +750,7 @@ namespace CMPT291_GROUP_PROJECT
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error");
+                MessageBox.Show("User not Found, try again", "Error");
             }
         }
 
@@ -733,10 +768,9 @@ namespace CMPT291_GROUP_PROJECT
                 //Start Queries
                 //MessageBox.Show($"Looking for Employee: {this.idSearch.Text}");
 
-                if (this.employeeDeleteIDlabel.Text.ToString() != "")
+                if (this.customerDeleteID.Text.ToString() != "")
                 {
-                    employeeDeleteButton.Show();
-                    myCommand.CommandText = $"Delete from Customer as C where C.CustomerID = {this.customerDeleteID.Text}";
+                    myCommand.CommandText = $"Delete from Customer where Customer.CustomerID = {this.customerDeleteID.Text}";
                     try
                     {
                         myReader = myCommand.ExecuteReader();
@@ -753,20 +787,63 @@ namespace CMPT291_GROUP_PROJECT
                         customerDeleteEmail.Text = "";
                         customerDeletePlanType.Text = "";
                         customerDeleteSearchID.Text = "";
-                        DeleteEmployeetab.Refresh();
-                        employeeDeleteButton.Hide();
+                        customerDeleteButton.Hide();
+                        MessageBox.Show("Deletion Succesful");
 
 
                         //
                     }
                     catch (Exception e3)
                     {
-                        MessageBox.Show("User not Found, try again", "Error");
+                        MessageBox.Show(e3.ToString());
                     }
                 }
                 else
                 {
                     MessageBox.Show("Please insert ID to attempt delete");
+                }
+                //End Queries
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            SqlConnection myConnection = new SqlConnection(connectionString);
+
+
+
+            int newCustomerID;
+            string lastCustomerID;
+            try
+            {
+                myConnection.Open();
+                myCommand = new SqlCommand();
+                myCommand.Connection = myConnection;
+                //Start Queries
+
+
+                try
+                {
+
+                    myCommand.CommandText = "select max(EmployeeID) as maxID from Employee;";
+                    myReader = myCommand.ExecuteReader();
+                    myReader.Read();
+                    lastCustomerID = myReader["maxID"].ToString();
+                    newCustomerID = Int32.Parse(lastCustomerID) + 1;
+                    myReader.Close();
+
+
+                    employeeAddEmployeeID.Text = newCustomerID.ToString();
+                    employeeAddButton.Show();
+                }
+                catch (Exception e3)
+                {
+                    MessageBox.Show(e3.ToString(), "Error");
                 }
                 //End Queries
             }
