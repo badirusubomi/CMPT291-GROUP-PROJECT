@@ -134,10 +134,10 @@ namespace CMPT291_GROUP_PROJECT
                         MessageBox.Show(e3.ToString(), "Error");
                     }
 
-                    MessageBox.Show($"Succesfully Returned: {deletesearchdatagrid.CurrentRow.Cells["movieTitle"].Value}");
+                    MessageBox.Show($"Succesfully Returned: {deletesearchdatagrid.CurrentRow.Cells["MovieName"].Value}");
                 }
             }
-            catch
+            catch (Exception ex)
             {
                 MessageBox.Show("Wrong cell selected");
             }
