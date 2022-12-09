@@ -315,11 +315,26 @@ namespace CMPT291_GROUP_PROJECT
                         myReader.Read();
 
                         myReader.Close();
-                        customerAddButton.Hide();
+                        employeeAddEmployeeID.Text = "";
+                        employeeAddFName.Text = "";
+                        employeeAddLName.Text = "";
+                        employeeAddEmail.Text = "";
+                        employeeAddGender.Text = "";
+                        EmployeeAddStartDate.Text = "";
+                        employeeAddWage.Text = "";
+                        employeeAddPassword.Text = "";
+                        employeeAddPostal.Text = "";
+                        employeeAddCity.Text = "";
+                        employeeAddStreet.Text = "";
+                        employeeAddState.Text = "";
+
+                        myReader.Close();
+                        MessageBox.Show("Addition Succesful");
+                        employeeAddButton.Hide();
                     }
                     catch (Exception e3)
                     {
-                        MessageBox.Show(e3.ToString(), "Error");
+                        MessageBox.Show("Error, user exists");
                     }
                     //End Queries
                 }
@@ -461,6 +476,22 @@ namespace CMPT291_GROUP_PROJECT
                         myReader.Read();
 
                         myReader.Close();
+                        CustomerAddID.Text = "";
+                        CustomerAddFName.Text = "";
+                        customerAddLName.Text = "";
+                        customerAddEmail.Text = "";
+                        customerAddCreditCard.Text = "";
+                        customerAddCreationDate.Text = "";
+                        customerAddAccountType.Text = "";
+                        customerAddPostal.Text = "";
+                        customerAddProvince.Text = "";
+                        customerAddStreet.Text = "";
+                        customerAddCity.Text = "";
+                        customerAddStreet.Text = "";
+                        customerAddPassword.Text = "";
+                        customerAddExpiryDate.Text = "";
+                        customerAddGender.Text = "";
+                        customerAddButton.Hide();
                     }
                     catch (Exception e3)
                     {

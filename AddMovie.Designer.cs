@@ -43,21 +43,31 @@
             this.label4 = new System.Windows.Forms.Label();
             this.yearReleasedBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.genreBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.titleBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.idradio = new System.Windows.Forms.RadioButton();
+            this.titleradio = new System.Windows.Forms.RadioButton();
+            this.deletesearchdatagrid = new System.Windows.Forms.DataGridView();
+            this.MovieID = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.MovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.idDelete = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.titleDelete = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.genreBox = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deletesearchdatagrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -135,6 +145,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.genreBox);
             this.tabPage1.Controls.Add(this.feeBox);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.button2);
@@ -142,7 +153,6 @@
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.yearReleasedBox);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.genreBox);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.titleBox);
             this.tabPage1.Controls.Add(this.label1);
@@ -218,14 +228,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Year Released";
             // 
-            // genreBox
-            // 
-            this.genreBox.Location = new System.Drawing.Point(145, 62);
-            this.genreBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.genreBox.Name = "genreBox";
-            this.genreBox.Size = new System.Drawing.Size(278, 23);
-            this.genreBox.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -255,6 +257,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.idradio);
+            this.tabPage2.Controls.Add(this.titleradio);
+            this.tabPage2.Controls.Add(this.deletesearchdatagrid);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.idDelete);
             this.tabPage2.Controls.Add(this.label6);
@@ -268,6 +273,86 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Delete Movie";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // idradio
+            // 
+            this.idradio.AutoSize = true;
+            this.idradio.Location = new System.Drawing.Point(123, 93);
+            this.idradio.Name = "idradio";
+            this.idradio.Size = new System.Drawing.Size(14, 13);
+            this.idradio.TabIndex = 15;
+            this.idradio.TabStop = true;
+            this.idradio.UseVisualStyleBackColor = true;
+            this.idradio.CheckedChanged += new System.EventHandler(this.idradio_CheckedChanged);
+            // 
+            // titleradio
+            // 
+            this.titleradio.AutoSize = true;
+            this.titleradio.Location = new System.Drawing.Point(123, 56);
+            this.titleradio.Name = "titleradio";
+            this.titleradio.Size = new System.Drawing.Size(14, 13);
+            this.titleradio.TabIndex = 15;
+            this.titleradio.TabStop = true;
+            this.titleradio.UseVisualStyleBackColor = true;
+            this.titleradio.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // deletesearchdatagrid
+            // 
+            this.deletesearchdatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.deletesearchdatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.deletesearchdatagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MovieID,
+            this.MovieName,
+            this.MovieType,
+            this.fee,
+            this.Year,
+            this.MovieRating});
+            this.deletesearchdatagrid.Location = new System.Drawing.Point(3, 272);
+            this.deletesearchdatagrid.Name = "deletesearchdatagrid";
+            this.deletesearchdatagrid.RowTemplate.Height = 25;
+            this.deletesearchdatagrid.Size = new System.Drawing.Size(1055, 98);
+            this.deletesearchdatagrid.TabIndex = 14;
+            this.deletesearchdatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.deletesearchdatagrid_CellContentClick);
+            // 
+            // MovieID
+            // 
+            this.MovieID.HeaderText = "ID";
+            this.MovieID.Name = "MovieID";
+            this.MovieID.ReadOnly = true;
+            this.MovieID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MovieID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // MovieName
+            // 
+            this.MovieName.HeaderText = "Title";
+            this.MovieName.Name = "MovieName";
+            this.MovieName.ReadOnly = true;
+            this.MovieName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // MovieType
+            // 
+            this.MovieType.HeaderText = "Genre";
+            this.MovieType.Name = "MovieType";
+            this.MovieType.ReadOnly = true;
+            // 
+            // fee
+            // 
+            this.fee.HeaderText = "Fee";
+            this.fee.Name = "fee";
+            this.fee.ReadOnly = true;
+            // 
+            // Year
+            // 
+            this.Year.HeaderText = "Year";
+            this.Year.Name = "Year";
+            this.Year.ReadOnly = true;
+            // 
+            // MovieRating
+            // 
+            this.MovieRating.HeaderText = "Rating";
+            this.MovieRating.Name = "MovieRating";
+            this.MovieRating.ReadOnly = true;
             // 
             // button3
             // 
@@ -276,12 +361,13 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(123, 22);
             this.button3.TabIndex = 13;
-            this.button3.Text = "Delete Movie";
+            this.button3.Text = "search";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // idDelete
             // 
+            this.idDelete.Enabled = false;
             this.idDelete.Location = new System.Drawing.Point(155, 89);
             this.idDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.idDelete.Name = "idDelete";
@@ -299,6 +385,7 @@
             // 
             // titleDelete
             // 
+            this.titleDelete.Enabled = false;
             this.titleDelete.Location = new System.Drawing.Point(155, 52);
             this.titleDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.titleDelete.Name = "titleDelete";
@@ -314,6 +401,14 @@
             this.label11.Size = new System.Drawing.Size(29, 15);
             this.label11.TabIndex = 8;
             this.label11.Text = "Title";
+            // 
+            // genreBox
+            // 
+            this.genreBox.FormattingEnabled = true;
+            this.genreBox.Location = new System.Drawing.Point(145, 64);
+            this.genreBox.Name = "genreBox";
+            this.genreBox.Size = new System.Drawing.Size(213, 23);
+            this.genreBox.TabIndex = 5;
             // 
             // AddMovie
             // 
@@ -335,6 +430,7 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deletesearchdatagrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,7 +450,6 @@
         private Button button2;
         private TextBox yearReleasedBox;
         private Label label3;
-        private TextBox genreBox;
         private Label label2;
         private TextBox ratingBox;
         private Label label4;
@@ -365,5 +460,15 @@
         private Label label6;
         private TextBox titleDelete;
         private Label label11;
+        private DataGridView deletesearchdatagrid;
+        private DataGridViewButtonColumn MovieID;
+        private DataGridViewTextBoxColumn MovieName;
+        private DataGridViewTextBoxColumn MovieType;
+        private DataGridViewTextBoxColumn fee;
+        private DataGridViewTextBoxColumn Year;
+        private DataGridViewTextBoxColumn MovieRating;
+        private RadioButton idradio;
+        private RadioButton titleradio;
+        private ComboBox genreBox;
     }
 }

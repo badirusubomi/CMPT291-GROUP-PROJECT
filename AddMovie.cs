@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.DirectoryServices;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,25 +29,12 @@ namespace CMPT291_GROUP_PROJECT
             //string connectionString = "Server = LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
 
             SqlConnection myConnection = new SqlConnection(connectionString);
+            myConnection.Open();
+            myCommand = new SqlCommand();
+            myCommand.Connection = myConnection;
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show("Succesfully Connected");
-            try
-            {
-                myConnection.Open();
-                myCommand = new SqlCommand();
-                myCommand.Connection = myConnection;
-                Console.WriteLine("Succesfully Connected");
-                //MessageBox.Show("Succesfully Connected");
-
-                //Start Queries
-
-                
-                //End Queries
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error");
-            }
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -106,13 +94,36 @@ namespace CMPT291_GROUP_PROJECT
 
         private void button3_Click(object sender, EventArgs e)
         {
+            deletesearchdatagrid.Rows.Clear();
             int newMovieID;
             string lastMovieID;
+            if (idradio.Checked)
+            {
+                myCommand.CommandText = $"select * from Movies  where MovieID = {idDelete.Text}";
+            }
+            else if (titleradio.Checked){
+                myCommand.CommandText = $"select * from Movies where Title like '%{titleDelete.Text.Trim()}%' ";
+            }
+            try
+            {
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    deletesearchdatagrid.Rows.Add(myReader["MovieID"].ToString(), myReader["Title"].ToString(),
+                                                  myReader["Genre"].ToString(),
+                                                  myReader["fee"].ToString(),
+                                                  myReader["ReleaseYear"].ToString(), myReader["MovieRating"]);
 
-            myCommand.CommandText = $"DELETE FROM Movies  where MovieID = {idDelete.Text} or MovieName = '{titleDelete.Text}';";
-            myReader = myCommand.ExecuteReader();
-            myReader.Close();
-            MessageBox.Show($"{titleDelete.Text} was deleted");
+
+                }
+
+                myReader.Close();
+            }
+            catch (Exception e3)
+            {
+                MessageBox.Show(e3.ToString(), "Error");
+            }
+            
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -128,6 +139,72 @@ namespace CMPT291_GROUP_PROJECT
         private void button9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (titleDelete.Enabled)
+            {
+                titleDelete.Enabled = false;
+                titleDelete.Text = "";
+            }
+            else
+            {
+                titleDelete.Enabled = true;
+            }
+        }
+
+        private void idradio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (idDelete.Enabled)
+            {
+                idDelete.Enabled = false;
+                idDelete.Text = "";
+
+            }
+            else
+            {
+                idDelete.Enabled = true;
+            }
+        }
+
+        private void deletesearchdatagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            myCommand.CommandText = $"DELETE FROM Movies  where Movies.MovieID = {deletesearchdatagrid.CurrentCell.Value} ;";
+            try
+            {
+                if (deletesearchdatagrid.Columns[e.ColumnIndex].Name == "MovieID")
+                {       
+                    
+                    try
+                    {
+                        myReader = myCommand.ExecuteReader();
+
+                        myReader.Close();
+                    }
+                    catch (Exception e3)
+                    {
+                        
+                    }
+                    
+                    MessageBox.Show($"Succesfully Deleted: {deletesearchdatagrid.CurrentRow.Cells["movieTitle"].Value}");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Wrong cell selected");
+            }
         }
     }
 }
