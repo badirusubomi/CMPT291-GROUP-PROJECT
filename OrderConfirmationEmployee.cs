@@ -38,6 +38,7 @@ namespace CMPT291_GROUP_PROJECT
             //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             int temporderID = 0;
+            string strtemporderID;
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show("Succesfully Connected");
             try
@@ -53,9 +54,10 @@ namespace CMPT291_GROUP_PROJECT
                     myCommand.CommandText = "select max(OrderID) as maxID from Orders;";
                     myReader = myCommand.ExecuteReader();
                     myReader.Read();
-                    temporderID = Int32.Parse(myReader["maxID"].ToString()) + 1;
-                    
-                    orderID.Text = (temporderID).ToString();
+                    strtemporderID = myReader["maxID"].ToString();
+                    temporderID = Int32.Parse(strtemporderID) + 1;
+                    //MessageBox.Show(temporderID.ToString());
+                    orderID.Text = $"{temporderID}";
 
                     myReader.Close();
                 }

@@ -70,56 +70,56 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(182, 202);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(70, 238);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 37);
+            this.label5.Size = new System.Drawing.Size(245, 37);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Olasubomi";
+            this.label5.Text = "Olasubomi Badiru";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(527, 202);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(70, 304);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 37);
+            this.label4.Size = new System.Drawing.Size(170, 37);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Jerome";
+            this.label4.Text = "Jerome Onil";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(830, 202);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(70, 370);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 37);
+            this.label3.Size = new System.Drawing.Size(199, 37);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Brandt";
+            this.label3.Text = "Brandt Sanche";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(533, 261);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(70, 436);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 37);
+            this.label6.Size = new System.Drawing.Size(273, 37);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Marek";
+            this.label6.Text = "Marek Maisonneuve";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(506, 158);
+            this.label2.Location = new System.Drawing.Point(70, 172);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 37);
+            this.label2.Size = new System.Drawing.Size(167, 37);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Developers";
+            this.label2.Text = "Developers:";
             // 
             // panel2
             // 

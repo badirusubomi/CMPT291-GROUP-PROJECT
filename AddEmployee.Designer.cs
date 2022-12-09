@@ -36,6 +36,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.AddEmployeeTab = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.label49 = new System.Windows.Forms.Label();
             this.EmployeeAddStartDate = new System.Windows.Forms.DateTimePicker();
             this.employeeAddPostal = new System.Windows.Forms.TextBox();
@@ -264,6 +265,7 @@
             // AddEmployeeTab
             // 
             this.AddEmployeeTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AddEmployeeTab.Controls.Add(this.button3);
             this.AddEmployeeTab.Controls.Add(this.label49);
             this.AddEmployeeTab.Controls.Add(this.EmployeeAddStartDate);
             this.AddEmployeeTab.Controls.Add(this.employeeAddPostal);
@@ -296,6 +298,21 @@
             this.AddEmployeeTab.TabIndex = 0;
             this.AddEmployeeTab.Text = "Add Employee";
             this.AddEmployeeTab.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(322, 25);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(156, 24);
+            this.button3.TabIndex = 84;
+            this.button3.Text = "Generate ID";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // label49
             // 
@@ -454,7 +471,7 @@
             // 
             // employeeAddEmployeeID
             // 
-            this.employeeAddEmployeeID.Location = new System.Drawing.Point(165, 25);
+            this.employeeAddEmployeeID.Location = new System.Drawing.Point(166, 22);
             this.employeeAddEmployeeID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.employeeAddEmployeeID.Name = "employeeAddEmployeeID";
             this.employeeAddEmployeeID.Size = new System.Drawing.Size(110, 23);
@@ -1622,7 +1639,7 @@
             this.customerDeleteButton.Name = "customerDeleteButton";
             this.customerDeleteButton.Size = new System.Drawing.Size(173, 54);
             this.customerDeleteButton.TabIndex = 106;
-            this.customerDeleteButton.Text = "Confirm";
+            this.customerDeleteButton.Text = "Delete";
             this.customerDeleteButton.UseVisualStyleBackColor = false;
             this.customerDeleteButton.Click += new System.EventHandler(this.customerDeleteButton_Click);
             // 
@@ -1938,5 +1955,6 @@
         private Label customerDeletePlanType;
         private Label irreqgularlabel;
         private Button customerDeleteButton;
+        private Button button3;
     }
 }
