@@ -17,12 +17,14 @@ namespace CMPT291_GROUP_PROJECT
         public SqlConnection myConnection;
         public SqlCommand myCommand;
         public SqlDataReader myReader;
+        SQL_Conn con_str;
         Form1 ths;
         public CollectCustomerInfo(Form1 frm)
         {
             ths = frm;
             InitializeComponent();
             ContinueRental.Hide();
+            //con_str.OpenConection();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,8 +55,8 @@ namespace CMPT291_GROUP_PROJECT
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            SqlConnection myConnection = new SqlConnection(connectionString);
+            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            //SqlConnection myConnection = new SqlConnection(connectionString);
             int PlanLimit = 0;
             string planID;
             int ordersThisMonth = 0;
@@ -65,8 +67,9 @@ namespace CMPT291_GROUP_PROJECT
 
 
             try
-            {
-                myConnection.Open();
+            {   con_str =  new SQL_Conn();
+                con_str.OpenConection();
+               // myConnection.Open();
                 myCommand = new SqlCommand();
                 myCommand.Connection = myConnection;
 

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CMPT291_GROUP_PROJECT
 {
     public partial class LogInPage : Form
@@ -17,19 +18,22 @@ namespace CMPT291_GROUP_PROJECT
         public SqlConnection myConnection;
         public SqlCommand myCommand;
         public SqlDataReader myReader;
+        SQL_Conn conn_str = new SQL_Conn();
+
         Form1 ths;
         public LogInPage(Form1 frm)
         {
             InitializeComponent();
             ths = frm;
-            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            conn_str.OpenConection();
+            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            SqlConnection myConnection = new SqlConnection(connectionString);
+            //SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show("Succesfully Connected");
             try
             {
-                myConnection.Open();
+                //myConnection.Open();
                 myCommand = new SqlCommand();
                 myCommand.Connection = myConnection;
 

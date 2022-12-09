@@ -11,12 +11,14 @@ using System.Windows.Forms;
 namespace CMPT291_GROUP_PROJECT
 {
     public partial class searchform : Form
-    {
+    {   SQL_Conn con_str = new SQL_Conn();
         Form1 ths;
         public searchform(Form1 frm)
         {
             InitializeComponent();
             ths = frm;
+            con_str = new SQL_Conn();
+            //con_str.OpenConection();
             button1.Click += new EventHandler(button1_Click);
         }
         public Form1 Form { get; set; }
