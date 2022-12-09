@@ -167,15 +167,14 @@ namespace CMPT291_GROUP_PROJECT
 
         private void idradio_CheckedChanged(object sender, EventArgs e)
         {
-            if (idDelete.Enabled)
+            if (titleDelete.Enabled)
             {
-                idDelete.Enabled = false;
-                idDelete.Text = "";
-
+                titleDelete.Enabled = false;
+                titleDelete.Text = "";
             }
             else
             {
-                idDelete.Enabled = true;
+                titleDelete.Enabled = true;
             }
         }
 

@@ -20,6 +20,7 @@ namespace CMPT291_GROUP_PROJECT
             this.button7.Hide();
             this.button8.Hide();
             this.button9.Hide();
+            label3.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

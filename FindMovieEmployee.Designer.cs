@@ -38,6 +38,13 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.searchResult = new System.Windows.Forms.DataGridView();
+            this.movieTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CopyID = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.movieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.year = new System.Windows.Forms.CheckBox();
@@ -56,13 +63,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
             this.dateTo = new System.Windows.Forms.DateTimePicker();
-            this.movieTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CopyID = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.movieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,6 +90,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1150, 46);
             this.panel2.TabIndex = 11;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label1
             // 
@@ -101,6 +102,7 @@
             this.label1.Size = new System.Drawing.Size(176, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Find Movie";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel3
             // 
@@ -184,6 +186,57 @@
             this.searchResult.TabIndex = 26;
             this.searchResult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.searchResult_CellContentClick);
             // 
+            // movieTitle
+            // 
+            this.movieTitle.HeaderText = "Title";
+            this.movieTitle.MinimumWidth = 6;
+            this.movieTitle.Name = "movieTitle";
+            this.movieTitle.ReadOnly = true;
+            this.movieTitle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // CopyID
+            // 
+            this.CopyID.HeaderText = "Copy ID";
+            this.CopyID.Name = "CopyID";
+            this.CopyID.ReadOnly = true;
+            // 
+            // movieID
+            // 
+            this.movieID.HeaderText = "movie ID";
+            this.movieID.MinimumWidth = 6;
+            this.movieID.Name = "movieID";
+            this.movieID.ReadOnly = true;
+            this.movieID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.movieID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Genre";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "year";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // Fee
+            // 
+            this.Fee.HeaderText = "Fee";
+            this.Fee.MinimumWidth = 6;
+            this.Fee.Name = "Fee";
+            this.Fee.ReadOnly = true;
+            // 
+            // Rating
+            // 
+            this.Rating.HeaderText = "rating";
+            this.Rating.MinimumWidth = 6;
+            this.Rating.Name = "Rating";
+            this.Rating.ReadOnly = true;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -194,6 +247,7 @@
             this.label6.Size = new System.Drawing.Size(128, 20);
             this.label6.TabIndex = 25;
             this.label6.Text = "Search Result:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -204,6 +258,7 @@
             this.label7.Size = new System.Drawing.Size(96, 15);
             this.label7.TabIndex = 27;
             this.label7.Text = "Select Your Copy";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // year
             // 
@@ -266,6 +321,7 @@
             this.genreComboBox.Size = new System.Drawing.Size(296, 23);
             this.genreComboBox.Sorted = true;
             this.genreComboBox.TabIndex = 36;
+            this.genreComboBox.SelectedIndexChanged += new System.EventHandler(this.genreComboBox_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -277,6 +333,7 @@
             this.label4.Size = new System.Drawing.Size(53, 18);
             this.label4.TabIndex = 31;
             this.label4.Text = "Genre:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -288,6 +345,7 @@
             this.label3.Size = new System.Drawing.Size(42, 18);
             this.label3.TabIndex = 32;
             this.label3.Text = "Year:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -299,6 +357,7 @@
             this.label2.Size = new System.Drawing.Size(47, 18);
             this.label2.TabIndex = 33;
             this.label2.Text = "Actor:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label5
             // 
@@ -310,6 +369,7 @@
             this.label5.Size = new System.Drawing.Size(39, 18);
             this.label5.TabIndex = 34;
             this.label5.Text = "Title:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // yearBox
             // 
@@ -320,6 +380,7 @@
             this.yearBox.ReadOnly = true;
             this.yearBox.Size = new System.Drawing.Size(296, 23);
             this.yearBox.TabIndex = 28;
+            this.yearBox.TextChanged += new System.EventHandler(this.yearBox_TextChanged);
             // 
             // actorBox
             // 
@@ -330,6 +391,7 @@
             this.actorBox.ReadOnly = true;
             this.actorBox.Size = new System.Drawing.Size(296, 23);
             this.actorBox.TabIndex = 29;
+            this.actorBox.TextChanged += new System.EventHandler(this.actorBox_TextChanged);
             // 
             // titleBox
             // 
@@ -340,6 +402,7 @@
             this.titleBox.ReadOnly = true;
             this.titleBox.Size = new System.Drawing.Size(296, 23);
             this.titleBox.TabIndex = 30;
+            this.titleBox.TextChanged += new System.EventHandler(this.titleBox_TextChanged);
             // 
             // label8
             // 
@@ -349,6 +412,7 @@
             this.label8.Size = new System.Drawing.Size(63, 15);
             this.label8.TabIndex = 41;
             this.label8.Text = "Date from:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -358,6 +422,7 @@
             this.label9.Size = new System.Drawing.Size(49, 15);
             this.label9.TabIndex = 41;
             this.label9.Text = "Date To:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // dateFrom
             // 
@@ -365,6 +430,7 @@
             this.dateFrom.Name = "dateFrom";
             this.dateFrom.Size = new System.Drawing.Size(200, 23);
             this.dateFrom.TabIndex = 42;
+            this.dateFrom.ValueChanged += new System.EventHandler(this.dateFrom_ValueChanged);
             // 
             // dateTo
             // 
@@ -372,57 +438,7 @@
             this.dateTo.Name = "dateTo";
             this.dateTo.Size = new System.Drawing.Size(200, 23);
             this.dateTo.TabIndex = 42;
-            // 
-            // movieTitle
-            // 
-            this.movieTitle.HeaderText = "Title";
-            this.movieTitle.MinimumWidth = 6;
-            this.movieTitle.Name = "movieTitle";
-            this.movieTitle.ReadOnly = true;
-            this.movieTitle.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // CopyID
-            // 
-            this.CopyID.HeaderText = "Copy ID";
-            this.CopyID.Name = "CopyID";
-            this.CopyID.ReadOnly = true;
-            // 
-            // movieID
-            // 
-            this.movieID.HeaderText = "movie ID";
-            this.movieID.MinimumWidth = 6;
-            this.movieID.Name = "movieID";
-            this.movieID.ReadOnly = true;
-            this.movieID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.movieID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Genre";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "year";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // Fee
-            // 
-            this.Fee.HeaderText = "Fee";
-            this.Fee.MinimumWidth = 6;
-            this.Fee.Name = "Fee";
-            this.Fee.ReadOnly = true;
-            // 
-            // Rating
-            // 
-            this.Rating.HeaderText = "rating";
-            this.Rating.MinimumWidth = 6;
-            this.Rating.Name = "Rating";
-            this.Rating.ReadOnly = true;
+            this.dateTo.ValueChanged += new System.EventHandler(this.dateTo_ValueChanged);
             // 
             // FindMovieEmployee
             // 
