@@ -154,5 +154,15 @@ namespace CMPT291_GROUP_PROJECT
             Environment.Exit(0);
 
         }
+
+        private void ProcessReturnsPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

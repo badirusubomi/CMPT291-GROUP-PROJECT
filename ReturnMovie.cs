@@ -16,5 +16,10 @@ namespace CMPT291_GROUP_PROJECT
         {
             InitializeComponent();
         }
+
+        private void ReturnMovie_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

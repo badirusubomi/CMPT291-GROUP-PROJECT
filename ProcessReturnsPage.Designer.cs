@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcessReturnsPage));
             this.deletesearchdatagrid = new System.Windows.Forms.DataGridView();
+            this.OrderID = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CopyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.idDelete = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,14 +52,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.OrderID = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MovieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CopyID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.deletesearchdatagrid)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -78,6 +78,55 @@
             this.deletesearchdatagrid.Size = new System.Drawing.Size(1055, 157);
             this.deletesearchdatagrid.TabIndex = 14;
             this.deletesearchdatagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.deletesearchdatagrid_CellContentClick);
+            // 
+            // OrderID
+            // 
+            this.OrderID.HeaderText = "Order ID";
+            this.OrderID.Name = "OrderID";
+            // 
+            // CustomerID
+            // 
+            this.CustomerID.HeaderText = "Customer ID";
+            this.CustomerID.Name = "CustomerID";
+            this.CustomerID.ReadOnly = true;
+            // 
+            // MovieID
+            // 
+            this.MovieID.HeaderText = "Movie ID";
+            this.MovieID.Name = "MovieID";
+            this.MovieID.ReadOnly = true;
+            this.MovieID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // CopyID
+            // 
+            this.CopyID.HeaderText = "Copy ID";
+            this.CopyID.Name = "CopyID";
+            this.CopyID.ReadOnly = true;
+            // 
+            // MovieName
+            // 
+            this.MovieName.HeaderText = "Title";
+            this.MovieName.Name = "MovieName";
+            this.MovieName.ReadOnly = true;
+            this.MovieName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // OrderStatus
+            // 
+            this.OrderStatus.HeaderText = "Order Status";
+            this.OrderStatus.Name = "OrderStatus";
+            this.OrderStatus.ReadOnly = true;
+            // 
+            // DateFrom
+            // 
+            this.DateFrom.HeaderText = "Rent From";
+            this.DateFrom.Name = "DateFrom";
+            this.DateFrom.ReadOnly = true;
+            // 
+            // dateTo
+            // 
+            this.dateTo.HeaderText = "Rent Till";
+            this.dateTo.Name = "dateTo";
+            this.dateTo.ReadOnly = true;
             // 
             // button3
             // 
@@ -146,6 +195,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manage Orders";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // titleradio
             // 
@@ -238,55 +288,6 @@
             this.panel3.Size = new System.Drawing.Size(1134, 98);
             this.panel3.TabIndex = 5;
             // 
-            // OrderID
-            // 
-            this.OrderID.HeaderText = "Order ID";
-            this.OrderID.Name = "OrderID";
-            // 
-            // CustomerID
-            // 
-            this.CustomerID.HeaderText = "Customer ID";
-            this.CustomerID.Name = "CustomerID";
-            this.CustomerID.ReadOnly = true;
-            // 
-            // MovieID
-            // 
-            this.MovieID.HeaderText = "Movie ID";
-            this.MovieID.Name = "MovieID";
-            this.MovieID.ReadOnly = true;
-            this.MovieID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // CopyID
-            // 
-            this.CopyID.HeaderText = "Copy ID";
-            this.CopyID.Name = "CopyID";
-            this.CopyID.ReadOnly = true;
-            // 
-            // MovieName
-            // 
-            this.MovieName.HeaderText = "Title";
-            this.MovieName.Name = "MovieName";
-            this.MovieName.ReadOnly = true;
-            this.MovieName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // OrderStatus
-            // 
-            this.OrderStatus.HeaderText = "Order Status";
-            this.OrderStatus.Name = "OrderStatus";
-            this.OrderStatus.ReadOnly = true;
-            // 
-            // DateFrom
-            // 
-            this.DateFrom.HeaderText = "Rent From";
-            this.DateFrom.Name = "DateFrom";
-            this.DateFrom.ReadOnly = true;
-            // 
-            // dateTo
-            // 
-            this.dateTo.HeaderText = "Rent Till";
-            this.dateTo.Name = "dateTo";
-            this.dateTo.ReadOnly = true;
-            // 
             // ProcessReturnsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -298,6 +299,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProcessReturnsPage";
             this.Text = "ProcessReturnsPage";
+            this.Load += new System.EventHandler(this.ProcessReturnsPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.deletesearchdatagrid)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
