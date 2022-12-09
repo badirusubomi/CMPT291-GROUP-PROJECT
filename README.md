@@ -44,10 +44,10 @@ The user is presented with multiple tabs with different functionality. Users are
 Entering a CustomerID will present all info to the user. After the user enters the customer to rent movies to, the user is presented with search information to select which movie will be rented to the user. The user is able to select movies based on title, genre, actor or year released. The user then enters what days to rent the movie from and until. The user will then be asked to confirm the order.
 
 ### Returns
-
+The returns page presents a table to the user and prompts to enter either a customer ID or a movie ID. Entering either of these will show all the orders with the respective ID in it. The user is then able to select the ID to mark it as returned. This will also update it in the database and make it available to all other users/
 
 ### Reports Page
-The user can view a sales report, that displays a table of sales based on employee sales or customer rentals. The user can view overdue items from this page as well.
-
-### Process Returns Page
-The user is able to process a users return by enetering a customer ID and an order ID. The application will then change the status of an order to returned.
+The user is prompted with the options to view sales reports for customers, employees, movies and overall sales report. The customer page shows how many movies are signed out per user. The users can be sorted in order by address, amount of movies possessed, gender, email, start date and return date.
+The employee section of the reports page shows information about all employees, and can be sorted by address, salary, gender, email and starting date.
+The overall sales reports section allows the user to view the amount of each specific movie that were rented out in any given month and year.
+The second tab on the page allows the user to view employee or customer sales for any given month and year. The user is also able to view overdue rentals that have not been returned yet.
