@@ -6,6 +6,8 @@ Brandt Sanche
 Jerome verghese
 Marek Maisonneuve
 
+# Connection String
+The ***connection string*** variable is located in ***SQL_Conn.cs***. Modifying this connection string will allow the program to work with any database. Change this to whatever the SQL setup is.
 
 # Approach Taken: BLOCKBUSTER Recreation
 ### Entity-Relationship Model and Tables
