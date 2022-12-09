@@ -73,18 +73,30 @@ ActorsID int NOT NULL FOREIGN KEY REFERENCES Actors(ActorID),
 ActorRating int,
 Constraint PK_Acts_In primary key (MovieID, ActorsID))
 
+drop table Orders;
 CREATE TABLE Orders(
 OrderID int NOT NULL PRIMARY KEY,
-CustomerID int NOT NULL FOREIGN KEY REFERENCES Customer(CustomerID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CustomerID int NOT NULL,
 	
-EmployeeID int NOT NULL FOREIGN KEY REFERENCES Employee(EmployeeID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+EmployeeID int NOT NULL,
 CopyID int NOT NULL,
 MovieID int NOT NULL,
 DateFrom DATE,
 DateTo DATE,
 OrderStatus int,
 Constraint FK_Copies 
-FOREIGN KEY (CopyID, MovieID) REFERENCES Copies(CopyID, MovieID) ON DELETE NO ACTION ON UPDATE NO ACTION
+FOREIGN KEY (CopyID, MovieID) REFERENCES Copies(CopyID, MovieID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+Constraint FK_Customer
+FOREIGN KEY (CustomerID) REFERENCES Customer ON DELETE CASCADE ON UPDATE CASCADE,
+Constraint FK_Employee
+FOREIGN KEY (EmployeeID) REFERENCES Employee ON DELETE cascade ON UPDATE cascade
 )
 
+Insert into Orders values (1, 1, 1, 01, 1, '2008-11-11', '2008-11-30', 0);
+Insert into Orders values (2, 1, 1, 01, 2, '2008-11-11', '2022-11-11', 0);
+Insert into Orders values (3, 1, 1, 01, 3, '2008-11-11', '2008-11-30', 0);
+Insert into Orders values (5, 3, 1, 01, 3, '2008-11-11', '2008-11-30', 0);
 
+SELECT * FROM Orders
+Insert Into Customer Values(3, 'Alexandra', 'Ferreira', 'alexF@macewan.ca', 'F', '10407 105 Ave NW', 'Edmonton', 'AB', 'T5J4S2', '2022-11-30', '2024-11-30', 01, 001, 'grumpy', 0);
+delete from Customer where CustomerID = 3; 

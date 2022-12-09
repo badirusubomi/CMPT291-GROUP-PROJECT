@@ -50,14 +50,21 @@ namespace CMPT291_GROUP_PROJECT
 
         private void searchResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (searchResult.Columns[e.ColumnIndex].Name == "CopyID")
+            try
             {
-                ths.AppUser._selectMovie = searchResult.CurrentCell.Value.ToString();
-                ths.AppUser._selectTitle = searchResult.CurrentRow.Cells["movieTitle"].Value.ToString();
-                movieIDths = searchResult.CurrentRow.Cells["movieID"].Value.ToString();
-                //MessageBox.Show($"Movie Title: {ths.AppUser._selectTitle}");
-                nextButton.Show();
-                nextButton.PerformClick();
+                if (searchResult.Columns[e.ColumnIndex].Name == "CopyID")
+                {
+                    ths.AppUser._selectMovie = searchResult.CurrentCell.Value.ToString();
+                    ths.AppUser._selectTitle = searchResult.CurrentRow.Cells["movieTitle"].Value.ToString();
+                    movieIDths = searchResult.CurrentRow.Cells["movieID"].Value.ToString();
+                    //MessageBox.Show($"Movie Title: {movieIDths}");
+                    nextButton.Show();
+                    nextButton.PerformClick();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Wrong cell selected");
             }
         }
 
@@ -101,8 +108,8 @@ namespace CMPT291_GROUP_PROJECT
                 myCommand.CommandText = $"select * from Copies as C7, ({ths.AppUser._query})" +
                                         $" as temp where C7.MovieID = temp.MovieID " +
                                         $"and C7.CopyID not in  (select C8.CopyID from Copies as C8, " +
-                                        $"Orders as O2 where O2.OrderID = C8.CopyID and C8.CopyID = C7.CopyID and O2.CopyID = C7.CopyID " +
-                                        $"and O2.Datefrom <= '{dateFrom.Text}' and O2.DateTo >= '{dateTo.Text}') ";
+                                        $"Orders as O2 where O2.CopyID = C8.CopyID and C8.CopyID = C7.CopyID and O2.MovieID = C7.MovieID " +
+                                        $"and O2.Datefrom < '{dateFrom.Text}' and O2.DateTo > '{dateTo.Text}') ";
                                 //Query needs revision
                 try
                 {

@@ -777,7 +777,7 @@ namespace CMPT291_GROUP_PROJECT
                         myReader.Read();
                         myReader.Close();
 
-                        // Re-use codee here
+                        //  Re-use codee here
                         //  - Clear out fields,
                         //  - refresh tab,
                         //  - Hide delete button

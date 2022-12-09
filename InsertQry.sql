@@ -5,6 +5,7 @@ Insert Into AccType Values ( 002, 'Essential', 15, 999);
 Insert Into AccType Values ( 003, 'Premium', 20, 999);
 Insert Into AccType Values ( 004, 'Gold', 25, 999);
 
+select max(OrderID) as maxID from Orders
 
 Insert Into Customer Values(1, 'Mohamad', 'El-Hajj', 'elhajjm@macewan.ca', 'M', '10407 105 Ave NW', 'Edmonton', 'AB', 'T5J4S2', '2022-11-30', '2024-11-30', 01, 004, 'HalaMadrid', 0);
 Insert Into Customer Values(2, 'Mohamad', 'El-Morsy', 'elmorsym@macewan.ca', 'M', '10407 105 Ave NW', 'Edmonton', 'AB', 'T5J4S2', '2022-11-30', '2024-11-30',01 , 004, 'NetworKING', 0);

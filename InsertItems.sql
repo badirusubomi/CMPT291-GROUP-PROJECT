@@ -16,6 +16,32 @@ insert into Movies values (2, 'Breaking Bad', 'Drama', 10, 5,2017);
 insert into Movies values (3, 'The Shining', 'Thriller', 7, 5, 2010);
 insert into Movies values (4, 'DocumentaryUnit', 'Documentary', 2, 1, 2000);
 
+/*		Inserting into Movies	*/
+insert into Movies values (1, 'The Incredibles', 'Action', 10,5, 2019);
+insert into Movies values (5, 'The Incredibles 2', 'Action', 10, 5,2019);
+insert into Movies values (2, 'Breaking Bad', 'Drama', 10, 5,2017);
+insert into Movies values (3, 'The Shining', 'Thriller', 7, 5, 2010);
+insert into Movies values (4, 'DocumentaryUnit', 'Documentary', 2, 1, 2000);
+/*		Inserting into Movies	*/
+insert into Movies values (1, 'The Incredibles', 'Action', 10,5, 2019);
+insert into Movies values (5, 'The Incredibles 2', 'Action', 10, 5,2019);
+insert into Movies values (2, 'Breaking Bad', 'Drama', 10, 5,2017);
+insert into Movies values (3, 'The Shining', 'Thriller', 7, 5, 2010);
+insert into Movies values (4, 'DocumentaryUnit', 'Documentary', 2, 1, 2000);
+/*		Inserting into Movies	*/
+insert into Movies values (1, 'The Incredibles', 'Action', 10,5, 2019);
+insert into Movies values (5, 'The Incredibles 2', 'Action', 10, 5,2019);
+insert into Movies values (2, 'Breaking Bad', 'Drama', 10, 5,2017);
+insert into Movies values (3, 'The Shining', 'Thriller', 7, 5, 2010);
+insert into Movies values (4, 'DocumentaryUnit', 'Documentary', 2, 1, 2000);
+/*		Inserting into Movies	*/
+insert into Movies values (1, 'The Incredibles', 'Action', 10,5, 2019);
+insert into Movies values (5, 'The Incredibles 2', 'Action', 10, 5,2019);
+insert into Movies values (2, 'Breaking Bad', 'Drama', 10, 5,2017);
+insert into Movies values (3, 'The Shining', 'Thriller', 7, 5, 2010);
+insert into Movies values (4, 'DocumentaryUnit', 'Documentary', 2, 1, 2000);
+
+
 delete  Acts_In;
 delete Orders;
 delete from Copies where MovieID in (select C2.MovieID from Copies as C2, Movies as M2 where C2.MovieID = M2.MovieID and M2.ReleaseYear < 2000); 
