@@ -68,16 +68,18 @@ ActorRating int
 )
 
 CREATE TABLE Acts_In(
-MovieID int NOT NULL FOREIGN KEY REFERENCES Movies(MovieID),
+MovieID int NOT NULL,
 ActorsID int NOT NULL FOREIGN KEY REFERENCES Actors(ActorID),
 ActorRating int,
-Constraint PK_Acts_In primary key (MovieID, ActorsID))
+Constraint PK_Acts_In primary key (MovieID, ActorsID),
+Constraint PK_MovieID
+FOREIGN KEY (MovieID) REFERENCES Movies ON DELETE cascade ON UPDATE cascade,
+Constraint PK_ActorsID
+FOREIGN KEY (ActorsID) REFERENCES Actors ON DELETE cascade ON UPDATE cascade)
 
-drop table Orders;
 CREATE TABLE Orders(
 OrderID int NOT NULL PRIMARY KEY,
 CustomerID int NOT NULL,
-	
 EmployeeID int NOT NULL,
 CopyID int NOT NULL,
 MovieID int NOT NULL,

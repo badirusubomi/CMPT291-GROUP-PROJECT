@@ -180,7 +180,7 @@ namespace CMPT291_GROUP_PROJECT
 
         private void deletesearchdatagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            myCommand.CommandText = $"DELETE FROM Movies  where Movies.MovieID = {deletesearchdatagrid.CurrentCell.Value} ;";
+            myCommand.CommandText = $"DELETE Movies  where Movies.MovieID = {deletesearchdatagrid.CurrentCell.Value}";
             try
             {
                 if (deletesearchdatagrid.Columns[e.ColumnIndex].Name == "MovieID")
@@ -189,18 +189,17 @@ namespace CMPT291_GROUP_PROJECT
                     try
                     {
                         myReader = myCommand.ExecuteReader();
-
                         myReader.Close();
+                        MessageBox.Show($"Succesfully Deleted: {deletesearchdatagrid.CurrentRow.Cells["MovieName"].Value}");
+                        deletesearchdatagrid.Rows.Clear();
                     }
                     catch (Exception e3)
                     {
-                        
+                        MessageBox.Show("Wrong cell selected");
                     }
-                    
-                    MessageBox.Show($"Succesfully Deleted: {deletesearchdatagrid.CurrentRow.Cells["movieTitle"].Value}");
                 }
             }
-            catch
+            catch (Exception ex)
             {
                 MessageBox.Show("Wrong cell selected");
             }
