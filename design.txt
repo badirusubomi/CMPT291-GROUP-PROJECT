@@ -23,3 +23,9 @@ Brandt
 Marek
 - Signup employee: https://www.youtube.com/watch?v=iVzZyerZh48&ab_channel=C%23UiAcademy
 - signup customer: https://www.youtube.com/watch?v=iVzZyerZh48&ab_channel=C%23UiAcademy
+
+
+
+Rental Status
+0- Out
+1-Returned

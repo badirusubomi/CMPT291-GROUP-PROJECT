@@ -220,7 +220,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(886, 189);
+            this.tabPage1.Size = new System.Drawing.Size(1061, 407);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Account Info";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -406,26 +406,31 @@
             // 
             this.orderID.HeaderText = "Order ID";
             this.orderID.Name = "orderID";
+            this.orderID.ReadOnly = true;
             // 
             // CopyID
             // 
             this.CopyID.HeaderText = "Copy ID";
             this.CopyID.Name = "CopyID";
+            this.CopyID.ReadOnly = true;
             // 
             // MovieTitle
             // 
             this.MovieTitle.HeaderText = "Movie TItle";
             this.MovieTitle.Name = "MovieTitle";
+            this.MovieTitle.ReadOnly = true;
             // 
             // rentFrom
             // 
             this.rentFrom.HeaderText = "Rent Date";
             this.rentFrom.Name = "rentFrom";
+            this.rentFrom.ReadOnly = true;
             // 
             // dateTo
             // 
             this.dateTo.HeaderText = "Return Date";
             this.dateTo.Name = "dateTo";
+            this.dateTo.ReadOnly = true;
             // 
             // Status
             // 

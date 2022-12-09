@@ -17,6 +17,7 @@ namespace CMPT291_GROUP_PROJECT
         {
             ths = frm;
             InitializeComponent();
+            ConfirmOrder.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -32,6 +33,11 @@ namespace CMPT291_GROUP_PROJECT
         private void ConfirmOrder_Click(object sender, EventArgs e)
         {
             ths.loadForms(new OrderConfirmedPage());
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

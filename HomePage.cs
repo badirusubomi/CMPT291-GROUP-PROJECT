@@ -51,6 +51,10 @@ namespace CMPT291_GROUP_PROJECT
             sidePanel.Top = button2.Top;
             sidePanel.Hide();
             _appUser = new User();
+            this.button7.Hide();
+            this.button8.Hide();
+            this.button9.Hide();
+            this.button10.Hide();
             /*this.panel1.Hide();
             this.panel2.Hide();
             this.panel3.Hide();
@@ -90,10 +94,7 @@ namespace CMPT291_GROUP_PROJECT
             this.button4.Hide();
             this.button5.Hide();
             this.button6.Hide();
-            this.button7.Hide();
-            this.button8.Hide();
-            this.button9.Hide();
-            this.button10.Hide();
+            
         }
         public void showForms(object Form)
         {
@@ -106,10 +107,7 @@ namespace CMPT291_GROUP_PROJECT
             this.button4.Show();
             this.button5.Show();
             this.button6.Show();
-            this.button7.Show();
-            this.button8.Show();
-            this.button9.Show();
-            this.button10.Show();
+           
         }
         public void loadBigForms(object Form)
         {

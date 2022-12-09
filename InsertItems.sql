@@ -16,7 +16,12 @@ insert into Movies values (2, 'Breaking Bad', 'Drama', 10, 5,2017);
 insert into Movies values (3, 'The Shining', 'Thriller', 7, 5, 2010);
 insert into Movies values (4, 'DocumentaryUnit', 'Documentary', 2, 1, 2000);
 
-
+delete  Acts_In;
+delete Orders;
+delete from Copies where MovieID in (select C2.MovieID from Copies as C2, Movies as M2 where C2.MovieID = M2.MovieID and M2.ReleaseYear < 2000); 
+delete from Movies where ReleaseYear < 2000;
+select ReleaseYear from Movies
+select * from Movies where Movies.ReleaseYear = 2000;
 
 /*		Inserting into Employees	*/
 insert into Employee values (1, 'Jerome','LName','jerome@mymacewan.ca','M','MacEwan Residence', 'Edmonton',

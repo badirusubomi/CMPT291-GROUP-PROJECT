@@ -21,11 +21,11 @@ insert into Employee values (4, 'Marek','LName','marek@mymacewan.ca','M','MacEwa
 							'Alberta', 'T6V0L5', '2022-01-01', 10000, 'BlockbusterMarek');
 
 
-insert into Movies values (1, 'The Incredibles', 'Action', 10,2019, 5);
-insert into Movies values (5, 'The Incredibles 2', 'Action', 10, 2019, 5);
-insert into Movies values (2, 'Breaking Bad', 'Drama', 10, 2017,5);
-insert into Movies values (3, 'The Shining', 'Thriller', 7, 2010, 5);
-insert into Movies values (4, 'DocumentaryUnit', 'Documentary', 2, 2000, 1);
+insert into Movies values (1, 'The Incredibles', 'Action', 10, 5, 2019);
+insert into Movies values (5, 'The Incredibles 2', 'Action', 10, 5, 2019);
+insert into Movies values (2, 'Breaking Bad', 'Drama', 10, 5, 2017);
+insert into Movies values (3, 'The Shining', 'Thriller', 7, 5, 2010);
+insert into Movies values (4, 'DocumentaryUnit', 'Documentary', 2, 1, 2000);
 
 Insert Into Actors values (1, 'Jack', 'Nicolson', 50, 'M',0);
 Insert Into Actors values (2, 'Leonardo', 'DiCaprio', 50, 'M',0);
