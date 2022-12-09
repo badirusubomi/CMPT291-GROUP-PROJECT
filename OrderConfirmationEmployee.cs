@@ -53,9 +53,10 @@ namespace CMPT291_GROUP_PROJECT
                     myCommand.CommandText = "select max(OrderID) as maxID from Orders;";
                     myReader = myCommand.ExecuteReader();
                     myReader.Read();
-                    temporderID = Int32.Parse(myReader["maxID"].ToString()) + 1;
-                    
-                    orderID.Text = (temporderID).ToString();
+                    string strtemporderID = myReader["maxID"].ToString();
+                    temporderID = Int32.Parse(strtemporderID) + 1;
+                    MessageBox.Show(temporderID.ToString());
+                    orderID.Text = temporderID.ToString();
 
                     myReader.Close();
                 }

@@ -110,7 +110,7 @@ namespace CMPT291_GROUP_PROJECT
                     }
                     catch (Exception e3)
                     {
-                        MessageBox.Show(e3.ToString(), "Error");
+                        MessageBox.Show("User not Found");
                     }
                 }
                 else

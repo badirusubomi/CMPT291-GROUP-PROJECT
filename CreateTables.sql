@@ -75,15 +75,16 @@ Constraint PK_Acts_In primary key (MovieID, ActorsID))
 
 CREATE TABLE Orders(
 OrderID int NOT NULL PRIMARY KEY,
-CustomerID int NOT NULL FOREIGN KEY REFERENCES Customer(CustomerID),
-EmployeeID int NOT NULL FOREIGN KEY REFERENCES Employee(EmployeeID),
+CustomerID int NOT NULL FOREIGN KEY REFERENCES Customer(CustomerID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+	
+EmployeeID int NOT NULL FOREIGN KEY REFERENCES Employee(EmployeeID) ON DELETE NO ACTION ON UPDATE NO ACTION,
 CopyID int NOT NULL,
 MovieID int NOT NULL,
 DateFrom DATE,
 DateTo DATE,
 OrderStatus int,
 Constraint FK_Copies 
-FOREIGN KEY (CopyID, MovieID) REFERENCES Copies(CopyID, MovieID)
+FOREIGN KEY (CopyID, MovieID) REFERENCES Copies(CopyID, MovieID) ON DELETE NO ACTION ON UPDATE NO ACTION
 )
 
 
