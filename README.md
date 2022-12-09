@@ -25,5 +25,9 @@ The user is presented with a login screen, and prompted to enter a username and 
 
 ### Users Page
 The user is presented with multiple tabs with different functionality. Users are able to add new employees or customer accounts and view info about accounts. Each of these different sets of features are shown on different tabs. Each user specified has specific info that is displayed to the user.
+
+### Collect Customer Info
+Entering a CustomerID will present all info to the user.
+
 ### Reports Page
 The user can view a sales report, that displays a table of sales based on employee sales or customer rentals. The user can view overdue items from this page as well.
