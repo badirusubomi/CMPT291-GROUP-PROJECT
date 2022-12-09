@@ -115,6 +115,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1189, 98);
             this.panel3.TabIndex = 15;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dataGridView1
             // 
@@ -187,27 +188,23 @@
             // 
             // emailCB
             // 
-            this.emailCB.AutoSize = true;
-            this.emailCB.Location = new System.Drawing.Point(1038, 159);
-            this.emailCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.emailCB.Name = "emailCB";
-            this.emailCB.Size = new System.Drawing.Size(55, 19);
-            this.emailCB.TabIndex = 17;
-            this.emailCB.Text = "Email";
-            this.emailCB.UseVisualStyleBackColor = true;
-            this.emailCB.CheckedChanged += new System.EventHandler(this.emailCB_CheckedChanged);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(1186, 212);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(68, 24);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Email";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // planCB
             // 
-            this.planCB.AutoSize = true;
-            this.planCB.Location = new System.Drawing.Point(1038, 197);
-            this.planCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.planCB.Name = "planCB";
-            this.planCB.Size = new System.Drawing.Size(63, 19);
-            this.planCB.TabIndex = 18;
-            this.planCB.Text = "Plan ID";
-            this.planCB.UseVisualStyleBackColor = true;
-            this.planCB.CheckedChanged += new System.EventHandler(this.planCB_CheckedChanged);
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(1186, 263);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(78, 24);
+            this.checkBox2.TabIndex = 18;
+            this.checkBox2.Text = "Plan ID";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -223,72 +220,56 @@
             // 
             // inhandCB
             // 
-            this.inhandCB.AutoSize = true;
-            this.inhandCB.Location = new System.Drawing.Point(857, 197);
-            this.inhandCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.inhandCB.Name = "inhandCB";
-            this.inhandCB.Size = new System.Drawing.Size(109, 19);
-            this.inhandCB.TabIndex = 21;
-            this.inhandCB.Text = "Movies In Hand";
-            this.inhandCB.UseVisualStyleBackColor = true;
-            this.inhandCB.CheckedChanged += new System.EventHandler(this.inhandCB_CheckedChanged);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(942, 306);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(979, 212);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(71, 24);
+            this.checkBox3.TabIndex = 20;
+            this.checkBox3.Text = "Name";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // adrCB
             // 
-            this.adrCB.AutoSize = true;
-            this.adrCB.Location = new System.Drawing.Point(857, 159);
-            this.adrCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.adrCB.Name = "adrCB";
-            this.adrCB.Size = new System.Drawing.Size(68, 19);
-            this.adrCB.TabIndex = 20;
-            this.adrCB.Text = "Address";
-            this.adrCB.UseVisualStyleBackColor = true;
-            this.adrCB.CheckedChanged += new System.EventHandler(this.nmeCB_CheckedChanged);
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(979, 263);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(134, 24);
+            this.checkBox4.TabIndex = 21;
+            this.checkBox4.Text = "Movies In Hand";
+            this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // mCB
             // 
-            this.mCB.AutoSize = true;
-            this.mCB.Location = new System.Drawing.Point(857, 242);
-            this.mCB.Name = "mCB";
-            this.mCB.Size = new System.Drawing.Size(52, 19);
-            this.mCB.TabIndex = 25;
-            this.mCB.Text = "Male";
-            this.mCB.UseVisualStyleBackColor = true;
-            this.mCB.CheckedChanged += new System.EventHandler(this.mCB_CheckedChanged);
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(979, 316);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(63, 24);
+            this.radioButton1.TabIndex = 22;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Male";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // fCB
             // 
-            this.fCB.AutoSize = true;
-            this.fCB.Location = new System.Drawing.Point(1038, 242);
-            this.fCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.fCB.Name = "fCB";
-            this.fCB.Size = new System.Drawing.Size(64, 19);
-            this.fCB.TabIndex = 26;
-            this.fCB.Text = "Female";
-            this.fCB.UseVisualStyleBackColor = true;
-            this.fCB.CheckedChanged += new System.EventHandler(this.fCB_CheckedChanged);
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(1186, 316);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(78, 24);
+            this.radioButton2.TabIndex = 23;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Female";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // CustomerReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1189, 423);
-            this.Controls.Add(this.fCB);
-            this.Controls.Add(this.mCB);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.inhandCB);
-            this.Controls.Add(this.adrCB);
+            this.ClientSize = new System.Drawing.Size(1359, 564);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.planCB);
             this.Controls.Add(this.emailCB);
