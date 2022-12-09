@@ -23,8 +23,8 @@ namespace CMPT291_GROUP_PROJECT
             ths = frm;
             SelectMovie.Hide();
             SelectMovie.Click += new EventHandler(SelectMovie_Click);
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show("Succesfully Connected");
@@ -72,14 +72,26 @@ namespace CMPT291_GROUP_PROJECT
 
         private void searchResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (searchResult.Columns[e.ColumnIndex].Name == "ID")
+            try
             {
-                ths.AppUser._selectMovie = searchResult.CurrentCell.Value.ToString();
-                ths.AppUser._selectTitle = searchResult.CurrentRow.Cells["Title"].Value.ToString();
-                //MessageBox.Show($"Movie Title: {ths.AppUser._selectTitle}");
-                SelectMovie.Show();
-                SelectMovie.PerformClick();
+                if (searchResult.Columns[e.ColumnIndex].Name == "ID")
+                {
+                    ths.AppUser._selectMovie = searchResult.CurrentCell.Value.ToString();
+                    ths.AppUser._selectTitle = searchResult.CurrentRow.Cells["Title"].Value.ToString();
+                    //MessageBox.Show($"Movie Title: {ths.AppUser._selectTitle}");
+                    SelectMovie.Show();
+                    SelectMovie.PerformClick();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Picked wrong Cell", "Choose another");
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

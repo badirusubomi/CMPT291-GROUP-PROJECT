@@ -30,24 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CollectCustomerInfo));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.ContinueRental = new System.Windows.Forms.Button();
+            this.collectCustomerCheckOutLimit = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.collectCustomerPlanExpiry = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.collectCustomerName = new System.Windows.Forms.Label();
+            this.collectCustomerPlanType = new System.Windows.Forms.Label();
+            this.collectCustomerEmail = new System.Windows.Forms.Label();
+            this.collectCustomerID = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.collectCustomerIDSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -63,24 +61,22 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.ContinueRental);
+            this.panel1.Controls.Add(this.collectCustomerCheckOutLimit);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.collectCustomerPlanExpiry);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.collectCustomerName);
+            this.panel1.Controls.Add(this.collectCustomerPlanType);
+            this.panel1.Controls.Add(this.collectCustomerEmail);
+            this.panel1.Controls.Add(this.collectCustomerID);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.collectCustomerIDSearch);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -89,120 +85,111 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1150, 664);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label5
+            // ContinueRental
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(852, 224);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 15);
-            this.label5.TabIndex = 82;
-            this.label5.Text = "text";
+            this.ContinueRental.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(135)))), ((int)(((byte)(67)))));
+            this.ContinueRental.FlatAppearance.BorderSize = 2;
+            this.ContinueRental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ContinueRental.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ContinueRental.Location = new System.Drawing.Point(688, 453);
+            this.ContinueRental.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ContinueRental.Name = "ContinueRental";
+            this.ContinueRental.Size = new System.Drawing.Size(164, 52);
+            this.ContinueRental.TabIndex = 83;
+            this.ContinueRental.Text = "Continue";
+            this.ContinueRental.UseVisualStyleBackColor = false;
+            this.ContinueRental.Click += new System.EventHandler(this.ContinueRental_Click);
+            // 
+            // collectCustomerCheckOutLimit
+            // 
+            this.collectCustomerCheckOutLimit.AutoSize = true;
+            this.collectCustomerCheckOutLimit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.collectCustomerCheckOutLimit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.collectCustomerCheckOutLimit.Location = new System.Drawing.Point(986, 224);
+            this.collectCustomerCheckOutLimit.Name = "collectCustomerCheckOutLimit";
+            this.collectCustomerCheckOutLimit.Size = new System.Drawing.Size(0, 15);
+            this.collectCustomerCheckOutLimit.TabIndex = 82;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(692, 224);
+            this.label6.Location = new System.Drawing.Point(826, 224);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 15);
             this.label6.TabIndex = 81;
             this.label6.Text = "Checkout Limit";
             // 
-            // label4
+            // collectCustomerPlanExpiry
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(58, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 15);
-            this.label4.TabIndex = 80;
-            this.label4.Text = "Enter Customer Name:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(205, 200);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 23);
-            this.textBox1.TabIndex = 79;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(596, 310);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 15);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "text";
+            this.collectCustomerPlanExpiry.AutoSize = true;
+            this.collectCustomerPlanExpiry.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.collectCustomerPlanExpiry.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.collectCustomerPlanExpiry.Location = new System.Drawing.Point(597, 310);
+            this.collectCustomerPlanExpiry.Name = "collectCustomerPlanExpiry";
+            this.collectCustomerPlanExpiry.Size = new System.Drawing.Size(0, 15);
+            this.collectCustomerPlanExpiry.TabIndex = 78;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(436, 310);
+            this.label3.Location = new System.Drawing.Point(437, 310);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 15);
             this.label3.TabIndex = 77;
             this.label3.Text = "Plan Expiry Date:";
             // 
-            // label20
+            // collectCustomerName
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label20.Location = new System.Drawing.Point(596, 224);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(27, 15);
-            this.label20.TabIndex = 76;
-            this.label20.Text = "text";
+            this.collectCustomerName.AutoSize = true;
+            this.collectCustomerName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.collectCustomerName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.collectCustomerName.Location = new System.Drawing.Point(597, 224);
+            this.collectCustomerName.Name = "collectCustomerName";
+            this.collectCustomerName.Size = new System.Drawing.Size(0, 15);
+            this.collectCustomerName.TabIndex = 76;
             // 
-            // label19
+            // collectCustomerPlanType
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label19.Location = new System.Drawing.Point(852, 180);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(27, 15);
-            this.label19.TabIndex = 75;
-            this.label19.Text = "text";
+            this.collectCustomerPlanType.AutoSize = true;
+            this.collectCustomerPlanType.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.collectCustomerPlanType.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.collectCustomerPlanType.Location = new System.Drawing.Point(986, 180);
+            this.collectCustomerPlanType.Name = "collectCustomerPlanType";
+            this.collectCustomerPlanType.Size = new System.Drawing.Size(0, 15);
+            this.collectCustomerPlanType.TabIndex = 75;
             // 
-            // label18
+            // collectCustomerEmail
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label18.Location = new System.Drawing.Point(596, 273);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(27, 15);
-            this.label18.TabIndex = 74;
-            this.label18.Text = "text";
+            this.collectCustomerEmail.AutoSize = true;
+            this.collectCustomerEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.collectCustomerEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.collectCustomerEmail.Location = new System.Drawing.Point(597, 273);
+            this.collectCustomerEmail.Name = "collectCustomerEmail";
+            this.collectCustomerEmail.Size = new System.Drawing.Size(0, 15);
+            this.collectCustomerEmail.TabIndex = 74;
             // 
-            // label17
+            // collectCustomerID
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(596, 180);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(27, 15);
-            this.label17.TabIndex = 73;
-            this.label17.Text = "text";
+            this.collectCustomerID.AutoSize = true;
+            this.collectCustomerID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.collectCustomerID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.collectCustomerID.Location = new System.Drawing.Point(597, 180);
+            this.collectCustomerID.Name = "collectCustomerID";
+            this.collectCustomerID.Size = new System.Drawing.Size(0, 15);
+            this.collectCustomerID.TabIndex = 73;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(436, 180);
+            this.label16.Location = new System.Drawing.Point(437, 180);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(80, 15);
             this.label16.TabIndex = 71;
@@ -213,7 +200,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(436, 224);
+            this.label15.Location = new System.Drawing.Point(437, 224);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(43, 15);
             this.label15.TabIndex = 70;
@@ -224,7 +211,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(692, 180);
+            this.label14.Location = new System.Drawing.Point(826, 180);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 15);
             this.label14.TabIndex = 69;
@@ -235,7 +222,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(436, 273);
+            this.label13.Location = new System.Drawing.Point(437, 273);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 15);
             this.label13.TabIndex = 68;
@@ -243,13 +230,14 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(205, 250);
+            this.button3.Location = new System.Drawing.Point(233, 224);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(82, 22);
             this.button3.TabIndex = 67;
             this.button3.Text = "Search";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label8
             // 
@@ -262,24 +250,13 @@
             this.label8.TabIndex = 66;
             this.label8.Text = "Enter Customer ID:";
             // 
-            // textBox7
+            // collectCustomerIDSearch
             // 
-            this.textBox7.Location = new System.Drawing.Point(205, 163);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(110, 23);
-            this.textBox7.TabIndex = 65;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(868, 374);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 22);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Next Page";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.collectCustomerIDSearch.Location = new System.Drawing.Point(205, 163);
+            this.collectCustomerIDSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.collectCustomerIDSearch.Name = "collectCustomerIDSearch";
+            this.collectCustomerIDSearch.Size = new System.Drawing.Size(110, 23);
+            this.collectCustomerIDSearch.TabIndex = 65;
             // 
             // panel2
             // 
@@ -383,23 +360,21 @@
         private Button button1;
         private PictureBox pictureBox1;
         private Button button6;
-        private Button button2;
-        private Label label5;
+        private Label collectCustomerCheckOutLimit;
         private Label label6;
-        private Label label4;
-        private TextBox textBox1;
-        private Label label2;
+        private Label collectCustomerPlanExpiry;
         private Label label3;
-        private Label label20;
-        private Label label19;
-        private Label label18;
-        private Label label17;
+        private Label collectCustomerName;
+        private Label collectCustomerPlanType;
+        private Label collectCustomerEmail;
+        private Label collectCustomerID;
         private Label label16;
         private Label label15;
         private Label label14;
         private Label label13;
         private Button button3;
         private Label label8;
-        private TextBox textBox7;
+        private TextBox collectCustomerIDSearch;
+        private Button ContinueRental;
     }
 }

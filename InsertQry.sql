@@ -21,11 +21,11 @@ insert into Employee values (4, 'Marek','LName','marek@mymacewan.ca','M','MacEwa
 							'Alberta', 'T6V0L5', '2022-01-01', 10000, 'BlockbusterMarek');
 
 
-insert into Movies values (1, 'The Incredibles', 'Action', 10,2019, 5);
-insert into Movies values (5, 'The Incredibles 2', 'Action', 10, 2019, 5);
-insert into Movies values (2, 'Breaking Bad', 'Drama', 10, 2017,5);
-insert into Movies values (3, 'The Shining', 'Thriller', 7, 2010, 5);
-insert into Movies values (4, 'DocumentaryUnit', 'Documentary', 2, 2000, 1);
+insert into Movies values (1, 'The Incredibles', 'Action', 10, 5, 2019);
+insert into Movies values (5, 'The Incredibles 2', 'Action', 10, 5, 2019);
+insert into Movies values (2, 'Breaking Bad', 'Drama', 10, 5, 2017);
+insert into Movies values (3, 'The Shining', 'Thriller', 7, 5, 2010);
+insert into Movies values (4, 'DocumentaryUnit', 'Documentary', 2, 1, 2000);
 
 Insert Into Actors values (1, 'Jack', 'Nicolson', 50, 'M',0);
 Insert Into Actors values (2, 'Leonardo', 'DiCaprio', 50, 'M',0);
@@ -64,6 +64,23 @@ select * from Orders;
 select Customer.CustomerID as ID from Customer where Customer.email = 'elhajjm@macewan.ca'
 select * from Orders, Movies where Orders.MovieID = Movies.MovieID and Orders.CustomerID = 1;
 
+UPDATE Customer SET inHand = inHand + 1 where Customer.CustomerID = 1;
+select * from Customer
+
+select * from Orders;
+select C1.CopyID, C1.MovieID from Copies as C1, Orders as O1 where C1.MovieID = O1.MovieID and O1.CopyID = C1.CopyID and  O1.MovieID = 1
+EXCEPT
+(select C2.CopyID, C2.MovieID from Copies as C2, Orders as O2 where C2.MovieID = O2.MovieID and O2.CopyID = C2.CopyID and  O2.MovieID = 1
+and C2.MovieID = 1 and O2.Datefrom >= '2022-12-12' and O2.Dateto <= '2022-12-16');
+
+select * from Copies where MovieID = 1;
+select * from Orders where MovieID = 1;
+
+select * from Copies as C7, (select * from Movies as M1 where M1.MovieID = 1) as temp where C7.MovieID = 1
+and C7.CopyID not in  (select C8.CopyID from Copies as C8,
+Orders as O2 where O2.OrderID = C8.CopyID and C8.CopyID = C7.CopyID and O2.CopyID = C7.CopyID 
+and O2.Datefrom <= '2008-11-12' and O2.DateTo >= '2008-11-20')
+
 /*
 UPDATE Employee
 
@@ -73,7 +90,6 @@ SET EmployeeID = {}, FName = {}, LName = {}, Email = {}, Gender = {},
 WHERE CustomerID = {};
 
 
-*/
 
 select * from Customer;
 UPDATE Employee SET EmployeeID = {employeeIDEdit.Text}, FName = '{employeeEditFNameLabel.Text}', LName = '{employeeEditLNameLabel.Text}', Email = '{employeeEditEmailLabel.Text}',
@@ -81,7 +97,10 @@ UPDATE Employee SET EmployeeID = {employeeIDEdit.Text}, FName = '{employeeEditFN
                                             City = '{employeeEditCityLabel.Text}', Province = '{employeeEditStateLabel.Text}', 
                                             ZipCode = '{employeeEditPostalLabel.Text}',Wage = {employeeEditWageLabel.Text},
                                             Passwords = '{employeeEditPasswordLabel.Text}' WHERE EmployeeID = {employeeIDEdit.Text};
+*/
 
+select * from Orders
+delete  from Orders where Orders.OrderID >=4;
 
 UPDATE CUSTOMER SET 
 Passwords = 'HalaMadrid' WHERE CustomerID = 1

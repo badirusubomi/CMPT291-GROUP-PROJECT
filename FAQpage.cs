@@ -17,6 +17,9 @@ namespace CMPT291_GROUP_PROJECT
         {
             ths = frm;
             InitializeComponent();
+            this.button7.Hide();
+            this.button8.Hide();
+            this.button9.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,6 +32,11 @@ namespace CMPT291_GROUP_PROJECT
         private void button6_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

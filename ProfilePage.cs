@@ -21,6 +21,10 @@ namespace CMPT291_GROUP_PROJECT
         {
             InitializeComponent();
             ths = frm;
+            this.button7.Hide();
+            this.button8.Hide();
+            this.button9.Hide();
+
             string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");

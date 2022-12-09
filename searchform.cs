@@ -74,27 +74,112 @@ namespace CMPT291_GROUP_PROJECT
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             OnCheckedChanged(sender, e);
-            CheckBox cb1 = (CheckBox)sender;
-            /*
-            if (cb1.Checked)
-            {
-                titleBox.ReadOnly = false;
-            }*/
+            titleBox.ReadOnly = false;
+            titleBox.Enabled = true;
+            
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             OnCheckedChanged(sender, e);
+            genreComboBox.Enabled = true;
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             OnCheckedChanged(sender, e);
+            actorBox.ReadOnly = false;
+            actorBox.Enabled = true;
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
             OnCheckedChanged(sender, e);
+            yearBox.ReadOnly = false;
+            yearBox.Enabled = true;
+        }
+
+        private void title_CheckStateChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void genre_CheckStateChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void actor_CheckStateChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void year_CheckStateChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void genre_CheckedChanged(object sender, EventArgs e)
+        {
+            OnCheckedChanged(sender, e);
+            if (genreComboBox.Enabled)
+            {
+                genreComboBox.Enabled = false;
+                genreComboBox.Text = "";
+                
+            }
+            else
+            {
+                genreComboBox.Enabled = true;
+            }
+        }
+
+        private void year_CheckedChanged(object sender, EventArgs e)
+        {
+            OnCheckedChanged(sender, e);
+            if (yearBox.Enabled)
+            {
+                yearBox.Enabled = false;
+                yearBox.Text = "";
+                yearBox.ReadOnly = true;
+            }
+            else
+            {
+                yearBox.Enabled = true;
+                yearBox.ReadOnly = false;
+            }
+        }
+
+        private void title_CheckedChanged(object sender, EventArgs e)
+        {
+            OnCheckedChanged(sender, e);
+            if (titleBox.Enabled)
+            {
+                titleBox.Enabled = false;
+                titleBox.ReadOnly = true;
+                titleBox.Text = "";
+            }
+            else
+            {
+                titleBox.Enabled = true;
+                titleBox.ReadOnly= false;
+            }
+        }
+
+        private void actor_CheckedChanged(object sender, EventArgs e)
+        {
+            OnCheckedChanged(sender, e);
+            if (actorBox.Enabled)
+            {
+                actorBox.Enabled = false;
+                actorBox.ReadOnly = true;
+                actorBox.Text = "";
+            }
+            else
+            {
+                actorBox.Enabled = true;
+                actorBox.ReadOnly = false;
+            }
         }
 
         private void titleBox_TextChanged(object sender, EventArgs e)
