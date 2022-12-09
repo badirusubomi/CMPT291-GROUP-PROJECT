@@ -18,7 +18,7 @@ Province varchar(40),
 ZipCode varchar(40),
 CreationDate DATE,
 ExpiryDate DATE,
-CreditCardNo varchar,
+CreditCardNo varchar(30),
 PlanID int NOT NULL FOREIGN KEY REFERENCES AccType(PlanID),
 Passwords varchar(40),
 inHand int
@@ -54,7 +54,9 @@ CopyID int NOT NULL,
 MovieID int NOT NULL FOREIGN KEY REFERENCES Movies(MovieID),
 CopyType char(20),
 OrderStatus int,
-Constraint PK_Copies primary key (CopyID, MovieID)
+Constraint PK_Copies primary key (CopyID, MovieID),
+Constraint PK_Movies
+FOREIGN KEY (MovieID) REFERENCES Movies ON DELETE cascade ON UPDATE cascade
 )
 
 
@@ -68,16 +70,18 @@ ActorRating int
 )
 
 CREATE TABLE Acts_In(
-MovieID int NOT NULL FOREIGN KEY REFERENCES Movies(MovieID),
+MovieID int NOT NULL,
 ActorsID int NOT NULL FOREIGN KEY REFERENCES Actors(ActorID),
 ActorRating int,
-Constraint PK_Acts_In primary key (MovieID, ActorsID))
+Constraint PK_Acts_In primary key (MovieID, ActorsID),
+Constraint PK_MovieID
+FOREIGN KEY (MovieID) REFERENCES Movies ON DELETE cascade ON UPDATE cascade,
+Constraint PK_ActorsID
+FOREIGN KEY (ActorsID) REFERENCES Actors ON DELETE cascade ON UPDATE cascade)
 
-drop table Orders;
 CREATE TABLE Orders(
 OrderID int NOT NULL PRIMARY KEY,
 CustomerID int NOT NULL,
-	
 EmployeeID int NOT NULL,
 CopyID int NOT NULL,
 MovieID int NOT NULL,
@@ -85,13 +89,15 @@ DateFrom DATE,
 DateTo DATE,
 OrderStatus int,
 Constraint FK_Copies 
-FOREIGN KEY (CopyID, MovieID) REFERENCES Copies(CopyID, MovieID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+FOREIGN KEY (CopyID, MovieID) REFERENCES Copies(CopyID, MovieID) ON DELETE CASCADE ON UPDATE CASCADE,
 Constraint FK_Customer
 FOREIGN KEY (CustomerID) REFERENCES Customer ON DELETE CASCADE ON UPDATE CASCADE,
 Constraint FK_Employee
 FOREIGN KEY (EmployeeID) REFERENCES Employee ON DELETE cascade ON UPDATE cascade
 )
 
+select * from Orders
+select * from Copies where CopyID = 01;
 Insert into Orders values (1, 1, 1, 01, 1, '2008-11-11', '2008-11-30', 0);
 Insert into Orders values (2, 1, 1, 01, 2, '2008-11-11', '2022-11-11', 0);
 Insert into Orders values (3, 1, 1, 01, 3, '2008-11-11', '2008-11-30', 0);

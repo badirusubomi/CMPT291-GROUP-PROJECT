@@ -22,8 +22,8 @@ namespace CMPT291_GROUP_PROJECT
         {
             InitializeComponent();
             ths = frm;
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show("Succesfully Connected");
@@ -140,6 +140,11 @@ namespace CMPT291_GROUP_PROJECT
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogInPage_Load(object sender, EventArgs e)
         {
 
         }

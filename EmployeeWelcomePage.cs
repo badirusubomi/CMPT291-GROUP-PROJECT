@@ -79,7 +79,12 @@ namespace CMPT291_GROUP_PROJECT
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            ths.loadBigForms(new ProcessReturnsPage(ths));
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

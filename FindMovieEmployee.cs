@@ -239,5 +239,85 @@ namespace CMPT291_GROUP_PROJECT
         {
             ths.loadBigForms(new OrderConfirmationEmployee(ths, this.dateFrom.Text, this.dateTo.Text, customeridff, movieIDths));
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genreComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yearBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void actorBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void titleBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateFrom_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTo_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

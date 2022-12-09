@@ -25,8 +25,8 @@ namespace CMPT291_GROUP_PROJECT
 
             //SQL Queries
             //string connectionString = "Data Source=(local);Database=BLOCKBUSTER;Integrated Security=sspi;";
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            string connectionString = "Server = LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            //string connectionString = "Server = LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
 
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
@@ -86,10 +86,33 @@ namespace CMPT291_GROUP_PROJECT
 
             MessageBox.Show($"New Movie ID: {newMovieID}");
             string newTitle, genre, fee, rating;
-            myCommand.CommandText = $"insert into Movies values ({newMovieID},'{titleBox.Text}', '{genreBox.Text}', {feeBox.Text}, {ratingBox.Text});";
-            myReader = myCommand.ExecuteReader();
-            myReader.Close();
-            MessageBox.Show($"{titleBox.Text} was inserted");
+            myCommand.CommandText = $"insert into Movies values ({newMovieID},'{titleBox.Text}', '{genreBox.Text}', {feeBox.Text}, {ratingBox.Text}, {yearReleasedBox.Text});";
+
+            try
+            {
+                myReader = myCommand.ExecuteReader();
+                myReader.Close();
+                MessageBox.Show($"{titleBox.Text} was inserted");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(),"Error");
+            }
+
+            myCommand.CommandText = $"insert into Copies values (1, {newMovieID}, 'DVD', 1);" +
+                                    $"insert into Copies values (2, {newMovieID}, 'Blu-Ray', 1);" +
+                                    $"insert into Copies values (3, {newMovieID}, 'VHS', 1);";
+            try
+            {
+                myReader = myCommand.ExecuteReader();
+                myReader.Close();
+                MessageBox.Show($"{titleBox.Text} copies were inserted");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+            }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -171,7 +194,6 @@ namespace CMPT291_GROUP_PROJECT
             {
                 idDelete.Enabled = false;
                 idDelete.Text = "";
-
             }
             else
             {
@@ -181,7 +203,7 @@ namespace CMPT291_GROUP_PROJECT
 
         private void deletesearchdatagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            myCommand.CommandText = $"DELETE FROM Movies  where Movies.MovieID = {deletesearchdatagrid.CurrentCell.Value} ;";
+            myCommand.CommandText = $"DELETE Movies where Movies.MovieID = {deletesearchdatagrid.CurrentCell.Value}";
             try
             {
                 if (deletesearchdatagrid.Columns[e.ColumnIndex].Name == "MovieID")
@@ -190,18 +212,17 @@ namespace CMPT291_GROUP_PROJECT
                     try
                     {
                         myReader = myCommand.ExecuteReader();
-
                         myReader.Close();
+                        MessageBox.Show($"Succesfully Deleted: {deletesearchdatagrid.CurrentRow.Cells["MovieName"].Value}");
+                        deletesearchdatagrid.Rows.Clear();
                     }
                     catch (Exception e3)
                     {
-                        
+                        MessageBox.Show("Wrong cell selected");
                     }
-                    
-                    MessageBox.Show($"Succesfully Deleted: {deletesearchdatagrid.CurrentRow.Cells["movieTitle"].Value}");
                 }
             }
-            catch
+            catch (Exception ex)
             {
                 MessageBox.Show("Wrong cell selected");
             }

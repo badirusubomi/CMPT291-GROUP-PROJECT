@@ -45,11 +45,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.genBT = new System.Windows.Forms.Button();
             this.yrCB = new System.Windows.Forms.ComboBox();
             this.mthCB = new System.Windows.Forms.ComboBox();
-            this.dyCB = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.statsG = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -94,8 +92,9 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1460, 98);
+            this.panel3.Size = new System.Drawing.Size(1386, 98);
             this.panel3.TabIndex = 42;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label9
             // 
@@ -163,11 +162,9 @@
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.genBT);
             this.tabPage1.Controls.Add(this.yrCB);
             this.tabPage1.Controls.Add(this.mthCB);
-            this.tabPage1.Controls.Add(this.dyCB);
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -275,17 +272,6 @@
             this.label2.TabIndex = 61;
             this.label2.Text = "Month";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(98, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 20);
-            this.label1.TabIndex = 60;
-            this.label1.Text = "Day";
-            // 
             // genBT
             // 
             this.genBT.Location = new System.Drawing.Point(374, 126);
@@ -327,46 +313,6 @@
             this.mthCB.Name = "mthCB";
             this.mthCB.Size = new System.Drawing.Size(121, 25);
             this.mthCB.TabIndex = 57;
-            // 
-            // dyCB
-            // 
-            this.dyCB.FormattingEnabled = true;
-            this.dyCB.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.dyCB.Location = new System.Drawing.Point(96, 122);
-            this.dyCB.Name = "dyCB";
-            this.dyCB.Size = new System.Drawing.Size(40, 25);
-            this.dyCB.TabIndex = 56;
             // 
             // tabPage2
             // 
@@ -599,7 +545,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1460, 636);
+            this.ClientSize = new System.Drawing.Size(1386, 636);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel3);
@@ -632,12 +578,10 @@
         private Button genBT;
         private ComboBox yrCB;
         private ComboBox mthCB;
-        private ComboBox dyCB;
         private TabPage tabPage2;
         private Label label4;
         private Label label3;
         private Label label2;
-        private Label label1;
         private Label label5;
         private RadioButton mvRB;
         private RadioButton renRB;

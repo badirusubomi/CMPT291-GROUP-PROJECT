@@ -169,6 +169,12 @@
             // genreBox
             // 
             this.genreBox.FormattingEnabled = true;
+            this.genreBox.Items.AddRange(new object[] {
+            "Action",
+            "Drama",
+            "Romance",
+            "Thriller",
+            "Documentary"});
             this.genreBox.Location = new System.Drawing.Point(145, 64);
             this.genreBox.Name = "genreBox";
             this.genreBox.Size = new System.Drawing.Size(213, 23);
