@@ -105,4 +105,4 @@ Insert into Orders values (5, 3, 1, 01, 3, '2008-11-11', '2008-11-30', 0);
 
 SELECT * FROM Orders
 Insert Into Customer Values(3, 'Alexandra', 'Ferreira', 'alexF@macewan.ca', 'F', '10407 105 Ave NW', 'Edmonton', 'AB', 'T5J4S2', '2022-11-30', '2024-11-30', 01, 001, 'grumpy', 0);
-delete from Customer where CustomerID = 3; 
+select * from Customer where CustomerID = 1; 

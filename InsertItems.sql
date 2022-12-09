@@ -96,17 +96,20 @@ select * from Copies;
 
 
 
-/*		drop tables		*/
+/*   To Empty tables		*/
 
 USE [BLOCKBUSTER]
 DELETE  Employee;
 DELETE  Customer;
 DELETE  Movies;
 DELETE  AccType;
+DELETE Orders;
+DELETE Actors;
+DELETE Acts_In;
 
 
 /*  drop tables  */
-
+select * from Orders
 drop table Orders;
 drop table Copies;
 drop table Customer;
@@ -121,3 +124,8 @@ drop table Employee;
 
 select C.Passwords from Customer as C where C.email = 'badiruo@mymacewan.ca'
 Select * from Copies as C, Movies as M where C.MovieID = M.MovieID and C.OrderStatus = 1;
+
+select T.EmployeeID, E.FName, T.Sales from Employee as E, 
+(select EmployeeID, count(*) as Sales from Orders
+                         where MONTH(DateFrom) = 12 AND YEAR(DateFrom) = 2022 group by EmployeeID) as T
+                        where T.EmployeeID = E.EmployeeID
