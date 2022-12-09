@@ -31,3 +31,6 @@ Entering a CustomerID will present all info to the user.
 
 ### Reports Page
 The user can view a sales report, that displays a table of sales based on employee sales or customer rentals. The user can view overdue items from this page as well.
+
+### Process Returns Page
+The user is able to process a users return by enetering a customer ID and an order ID. The application will then change the status of an order to returned.
