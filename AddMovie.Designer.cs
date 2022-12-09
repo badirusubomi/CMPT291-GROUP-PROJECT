@@ -36,6 +36,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.genreBox = new System.Windows.Forms.ComboBox();
             this.feeBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -61,7 +62,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.titleDelete = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.genreBox = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -166,6 +166,14 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // genreBox
+            // 
+            this.genreBox.FormattingEnabled = true;
+            this.genreBox.Location = new System.Drawing.Point(145, 64);
+            this.genreBox.Name = "genreBox";
+            this.genreBox.Size = new System.Drawing.Size(213, 23);
+            this.genreBox.TabIndex = 5;
+            // 
             // feeBox
             // 
             this.feeBox.Location = new System.Drawing.Point(727, 26);
@@ -257,6 +265,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
             this.tabPage2.Controls.Add(this.idradio);
             this.tabPage2.Controls.Add(this.titleradio);
             this.tabPage2.Controls.Add(this.deletesearchdatagrid);
@@ -265,6 +274,7 @@
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.titleDelete);
             this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
@@ -272,7 +282,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1074, 434);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Delete Movie";
-            this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // idradio
@@ -300,6 +309,7 @@
             // deletesearchdatagrid
             // 
             this.deletesearchdatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.deletesearchdatagrid.BackgroundColor = System.Drawing.Color.White;
             this.deletesearchdatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.deletesearchdatagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MovieID,
@@ -402,18 +412,11 @@
             this.label11.TabIndex = 8;
             this.label11.Text = "Title";
             // 
-            // genreBox
-            // 
-            this.genreBox.FormattingEnabled = true;
-            this.genreBox.Location = new System.Drawing.Point(145, 64);
-            this.genreBox.Name = "genreBox";
-            this.genreBox.Size = new System.Drawing.Size(213, 23);
-            this.genreBox.TabIndex = 5;
-            // 
             // AddMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1150, 664);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel3);

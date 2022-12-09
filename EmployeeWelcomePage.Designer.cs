@@ -122,6 +122,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button10);
             this.panel2.Controls.Add(this.sidePanel);
             this.panel2.Controls.Add(this.button5);
@@ -170,7 +171,7 @@
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(15, 302);
+            this.button3.Location = new System.Drawing.Point(14, 367);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(161, 53);
@@ -242,14 +243,14 @@
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(15, 374);
+            this.button5.Location = new System.Drawing.Point(12, 301);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(163, 53);
-            this.button5.TabIndex = 10;
+            this.button5.Size = new System.Drawing.Size(161, 53);
+            this.button5.TabIndex = 13;
             this.button5.Text = "Returns";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button3_Click);
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // EmployeeWelcomePage
             // 

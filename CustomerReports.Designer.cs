@@ -35,6 +35,18 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.clrBT = new System.Windows.Forms.Button();
+            this.apBT = new System.Windows.Forms.Button();
+            this.sdRB = new System.Windows.Forms.RadioButton();
+            this.edRB = new System.Windows.Forms.RadioButton();
+            this.adrRB = new System.Windows.Forms.RadioButton();
+            this.ihRB = new System.Windows.Forms.RadioButton();
+            this.mRB = new System.Windows.Forms.RadioButton();
+            this.emRB = new System.Windows.Forms.RadioButton();
+            this.plRB = new System.Windows.Forms.RadioButton();
+            this.fRB = new System.Windows.Forms.RadioButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,14 +54,8 @@
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Plan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inHand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailCB = new System.Windows.Forms.CheckBox();
-            this.planCB = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.inhandCB = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.adrCB = new System.Windows.Forms.CheckBox();
-            this.mCB = new System.Windows.Forms.CheckBox();
-            this.fCB = new System.Windows.Forms.CheckBox();
+            this.sDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -115,7 +121,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1359, 98);
             this.panel3.TabIndex = 15;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dataGridView1
             // 
@@ -127,7 +132,9 @@
             this.Gender,
             this.Address,
             this.Plan,
-            this.inHand});
+            this.inHand,
+            this.sDate,
+            this.eDate});
             this.dataGridView1.Location = new System.Drawing.Point(10, 103);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -136,6 +143,133 @@
             this.dataGridView1.Size = new System.Drawing.Size(814, 296);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(955, 118);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 25);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Filters";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // clrBT
+            // 
+            this.clrBT.Location = new System.Drawing.Point(358, 470);
+            this.clrBT.Name = "clrBT";
+            this.clrBT.Size = new System.Drawing.Size(75, 23);
+            this.clrBT.TabIndex = 24;
+            this.clrBT.Text = "Clear";
+            this.clrBT.UseVisualStyleBackColor = true;
+            this.clrBT.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // apBT
+            // 
+            this.apBT.Location = new System.Drawing.Point(942, 401);
+            this.apBT.Name = "apBT";
+            this.apBT.Size = new System.Drawing.Size(75, 23);
+            this.apBT.TabIndex = 25;
+            this.apBT.Text = "Apply";
+            this.apBT.UseVisualStyleBackColor = true;
+            this.apBT.Click += new System.EventHandler(this.apBT_Click);
+            // 
+            // sdRB
+            // 
+            this.sdRB.AutoSize = true;
+            this.sdRB.Location = new System.Drawing.Point(858, 349);
+            this.sdRB.Name = "sdRB";
+            this.sdRB.Size = new System.Drawing.Size(76, 19);
+            this.sdRB.TabIndex = 26;
+            this.sdRB.TabStop = true;
+            this.sdRB.Text = "Start Date";
+            this.sdRB.UseVisualStyleBackColor = true;
+            // 
+            // edRB
+            // 
+            this.edRB.AutoSize = true;
+            this.edRB.Location = new System.Drawing.Point(1033, 349);
+            this.edRB.Name = "edRB";
+            this.edRB.Size = new System.Drawing.Size(84, 19);
+            this.edRB.TabIndex = 27;
+            this.edRB.TabStop = true;
+            this.edRB.Text = "Expiry Date";
+            this.edRB.UseVisualStyleBackColor = true;
+            // 
+            // adrRB
+            // 
+            this.adrRB.AutoSize = true;
+            this.adrRB.Location = new System.Drawing.Point(858, 194);
+            this.adrRB.Name = "adrRB";
+            this.adrRB.Size = new System.Drawing.Size(67, 19);
+            this.adrRB.TabIndex = 28;
+            this.adrRB.TabStop = true;
+            this.adrRB.Text = "Address";
+            this.adrRB.UseVisualStyleBackColor = true;
+            // 
+            // ihRB
+            // 
+            this.ihRB.AutoSize = true;
+            this.ihRB.Location = new System.Drawing.Point(858, 245);
+            this.ihRB.Name = "ihRB";
+            this.ihRB.Size = new System.Drawing.Size(108, 19);
+            this.ihRB.TabIndex = 29;
+            this.ihRB.TabStop = true;
+            this.ihRB.Text = "Movies In Hand";
+            this.ihRB.UseVisualStyleBackColor = true;
+            // 
+            // mRB
+            // 
+            this.mRB.AutoSize = true;
+            this.mRB.Location = new System.Drawing.Point(858, 297);
+            this.mRB.Name = "mRB";
+            this.mRB.Size = new System.Drawing.Size(51, 19);
+            this.mRB.TabIndex = 30;
+            this.mRB.TabStop = true;
+            this.mRB.Text = "Male";
+            this.mRB.UseVisualStyleBackColor = true;
+            // 
+            // emRB
+            // 
+            this.emRB.AutoSize = true;
+            this.emRB.Location = new System.Drawing.Point(1033, 194);
+            this.emRB.Name = "emRB";
+            this.emRB.Size = new System.Drawing.Size(54, 19);
+            this.emRB.TabIndex = 31;
+            this.emRB.TabStop = true;
+            this.emRB.Text = "Email";
+            this.emRB.UseVisualStyleBackColor = true;
+            // 
+            // plRB
+            // 
+            this.plRB.AutoSize = true;
+            this.plRB.Location = new System.Drawing.Point(1033, 245);
+            this.plRB.Name = "plRB";
+            this.plRB.Size = new System.Drawing.Size(62, 19);
+            this.plRB.TabIndex = 32;
+            this.plRB.TabStop = true;
+            this.plRB.Text = "Plan ID";
+            this.plRB.UseVisualStyleBackColor = true;
+            // 
+            // fRB
+            // 
+            this.fRB.AutoSize = true;
+            this.fRB.Location = new System.Drawing.Point(1033, 297);
+            this.fRB.Name = "fRB";
+            this.fRB.Size = new System.Drawing.Size(63, 19);
+            this.fRB.TabIndex = 33;
+            this.fRB.TabStop = true;
+            this.fRB.Text = "Female";
+            this.fRB.UseVisualStyleBackColor = true;
             // 
             // ID
             // 
@@ -186,66 +320,15 @@
             this.inHand.Name = "inHand";
             this.inHand.Width = 125;
             // 
-            // emailCB
+            // sDate
             // 
-            this.emailCB.Location = new System.Drawing.Point(0, 0);
-            this.emailCB.Name = "emailCB";
-            this.emailCB.Size = new System.Drawing.Size(104, 24);
-            this.emailCB.TabIndex = 21;
+            this.sDate.HeaderText = "Date Joined";
+            this.sDate.Name = "sDate";
             // 
-            // planCB
+            // eDate
             // 
-            this.planCB.Location = new System.Drawing.Point(0, 0);
-            this.planCB.Name = "planCB";
-            this.planCB.Size = new System.Drawing.Size(104, 24);
-            this.planCB.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(955, 118);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 25);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Filters";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // inhandCB
-            // 
-            this.inhandCB.Location = new System.Drawing.Point(0, 0);
-            this.inhandCB.Name = "inhandCB";
-            this.inhandCB.Size = new System.Drawing.Size(104, 24);
-            this.inhandCB.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            // 
-            // adrCB
-            // 
-            this.adrCB.Location = new System.Drawing.Point(0, 0);
-            this.adrCB.Name = "adrCB";
-            this.adrCB.Size = new System.Drawing.Size(104, 24);
-            this.adrCB.TabIndex = 0;
-            // 
-            // mCB
-            // 
-            this.mCB.Location = new System.Drawing.Point(0, 0);
-            this.mCB.Name = "mCB";
-            this.mCB.Size = new System.Drawing.Size(104, 24);
-            this.mCB.TabIndex = 0;
-            // 
-            // fCB
-            // 
-            this.fCB.Location = new System.Drawing.Point(0, 0);
-            this.fCB.Name = "fCB";
-            this.fCB.Size = new System.Drawing.Size(104, 24);
-            this.fCB.TabIndex = 0;
+            this.eDate.HeaderText = "Expiry Date";
+            this.eDate.Name = "eDate";
             // 
             // CustomerReports
             // 
@@ -253,9 +336,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1359, 564);
+            this.Controls.Add(this.fRB);
+            this.Controls.Add(this.plRB);
+            this.Controls.Add(this.emRB);
+            this.Controls.Add(this.mRB);
+            this.Controls.Add(this.ihRB);
+            this.Controls.Add(this.adrRB);
+            this.Controls.Add(this.edRB);
+            this.Controls.Add(this.sdRB);
+            this.Controls.Add(this.apBT);
+            this.Controls.Add(this.clrBT);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.planCB);
-            this.Controls.Add(this.emailCB);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -280,6 +371,18 @@
         private Label label9;
         private Panel panel3;
         private DataGridView dataGridView1;
+        private Button button2;
+        private Label label1;
+        private Button clrBT;
+        private Button apBT;
+        private RadioButton sdRB;
+        private RadioButton edRB;
+        private RadioButton adrRB;
+        private RadioButton ihRB;
+        private RadioButton mRB;
+        private RadioButton emRB;
+        private RadioButton plRB;
+        private RadioButton fRB;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn CName;
         private DataGridViewTextBoxColumn Email;
@@ -287,13 +390,7 @@
         private DataGridViewTextBoxColumn Address;
         private DataGridViewTextBoxColumn Plan;
         private DataGridViewTextBoxColumn inHand;
-        private CheckBox emailCB;
-        private CheckBox planCB;
-        private Label label1;
-        private CheckBox inhandCB;
-        private Button button2;
-        private CheckBox adrCB;
-        private CheckBox mCB;
-        private CheckBox fCB;
+        private DataGridViewTextBoxColumn sDate;
+        private DataGridViewTextBoxColumn eDate;
     }
 }

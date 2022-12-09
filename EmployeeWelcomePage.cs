@@ -76,5 +76,10 @@ namespace CMPT291_GROUP_PROJECT
         {
             ths.loadBigForms(new Form1());
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ths.loadBigForms(new ReturnMovie(ths));
+        }
     }
 }

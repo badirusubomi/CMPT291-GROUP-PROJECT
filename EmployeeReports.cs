@@ -21,8 +21,8 @@ namespace CMPT291_GROUP_PROJECT
         {
             InitializeComponent();
             EmpRep = frm;
-            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             myConnection.Open();
             myCommand = new SqlCommand();
@@ -49,6 +49,31 @@ namespace CMPT291_GROUP_PROJECT
                 MessageBox.Show(e3.ToString(), "Error");
             }
         }
+
+        private void reLoad(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            myCommand.CommandText = $"select * from Employee";
+            try
+            {
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    dataGridView1.Rows.Add(myReader["EmployeeID"].ToString(), myReader["FName"].ToString().Trim() + " " + myReader["LName"].ToString().Trim(),
+                                             myReader["email"].ToString(), myReader["Gender"].ToString(),
+                                          $"{myReader["Street"]} {myReader["City"]} {myReader["Province"]} {myReader["ZipCode"]}",
+                                          myReader["StartDate"].ToString(), myReader["Wage"].ToString());
+
+                }
+                myReader.Close();
+            }
+            catch (Exception e3)
+            {
+                MessageBox.Show(e3.ToString(), "Error");
+            }
+        }
+        
+        
         private int checkCounter;
         private void OnCheckedChanged(object sender, EventArgs e)
         {
@@ -267,9 +292,9 @@ namespace CMPT291_GROUP_PROJECT
 
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            reLoad(sender,e);
         }
     }
 }
