@@ -31,14 +31,20 @@ The customer is presented with options to view their profile, which shows them a
 ### Categories
 The user is shown a table showing all the possible movie categories. Clicking on the respective tab will show all movies in the catalog that are under that category.
 
-### Employee Home Page
+# Employee Home Page
 If the user logs in as an employee, the user is presented with options to edit users, edit movies, rent movies out to users, process returns and view sales reports.
+
+### Edit movies
+The user is able to add movies to the database with all its respective fields, such as title, genre, year released and fee for renting. The user is also able to remove movies from the database entirely by specifying either a title or a movie ID
 
 ### Users Page
 The user is presented with multiple tabs with different functionality. Users are able to add new employees or customer accounts and view info about accounts. Each of these different sets of features are shown on different tabs. Each user specified has specific info that is displayed to the user.
 
 ### Rentals
-Entering a CustomerID will present all info to the user. After the user enters the customer to rent movies to, the user is presented with search information to select which movie will be rented to the user. The user is able to select movies based on title, genre, actor or year released. The user then enters what days to rent the movie from and until.
+Entering a CustomerID will present all info to the user. After the user enters the customer to rent movies to, the user is presented with search information to select which movie will be rented to the user. The user is able to select movies based on title, genre, actor or year released. The user then enters what days to rent the movie from and until. The user will then be asked to confirm the order.
+
+### Returns
+
 
 ### Reports Page
 The user can view a sales report, that displays a table of sales based on employee sales or customer rentals. The user can view overdue items from this page as well.
