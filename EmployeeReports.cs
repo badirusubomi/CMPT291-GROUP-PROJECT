@@ -49,6 +49,31 @@ namespace CMPT291_GROUP_PROJECT
                 MessageBox.Show(e3.ToString(), "Error");
             }
         }
+
+        private void reLoad(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            myCommand.CommandText = $"select * from Employee";
+            try
+            {
+                myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    dataGridView1.Rows.Add(myReader["EmployeeID"].ToString(), myReader["FName"].ToString().Trim() + " " + myReader["LName"].ToString().Trim(),
+                                             myReader["email"].ToString(), myReader["Gender"].ToString(),
+                                          $"{myReader["Street"]} {myReader["City"]} {myReader["Province"]} {myReader["ZipCode"]}",
+                                          myReader["StartDate"].ToString(), myReader["Wage"].ToString());
+
+                }
+                myReader.Close();
+            }
+            catch (Exception e3)
+            {
+                MessageBox.Show(e3.ToString(), "Error");
+            }
+        }
+        
+        
         private int checkCounter;
         private void OnCheckedChanged(object sender, EventArgs e)
         {
@@ -265,6 +290,11 @@ namespace CMPT291_GROUP_PROJECT
             ordCO.SelectedIndex = -1;
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            reLoad(sender,e);
         }
     }
 }

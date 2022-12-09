@@ -22,8 +22,8 @@ namespace CMPT291_GROUP_PROJECT
         {
             InitializeComponent();
             ths = frm;
-            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
             SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show("Succesfully Connected");
@@ -42,7 +42,12 @@ namespace CMPT291_GROUP_PROJECT
                 MessageBox.Show(ex.ToString(), "Error");
             }
         }
-
+        private void onEmpty(object sender, EventArgs e)
+        {
+            MessageBox.Show("Wrong Username or Password", "Error");
+            Username.Clear();
+            Password.Clear();
+        }
         private void LogInButton_Click(object sender, EventArgs e)
         {
             ths.AppUser = new User();
@@ -59,6 +64,12 @@ namespace CMPT291_GROUP_PROJECT
                 try
                 {
                     myReader = myCommand.ExecuteReader();
+                    if (!myReader.HasRows)
+                    {
+                        onEmpty(sender, e);
+                        //Username.Clear();
+                        //Password.Clear();
+                    }
                     while (myReader.Read())
                     {
                         //MessageBox.Show(myReader["MovieName"].ToString());
@@ -88,6 +99,12 @@ namespace CMPT291_GROUP_PROJECT
                 try
                 {
                     myReader = myCommand.ExecuteReader();
+                   
+                    if (!myReader.HasRows)
+                    {
+                        onEmpty(sender, e);
+                        
+                    }
                     while (myReader.Read())
                     {
                         tempPassword = myReader["password"].ToString();

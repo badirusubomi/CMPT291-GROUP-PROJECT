@@ -35,6 +35,18 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.clrBT = new System.Windows.Forms.Button();
+            this.apBT = new System.Windows.Forms.Button();
+            this.sdRB = new System.Windows.Forms.RadioButton();
+            this.edRB = new System.Windows.Forms.RadioButton();
+            this.adrRB = new System.Windows.Forms.RadioButton();
+            this.ihRB = new System.Windows.Forms.RadioButton();
+            this.mRB = new System.Windows.Forms.RadioButton();
+            this.emRB = new System.Windows.Forms.RadioButton();
+            this.plRB = new System.Windows.Forms.RadioButton();
+            this.fRB = new System.Windows.Forms.RadioButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,14 +54,8 @@
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Plan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inHand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailCB = new System.Windows.Forms.CheckBox();
-            this.planCB = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.inhandCB = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.adrCB = new System.Windows.Forms.CheckBox();
-            this.mCB = new System.Windows.Forms.CheckBox();
-            this.fCB = new System.Windows.Forms.CheckBox();
+            this.sDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -113,9 +119,8 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1189, 98);
+            this.panel3.Size = new System.Drawing.Size(1359, 98);
             this.panel3.TabIndex = 15;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dataGridView1
             // 
@@ -127,7 +132,9 @@
             this.Gender,
             this.Address,
             this.Plan,
-            this.inHand});
+            this.inHand,
+            this.sDate,
+            this.eDate});
             this.dataGridView1.Location = new System.Drawing.Point(10, 103);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
@@ -136,6 +143,133 @@
             this.dataGridView1.Size = new System.Drawing.Size(814, 296);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(955, 118);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 25);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Filters";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // clrBT
+            // 
+            this.clrBT.Location = new System.Drawing.Point(358, 470);
+            this.clrBT.Name = "clrBT";
+            this.clrBT.Size = new System.Drawing.Size(75, 23);
+            this.clrBT.TabIndex = 24;
+            this.clrBT.Text = "Clear";
+            this.clrBT.UseVisualStyleBackColor = true;
+            this.clrBT.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // apBT
+            // 
+            this.apBT.Location = new System.Drawing.Point(942, 401);
+            this.apBT.Name = "apBT";
+            this.apBT.Size = new System.Drawing.Size(75, 23);
+            this.apBT.TabIndex = 25;
+            this.apBT.Text = "Apply";
+            this.apBT.UseVisualStyleBackColor = true;
+            this.apBT.Click += new System.EventHandler(this.apBT_Click);
+            // 
+            // sdRB
+            // 
+            this.sdRB.AutoSize = true;
+            this.sdRB.Location = new System.Drawing.Point(858, 349);
+            this.sdRB.Name = "sdRB";
+            this.sdRB.Size = new System.Drawing.Size(76, 19);
+            this.sdRB.TabIndex = 26;
+            this.sdRB.TabStop = true;
+            this.sdRB.Text = "Start Date";
+            this.sdRB.UseVisualStyleBackColor = true;
+            // 
+            // edRB
+            // 
+            this.edRB.AutoSize = true;
+            this.edRB.Location = new System.Drawing.Point(1033, 349);
+            this.edRB.Name = "edRB";
+            this.edRB.Size = new System.Drawing.Size(84, 19);
+            this.edRB.TabIndex = 27;
+            this.edRB.TabStop = true;
+            this.edRB.Text = "Expiry Date";
+            this.edRB.UseVisualStyleBackColor = true;
+            // 
+            // adrRB
+            // 
+            this.adrRB.AutoSize = true;
+            this.adrRB.Location = new System.Drawing.Point(858, 194);
+            this.adrRB.Name = "adrRB";
+            this.adrRB.Size = new System.Drawing.Size(67, 19);
+            this.adrRB.TabIndex = 28;
+            this.adrRB.TabStop = true;
+            this.adrRB.Text = "Address";
+            this.adrRB.UseVisualStyleBackColor = true;
+            // 
+            // ihRB
+            // 
+            this.ihRB.AutoSize = true;
+            this.ihRB.Location = new System.Drawing.Point(858, 245);
+            this.ihRB.Name = "ihRB";
+            this.ihRB.Size = new System.Drawing.Size(108, 19);
+            this.ihRB.TabIndex = 29;
+            this.ihRB.TabStop = true;
+            this.ihRB.Text = "Movies In Hand";
+            this.ihRB.UseVisualStyleBackColor = true;
+            // 
+            // mRB
+            // 
+            this.mRB.AutoSize = true;
+            this.mRB.Location = new System.Drawing.Point(858, 297);
+            this.mRB.Name = "mRB";
+            this.mRB.Size = new System.Drawing.Size(51, 19);
+            this.mRB.TabIndex = 30;
+            this.mRB.TabStop = true;
+            this.mRB.Text = "Male";
+            this.mRB.UseVisualStyleBackColor = true;
+            // 
+            // emRB
+            // 
+            this.emRB.AutoSize = true;
+            this.emRB.Location = new System.Drawing.Point(1033, 194);
+            this.emRB.Name = "emRB";
+            this.emRB.Size = new System.Drawing.Size(54, 19);
+            this.emRB.TabIndex = 31;
+            this.emRB.TabStop = true;
+            this.emRB.Text = "Email";
+            this.emRB.UseVisualStyleBackColor = true;
+            // 
+            // plRB
+            // 
+            this.plRB.AutoSize = true;
+            this.plRB.Location = new System.Drawing.Point(1033, 245);
+            this.plRB.Name = "plRB";
+            this.plRB.Size = new System.Drawing.Size(62, 19);
+            this.plRB.TabIndex = 32;
+            this.plRB.TabStop = true;
+            this.plRB.Text = "Plan ID";
+            this.plRB.UseVisualStyleBackColor = true;
+            // 
+            // fRB
+            // 
+            this.fRB.AutoSize = true;
+            this.fRB.Location = new System.Drawing.Point(1033, 297);
+            this.fRB.Name = "fRB";
+            this.fRB.Size = new System.Drawing.Size(63, 19);
+            this.fRB.TabIndex = 33;
+            this.fRB.TabStop = true;
+            this.fRB.Text = "Female";
+            this.fRB.UseVisualStyleBackColor = true;
             // 
             // ID
             // 
@@ -186,79 +320,15 @@
             this.inHand.Name = "inHand";
             this.inHand.Width = 125;
             // 
-            // emailCB
+            // sDate
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1186, 212);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(68, 24);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Email";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.sDate.HeaderText = "Date Joined";
+            this.sDate.Name = "sDate";
             // 
-            // planCB
+            // eDate
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(1186, 263);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(78, 24);
-            this.checkBox2.TabIndex = 18;
-            this.checkBox2.Text = "Plan ID";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(955, 118);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 25);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Filters";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // inhandCB
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(979, 212);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(71, 24);
-            this.checkBox3.TabIndex = 20;
-            this.checkBox3.Text = "Name";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // adrCB
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(979, 263);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(134, 24);
-            this.checkBox4.TabIndex = 21;
-            this.checkBox4.Text = "Movies In Hand";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // mCB
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(979, 316);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(63, 24);
-            this.radioButton1.TabIndex = 22;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // fCB
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(1186, 316);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(78, 24);
-            this.radioButton2.TabIndex = 23;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.eDate.HeaderText = "Expiry Date";
+            this.eDate.Name = "eDate";
             // 
             // CustomerReports
             // 
@@ -266,13 +336,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1359, 564);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.fRB);
+            this.Controls.Add(this.plRB);
+            this.Controls.Add(this.emRB);
+            this.Controls.Add(this.mRB);
+            this.Controls.Add(this.ihRB);
+            this.Controls.Add(this.adrRB);
+            this.Controls.Add(this.edRB);
+            this.Controls.Add(this.sdRB);
+            this.Controls.Add(this.apBT);
+            this.Controls.Add(this.clrBT);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.planCB);
-            this.Controls.Add(this.emailCB);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -297,6 +371,18 @@
         private Label label9;
         private Panel panel3;
         private DataGridView dataGridView1;
+        private Button button2;
+        private Label label1;
+        private Button clrBT;
+        private Button apBT;
+        private RadioButton sdRB;
+        private RadioButton edRB;
+        private RadioButton adrRB;
+        private RadioButton ihRB;
+        private RadioButton mRB;
+        private RadioButton emRB;
+        private RadioButton plRB;
+        private RadioButton fRB;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn CName;
         private DataGridViewTextBoxColumn Email;
@@ -304,13 +390,7 @@
         private DataGridViewTextBoxColumn Address;
         private DataGridViewTextBoxColumn Plan;
         private DataGridViewTextBoxColumn inHand;
-        private CheckBox emailCB;
-        private CheckBox planCB;
-        private Label label1;
-        private CheckBox inhandCB;
-        private Button button2;
-        private CheckBox adrCB;
-        private CheckBox mCB;
-        private CheckBox fCB;
+        private DataGridViewTextBoxColumn sDate;
+        private DataGridViewTextBoxColumn eDate;
     }
 }
