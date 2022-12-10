@@ -16,24 +16,24 @@ namespace CMPT291_GROUP_PROJECT
         public SqlConnection myConnection;
         public SqlCommand myCommand;
         public SqlDataReader myReader;
-        SQL_Conn con_str;
+        //SQL_Conn con_str;
         Form1 ths;
         public ProfilePage(Form1 frm)
         {
             InitializeComponent();
             ths = frm;
-            con_str.OpenConection();
+           // con_str.OpenConection();
             this.button7.Hide();
             this.button8.Hide();
             this.button9.Hide();
 
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            //SqlConnection myConnection = new SqlConnection(connectionString);
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show($"Username: {ths.AppUser._email}");   Dev. Check
             try
             {
-                //myConnection.Open();
+                myConnection.Open();
                 myCommand = new SqlCommand();
                 myCommand.Connection = myConnection;
 

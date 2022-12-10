@@ -67,9 +67,9 @@ namespace CMPT291_GROUP_PROJECT
 
 
             try
-            {   con_str =  new SQL_Conn();
-                con_str.OpenConection();
-               // myConnection.Open();
+            {   //con_str =  new SQL_Conn();
+                //con_str.OpenConection();
+               myConnection.Open();
                 myCommand = new SqlCommand();
                 myCommand.Connection = myConnection;
 

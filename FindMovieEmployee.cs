@@ -20,13 +20,13 @@ namespace CMPT291_GROUP_PROJECT
         Form1 ths;
         string customeridff;
         string movieIDths;
-        SQL_Conn con_str;
+        //SQL_Conn con_str;
         public FindMovieEmployee(Form1 frm, string customerIDf)
         {
             ths = frm;
             InitializeComponent();
-            con_str = new SQL_Conn();
-            con_str.OpenConection();
+            //con_str = new SQL_Conn();
+            //con_str.OpenConection();
             nextButton.Hide();
             customeridff = customerIDf;
         }
@@ -96,15 +96,15 @@ namespace CMPT291_GROUP_PROJECT
             }
             ths.AppUser._query = query.Remove(0, 9);
             //======================================
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            //SqlConnection myConnection = new SqlConnection(connectionString);
+            SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show("Succesfully Connected");
             try
             {
-                con_str.OpenConection();
-                //myConnection.Open();
+                //con_str.OpenConection();
+                myConnection.Open();
                 myCommand = new SqlCommand();
                 myCommand.Connection = myConnection;
                 //MessageBox.Show($"Query: {ths.AppUser._query}");

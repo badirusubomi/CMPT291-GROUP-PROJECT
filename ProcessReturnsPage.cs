@@ -18,21 +18,21 @@ namespace CMPT291_GROUP_PROJECT
         public SqlDataReader myReader;
         
         Form1 ths;
-        SQL_Conn con_str;
+        //SQL_Conn con_str;
         public ProcessReturnsPage(Form1 frm)
         {
             ths = frm;
-            con_str= new SQL_Conn();
+           // con_str= new SQL_Conn();
             InitializeComponent();
-            con_str = new SQL_Conn();
+           // con_str = new SQL_Conn();
             //SQL Queries
             //string connectionString = "Data Source=(local);Database=BLOCKBUSTER;Integrated Security=sspi;";
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             //string connectionString = "Server = LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
 
-            //SqlConnection myConnection = new SqlConnection(connectionString);
-            //myConnection.Open();
-            con_str.OpenConection();
+            SqlConnection myConnection = new SqlConnection(connectionString);
+            myConnection.Open();
+            //con_str.OpenConection();
             myCommand = new SqlCommand();
             myCommand.Connection = myConnection;
         }
