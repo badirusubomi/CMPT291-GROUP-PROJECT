@@ -105,6 +105,7 @@ FOREIGN KEY (EmployeeID) REFERENCES Employee ON DELETE cascade ON UPDATE cascade
 
 /* Insertion SHould follow this order AcctType->Movies->Copies->Customer->Employee */
 
+USE [BLOCKBUSTER]
 insert into  AccType values (1, 'Basic', 10, 2);
 insert into  AccType values (2, 'Essential', 15, 5);
 insert into  AccType values (3, 'Premium', 20,10);

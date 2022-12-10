@@ -30,7 +30,7 @@ namespace CMPT291_GROUP_PROJECT
             //con_str.OpenConection();
             string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            //SqlConnection myConnection = new SqlConnection(connectionString);
+            SqlConnection myConnection = new SqlConnection(connectionString);
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show("Succesfully Connected");
             try
