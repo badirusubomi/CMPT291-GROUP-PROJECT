@@ -24,10 +24,10 @@ namespace CMPT291_GROUP_PROJECT
         {
             InitializeComponent();
             ths = frm;
-            conn_str = new SQL_Conn();
+            con_str = new SQL_Conn();
 
 
-            conn_str.OpenConection();
+            con_str.OpenConection();
             //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
             //SqlConnection myConnection = new SqlConnection(connectionString);
