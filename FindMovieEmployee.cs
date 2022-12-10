@@ -109,12 +109,20 @@ namespace CMPT291_GROUP_PROJECT
                 myCommand.Connection = myConnection;
                 //MessageBox.Show($"Query: {ths.AppUser._query}");
                 //Start Queries
+                /*
+                myCommand.CommandText = $"select *,Concat(C7.CopyID,C7.MovieID) as uniquekey from Copies as C7, ({ths.AppUser._query})" +
+                                        $" as temp where C7.MovieID = temp.MovieID " +
+                                        $"and Concat(C7.CopyID,C7.MovieID) not in  (select Concat(C8.CopyID,C8.MovieID) from Copies as C8, " +
+                                        $"Orders as O2 where O2.CopyID = C8.CopyID and O2.MovieID = C8.MovieID  and C8.CopyID = C7.CopyID and C8.MovieID = C7.MovieID " +
+                                        $"and O2.DateTo <= '{dateFrom.Text}' ";*/
                 myCommand.CommandText = $"select * from Copies as C7, ({ths.AppUser._query})" +
                                         $" as temp where C7.MovieID = temp.MovieID " +
                                         $"and C7.CopyID not in  (select C8.CopyID from Copies as C8, " +
                                         $"Orders as O2 where O2.CopyID = C8.CopyID and C8.CopyID = C7.CopyID and O2.MovieID = C7.MovieID " +
                                         $" and O2.MovieID = C8.MovieID and O2.Datefrom < '{dateFrom.Text}' and O2.DateTo > '{dateTo.Text}') ";
-                                //Query needs revision
+                //Query needs revision
+                //Query needs revision
+                //MessageBox.Show($"{myCommand.CommandText}");
                 try
                 {
                     myReader = myCommand.ExecuteReader();
