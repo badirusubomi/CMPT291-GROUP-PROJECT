@@ -17,17 +17,17 @@ namespace CMPT291_GROUP_PROJECT
         public SqlCommand myCommand;
         public SqlDataReader myReader;
         Form1 MainRep;
-        SQL_Conn con_str;
+        //SQL_Conn con_str;
         public MainReports(Form1 frm)
         {
             MainRep = frm;
             InitializeComponent();
-            con_str= new SQL_Conn();
-            con_str.OpenConection();
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            //con_str= new SQL_Conn();
+            //con_str.OpenConection();
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            //SqlConnection myConnection = new SqlConnection(connectionString);
-            //myConnection.Open();
+            SqlConnection myConnection = new SqlConnection(connectionString);
+            myConnection.Open();
             myCommand = new SqlCommand();
             myCommand.Connection = myConnection;
             dataGridView1.Rows.Clear();

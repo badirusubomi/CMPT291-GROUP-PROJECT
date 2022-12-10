@@ -19,13 +19,13 @@ namespace CMPT291_GROUP_PROJECT
         public SqlDataReader myReader;
         Form1 ths;
         string movieID;
-        SQL_Conn con_str;
+        //SQL_Conn con_str;
         public OrderConfirmationEmployee(Form1 frm, string dateFromf, string dateTof, string customerIDf, string movieIDfrm)
         {
             ths = frm;
             InitializeComponent();
             button2.Hide();
-            con_str= new SQL_Conn();
+           // con_str= new SQL_Conn();
 
             DateTo.Text = dateTof;
             DateFrom.Text = dateFromf;
@@ -35,17 +35,17 @@ namespace CMPT291_GROUP_PROJECT
             movieID = movieIDfrm;
 
             //SQL begins;
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            //SqlConnection myConnection = new SqlConnection(connectionString);
+            SqlConnection myConnection = new SqlConnection(connectionString);
             int temporderID = 0;
             string strtemporderID;
             //Console.WriteLine("Succesfully Connected");
             //MessageBox.Show("Succesfully Connected");
             try
             {
-                con_str.OpenConection();
-                //myConnection.Open();
+                //con_str.OpenConection();
+                myConnection.Open();
                 myCommand = new SqlCommand();
                 myCommand.Connection = myConnection;
                 //MessageBox.Show($"Query: {ths.AppUser._query}");
@@ -97,14 +97,14 @@ namespace CMPT291_GROUP_PROJECT
 
         private void ConfirmOrder_Click(object sender, EventArgs e)
         {
-            //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
+            string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
-            //SqlConnection myConnection = new SqlConnection(connectionString);
+            SqlConnection myConnection = new SqlConnection(connectionString);
 
             try
             {
-                //myConnection.Open();
-                con_str.OpenConection();
+                myConnection.Open();
+                //con_str.OpenConection();
                 myCommand = new SqlCommand();
                 myCommand.Connection = myConnection;
                 //MessageBox.Show($"Query: {ths.AppUser._query}");
