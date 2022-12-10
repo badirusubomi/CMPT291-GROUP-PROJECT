@@ -15,7 +15,7 @@ namespace CMPT291_GROUP_PROJECT
     public class SQL_Conn
     {
 
-        string ConnectionString = "";
+        string ConnectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
         SqlConnection con;
 
         public void OpenConection()
@@ -31,3 +31,4 @@ namespace CMPT291_GROUP_PROJECT
         }
 
     }
+}
