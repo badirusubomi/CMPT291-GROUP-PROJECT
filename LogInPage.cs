@@ -18,13 +18,15 @@ namespace CMPT291_GROUP_PROJECT
         public SqlConnection myConnection;
         public SqlCommand myCommand;
         public SqlDataReader myReader;
-        SQL_Conn conn_str = new SQL_Conn();
-
+        SQL_Conn con_str;       
         Form1 ths;
         public LogInPage(Form1 frm)
         {
             InitializeComponent();
             ths = frm;
+            conn_str = new SQL_Conn();
+
+
             conn_str.OpenConection();
             //string connectionString = "Server = SUBBIESLAPTOP\\SQLEXPRESS;Database=BLOCKBUSTER;Trusted_connection = yes;";
             //string connectionString = "Server =LAPTOP-UN5MBSMV;Database=BLOCKBUSTER;Trusted_connection = yes;";
