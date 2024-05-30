@@ -5,7 +5,7 @@ Project Name: Fake
 
 Group Members:
 
-Olasubomi Badiru
-Brandt Sanche 
-Jerome verghese
-Marek Maisonneuve
+Olasubomi Badiru,
+Brandt Sanche, 
+Jerome verghese,
+Marek Maisonneuve.
